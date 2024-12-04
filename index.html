@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="src/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="src/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="src/css/aos.css">
+    <link rel="stylesheet" href="src/css/geral.css">
+    <link rel="stylesheet" href="src/css/estilo.css">
+    <link rel="stylesheet" href="src/css/responsivo.css">
+    <link rel="shortcut icon" href="./src/img/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">    
+    <title>Bloco de Notas</title>
+</head>
+<body>
+    
+    <header class="text-center titulo">
+        <div class="datetime">
+            <h1>Bloco De Notas Digital</h1>
+            <span id="greeting"></span>
+            <h4 id="date"></h4>
+            <strong id="time"></strong>
+        </div>
+    </header>
+
+    <main class="mb-80 titulo">
+        <h2>Passagem de Turno</h2>
+        <textarea class="custom-textarea" name="anotacoes" id="anotacoes" cols="100" rows="12" placeholder="Digite o texto"></textarea>
+        <br>
+        <button class="btn btn-success" onclick="salvar()">Salvar texto</button>
+        <button class="btn btn-primary" onclick="copiar_texto_anotacoes()">Copiar texto</button>
+    </main>
+
+    <section class="ocorrencias">
+        <h2>Ocorrências Frequentes</h2>
+        <h3>Problema no atuador bloqueio</h3>
+        <strong>Código 189</strong>
+        <textarea id="ocorrencia1">Identificamos que o veículo apresenta defeito no atuador de bloqueio. O veículo consegue trafegar normalmente com o atuador acionado, recomendamos que seja realizada a manutenção necessária o quanto antes para garantir o pleno funcionamento e evitar problemas futuros.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia1')">Copiar</button>
+        
+        <h3>Não informa macro de Reinicio de Viagem</h3>
+        <strong>Código 247</strong>
+        <textarea id="ocorrencia2">Identificamos que o motorista realiza paradas, porém não informa a macro de reinício e, após essa parada, segue viagem sem realizar o procedimento de reinício. Isso pode comprometer o processo e gerar inconsistências no sistema, portanto, é fundamental que o motorista siga todas as etapas do procedimento corretamente, incluindo o registro da macro de reinício, para garantir o correto funcionamento do processo.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia2')">Copiar</button>
+        
+        <h3>PROCEDIMENTO INCORRETO - SAINDO DA FRIGOL SEM INFORMAR (Água Azul do Norte)</h3>
+        <strong>Código 169</strong>
+        <textarea id="ocorrencia3">Identificamos que o motorista realiza a MOVIMENTAÇÃO sem comunicar as macros/mensagens. Ele sai da unidade Frigol (Água Azul do Norte) e se desloca até a lavador ou posto. Recomendamos que o motorista seja devidamente orientado a sempre informar as mensagens de macros.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia3')">Copiar</button>
+
+        <h3>Não informa macro de parada</h3>
+        <strong>Código 246</strong>
+        <textarea id="ocorrencia4">Identificamos que o motorista realizou paradas durante o trajeto, mas não registrou a macro de parada correspondente. É fundamental que todas as paradas sejam devidamente informadas por meio da macro específica, garantindo a correta atualização das informações. Solicitamos que o motorista seja orientado a seguir este procedimento de forma consistente.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia4')">Copiar</button>
+
+        <h3>Saiu sem macros</h3>
+        <textarea id="ocorrencia5">Gostaria de informar que o motorista não tem enviado as macros de movimentação de viagem conforme o procedimento. Esse envio é essencial para o acompanhamento das rotas e organização das operações. Solicitamos que o motorista seja orientado a sempre realizar o procedimento.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia5')">Copiar</button>
+
+        <h3>Não informa macro de chegada no cliente</h3>
+        <textarea id="ocorrencia6">Gostaria de informar que o motorista não tem informado a macro de chegada conforme solicitado. Essa informação é essencial para o controle adequado das viagens e o planejamento das próximas etapas. Solicitamos que o motorista seja orientado a sempre realizar o procedimento.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia6')">Copiar</button>
+
+        <h3>Não informa macro de parada/reinicio</h3>
+        <textarea id="ocorrencia7">Prezados, Gostaríamos de informar que o motorista não está registrando as macros de parada e reinício de viagem conforme o procedimento estabelecido. Esse registro é fundamental para o acompanhamento adequado da viagem e para garantir a segurança e conformidade das operações.Solicitamos que o motorista seja orientado a seguir corretamente o procedimento de envio das macros de parada e reinício, garantindo que todas as etapas da viagem sejam devidamente informadas e registradas.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia7')">Copiar</button>
+
+        <h3>DESENGATE AUTORIZADO PARA MANUTENÇÃO</h3>
+        <strong>Código 249</strong>
+        <p>Solicitado pelo Apoio DALASTRA</p>
+        <textarea id="ocorrencia8">REGISTRAMOS QUE O APOIO DALASTRA SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia8')">Copiar</button>
+
+        
+        <p>Solicitado pelo Bruno</p>
+        <textarea id="ocorrencia9">REGISTRAMOS QUE O RESPONSÁVEL BRUNO SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia9')">Copiar</button>
+
+        <p>Solicitado pelo Felipe</p>
+        <textarea id="ocorrencia9">REGISTRAMOS QUE O RESPONSÁVEL FELIPE SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia9')">Copiar</button>
+
+        <h3>Informativo de viagem sem SM</h3>
+        <strong>Insira o município de origem e destino dentro do asterisco</strong>
+        <textarea id="ocorrencia10">INFORMATIVO: VIAGEM SEM SM - PLACA: ** - Condutor informou Início de viagem carregado de ** com destino a ** e está sem SM.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia10')">Copiar</button>
+
+
+    </section>
+
+
+
+    
+
+    
+    
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/bootstrap.bundle.min.js"></script>
+    <script src="src/js/owl.carousel.min.js"></script>
+    <script src="src/js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="src/js/main.js"></script>
+</body>
+</html>
