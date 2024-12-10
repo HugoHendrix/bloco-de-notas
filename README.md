@@ -1,6 +1,4 @@
-![logo da empresa](technocel.png)
 
----
 
 # Technocel - Anotações e Ferramentas de Monitoramento
 
