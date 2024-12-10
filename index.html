@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,11 +13,12 @@
     <link rel="stylesheet" href="src/css/estilo.css">
     <link rel="stylesheet" href="src/css/responsivo.css">
     <link rel="shortcut icon" href="./src/img/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">    
+    <link rel="stylesheet" href="https://matcha.mizu.sh/matcha.css">
     <title>Bloco de Notas</title>
 </head>
-<body>
-    
+
+<body class="bg-default">
+
     <header class="text-center titulo">
         <div class="datetime">
             <h1>Bloco De Notas Digital</h1>
@@ -28,7 +30,8 @@
 
     <main class="mb-80 titulo">
         <h2>Passagem de Turno</h2>
-        <textarea class="custom-textarea" name="anotacoes" id="anotacoes" cols="100" rows="12" placeholder="Digite o texto"></textarea>
+        <textarea class="custom-textarea" name="anotacoes" id="anotacoes" cols="100" rows="12"
+            placeholder="Digite o texto"></textarea>
         <br>
         <button class="btn btn-success" onclick="salvar()">Salvar texto</button>
         <button class="btn btn-primary" onclick="copiar_texto_anotacoes()">Copiar texto</button>
@@ -38,65 +41,275 @@
         <h2>Ocorrências Frequentes</h2>
         <h3>Problema no atuador bloqueio</h3>
         <strong>Código 189</strong>
-        <textarea id="ocorrencia1">Identificamos que o veículo apresenta defeito no atuador de bloqueio. O veículo consegue trafegar normalmente com o atuador acionado, recomendamos que seja realizada a manutenção necessária o quanto antes para garantir o pleno funcionamento e evitar problemas futuros.</textarea>
+        <textarea
+            id="ocorrencia1">Identificamos que o veículo apresenta defeito no atuador de bloqueio. O veículo consegue trafegar normalmente com o atuador acionado, recomendamos que seja realizada a manutenção necessária o quanto antes para garantir o pleno funcionamento e evitar problemas futuros.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia1')">Copiar</button>
-        
+
+        <hr>
+
         <h3>Não informa macro de Reinicio de Viagem</h3>
         <strong>Código 247</strong>
-        <textarea id="ocorrencia2">Identificamos que o motorista realiza paradas, porém não informa a macro de reinício e, após essa parada, segue viagem sem realizar o procedimento de reinício. Isso pode comprometer o processo e gerar inconsistências no sistema, portanto, é fundamental que o motorista siga todas as etapas do procedimento corretamente, incluindo o registro da macro de reinício, para garantir o correto funcionamento do processo.</textarea>
+        <textarea
+            id="ocorrencia2">Identificamos que o motorista realiza paradas, porém não informa a macro de reinício e, após essa parada, segue viagem sem realizar o procedimento de reinício. Isso pode comprometer o processo e gerar inconsistências no sistema, portanto, é fundamental que o motorista siga todas as etapas do procedimento corretamente, incluindo o registro da macro de reinício, para garantir o correto funcionamento do processo.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia2')">Copiar</button>
-        
+
+        <hr>
+
         <h3>PROCEDIMENTO INCORRETO - SAINDO DA FRIGOL SEM INFORMAR (Água Azul do Norte)</h3>
         <strong>Código 169</strong>
-        <textarea id="ocorrencia3">Identificamos que o motorista realiza a MOVIMENTAÇÃO sem comunicar as macros/mensagens. Ele sai da unidade Frigol (Água Azul do Norte) e se desloca até a lavador ou posto. Recomendamos que o motorista seja devidamente orientado a sempre informar as mensagens de macros.</textarea>
+        <textarea
+            id="ocorrencia3">Identificamos que o motorista realiza a MOVIMENTAÇÃO sem comunicar as macros/mensagens. Ele sai da unidade Frigol (Água Azul do Norte) e se desloca até a lavador ou posto. Recomendamos que o motorista seja devidamente orientado a sempre informar as mensagens de macros.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia3')">Copiar</button>
 
-        <h3>Não informa macro de parada</h3>
+        <hr>
+
+        <h3>Não informa macro de PARADA</h3>
         <strong>Código 246</strong>
-        <textarea id="ocorrencia4">Identificamos que o motorista realizou paradas durante o trajeto, mas não registrou a macro de parada correspondente. É fundamental que todas as paradas sejam devidamente informadas por meio da macro específica, garantindo a correta atualização das informações. Solicitamos que o motorista seja orientado a seguir este procedimento de forma consistente.</textarea>
+        <textarea
+            id="ocorrencia4">Identificamos que o motorista realizou paradas durante o trajeto, mas não registrou a macro de parada correspondente. É fundamental que todas as paradas sejam devidamente informadas por meio da macro específica, garantindo a correta atualização das informações. Solicitamos que o motorista seja orientado a seguir este procedimento de forma consistente.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia4')">Copiar</button>
 
+        <hr>
+
         <h3>Saiu sem macros</h3>
-        <textarea id="ocorrencia5">Gostaria de informar que o motorista não tem enviado as macros de movimentação de viagem conforme o procedimento. Esse envio é essencial para o acompanhamento das rotas e organização das operações. Solicitamos que o motorista seja orientado a sempre realizar o procedimento.</textarea>
+        <textarea
+            id="ocorrencia5">Gostaria de informar que o motorista não tem enviado as macros de movimentação de viagem conforme o procedimento. Esse envio é essencial para o acompanhamento das rotas e organização das operações. Solicitamos que o motorista seja orientado a sempre realizar o procedimento.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia5')">Copiar</button>
 
+        <hr>
+
         <h3>Não informa macro de chegada no cliente</h3>
-        <textarea id="ocorrencia6">Gostaria de informar que o motorista não tem informado a macro de chegada conforme solicitado. Essa informação é essencial para o controle adequado das viagens e o planejamento das próximas etapas. Solicitamos que o motorista seja orientado a sempre realizar o procedimento.</textarea>
+        <textarea
+            id="ocorrencia6">Gostaria de informar que o motorista não tem informado a macro de chegada conforme solicitado. Essa informação é essencial para o controle adequado das viagens e o planejamento das próximas etapas. Solicitamos que o motorista seja orientado a sempre realizar o procedimento.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia6')">Copiar</button>
 
+        <hr>
+
         <h3>Não informa macro de parada/reinicio</h3>
-        <textarea id="ocorrencia7">Prezados, Gostaríamos de informar que o motorista não está registrando as macros de parada e reinício de viagem conforme o procedimento estabelecido. Esse registro é fundamental para o acompanhamento adequado da viagem e para garantir a segurança e conformidade das operações.Solicitamos que o motorista seja orientado a seguir corretamente o procedimento de envio das macros de parada e reinício, garantindo que todas as etapas da viagem sejam devidamente informadas e registradas.</textarea>
+        <textarea
+            id="ocorrencia7">Prezados, Gostaríamos de informar que o motorista não está registrando as macros de parada e reinício de viagem conforme o procedimento estabelecido. Esse registro é fundamental para o acompanhamento adequado da viagem e para garantir a segurança e conformidade das operações.Solicitamos que o motorista seja orientado a seguir corretamente o procedimento de envio das macros de parada e reinício, garantindo que todas as etapas da viagem sejam devidamente informadas e registradas.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia7')">Copiar</button>
+
+        <hr>
 
         <h3>DESENGATE AUTORIZADO PARA MANUTENÇÃO</h3>
         <strong>Código 249</strong>
         <p>Solicitado pelo Apoio DALASTRA</p>
-        <textarea id="ocorrencia8">REGISTRAMOS QUE O APOIO DALASTRA SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
+        <textarea
+            id="ocorrencia8">REGISTRAMOS QUE O APOIO DALASTRA SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia8')">Copiar</button>
 
-        
+
         <p>Solicitado pelo Bruno</p>
-        <textarea id="ocorrencia9">REGISTRAMOS QUE O RESPONSÁVEL BRUNO SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
+        <textarea
+            id="ocorrencia9">REGISTRAMOS QUE O RESPONSÁVEL BRUNO SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia9')">Copiar</button>
 
+
         <p>Solicitado pelo Felipe</p>
-        <textarea id="ocorrencia9">REGISTRAMOS QUE O RESPONSÁVEL FELIPE SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
+        <textarea
+            id="ocorrencia9">REGISTRAMOS QUE O RESPONSÁVEL FELIPE SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia9')">Copiar</button>
 
         <h3>Informativo de viagem sem SM</h3>
         <strong>Insira o município de origem e destino dentro do asterisco</strong>
-        <textarea id="ocorrencia10">INFORMATIVO: VIAGEM SEM SM - PLACA: ** - Condutor informou Início de viagem carregado de ** com destino a ** e está sem SM.</textarea>
+        <textarea
+            id="ocorrencia10">INFORMATIVO: VIAGEM SEM SM - PLACA: ** - Condutor informou Início de viagem carregado de ** com destino a ** e está sem SM.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia10')">Copiar</button>
 
 
     </section>
 
+    <section class="flash accent p-5 mb-50">
+        <h2 class="fs-32 text-center text-uppercase">Anotações Gerais</h2>
+
+        <h2 class="fs-24 text-uppercase">Locais e Destinos</h2>
+        <ul class="mb-30">
+            <li><span class="highlight">Casqueiro:</span> Bairro de Cubatão-SP.</li>
+            <li><span class="highlight">CEPALGO:</span> Cliente em Aparecida de Goiânia-GO</li>
+            <li><span class="highlight">Frigorífico Minerva:</span> Para veículos localizados na
+                <strong>Minerva</strong>, as posições devem ser
+                reportadas de forma mais branda, considerando a localização em áreas remotas e afastadas,
+                onde a perda de sinal é comum.
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2 class="fs-24 text-uppercase">Contatos e Ramais</h2>
+        <ul>
+            <li><strong>Rocell/JD:</strong> 7861</li>
+            <li><strong>Dalastra/Satal:</strong> 7862</li>
+            <li><strong>Barra Mansa/Fernandes:</strong> 7863</li>
+            <li><strong>Horizonte:</strong> 7864</li>
+            <li><strong>Liderança:</strong> 7860</li>
+            <li><strong>Check List:</strong> 7859</li>
+            <li><strong>Gerente:</strong> 7853</li>
+        </ul>
+
+        <hr>
+    </section>
+
+    <div class="flash attention p-5">
+        <h2 class="fs-24 text-uppercase">Filtro para Identificar Perda de Sinal</h2>
+        <p>Para monitorar a perda de sinal de forma eficiente, configure os seguintes filtros:</p>
+        <ul>
+            <li>
+                <strong>Filtro - Data com.bordo:</strong> Insira valores superiores à data e hora desejada.
+                <br><em>Exemplo:</em> <code>> 10/12/2024 02:00</code>
+            </li>
+            <li>
+                <strong>Filtro - Proximidade:</strong> Configure para <em>não conter</em> veículos próximos às garagens.
+                <br><em>Exemplo:</em> <code>! *dalastra*</code>
+            </li>
+            <li>
+                <strong>Filtro - Observação:</strong> Inclua categorias específicas como <code>FROTA</code>,
+                <code>AGREGADO</code>, ou <code>PVZ</code> para refinar os resultados.
+            </li>
+        </ul>
+
+        <hr>
+
+    </div>
+
+    <div class="flash severe p-5">
+        <h2 class="fs-24 text-uppercase">Procedimentos Importantes</h2>
+        <ul class="mb-30">
+            <li>Na <span class="highlight">Omnilink</span>: Enviar comando de <strong>deslacre de motor</strong> para
+                veículos em reinicio de pernoite.</li>
+            <li>Rastreadores secundários: Utilize <span class="highlight">ucv (Consulte o login da liderança na
+                    Autotrac)</span> ou <span class="highlight">3S</span>.</li>
+            <li>Para veículos do projeto Caminhoneiro: mensagens de macros, se parecem com mensagens de texto livre,
+                devem ser consideradas.</li>
+        </ul>
+    </div>
+
+    <section class="section p-5">
+        <h2 class="fs-24 text-center text-uppercase mb-30">Anotações GRID</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Abreviação</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>IVO</strong></td>
+                    <td>Início de viagem na origem</td>
+                </tr>
+                <tr>
+                    <td><strong>IVN</strong></td>
+                    <td>Início de viagem aguardando</td>
+                </tr>
+                <tr>
+                    <td><strong>PVZ</strong></td>
+                    <td>Veículo parado vazio - informar movimentação</td>
+                </tr>
+                <tr>
+                    <td><strong>VZ</strong></td>
+                    <td>Veículo vazio</td>
+                </tr>
+                <tr>
+                    <td><strong>CAR</strong></td>
+                    <td>Veículo carregado</td>
+                </tr>
+                <tr>
+                    <td><strong>CCAR</strong></td>
+                    <td>Veículo carregado em acompanhamento</td>
+                </tr>
+                <tr>
+                    <td><strong>CVZ</strong></td>
+                    <td>Veículo vazio monitorado</td>
+                </tr>
+                <tr>
+                    <td><strong>ENT</strong></td>
+                    <td>Veículo em entrega</td>
+                </tr>
+                <tr>
+                    <td><strong>COL</strong></td>
+                    <td>Veículo em coleta</td>
+                </tr>
+                <tr>
+                    <td><strong>+ PG</strong></td>
+                    <td>Parada na garagem</td>
+                </tr>
+                <tr>
+                    <td><strong>- PE</strong></td>
+                    <td>Parada eventual</td>
+                </tr>
+                <td><strong>+ PTVB</strong></td>
+                <td>Parada pernoite/veículo bloqueado</td>
+                </tr>
+                <tr>
+                    <td><strong>OF</strong></td>
+                    <td>Ocorrência feita</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="flash variant p-5">
+        <h2 class="fs-24">Excesso de Funções Lógicas</h2>
+        <p>Estas ações devem ser realizadas apenas para veículos monitorados pela nossa <strong>GR</strong> na Autotrac:
+        </p>
+        <ul>
+            <li>Limpar todas as funções.</li>
+            <li>Enviar <strong>Geral Prime/Híbrido + Segurança</strong> (configuração básica).</li>
+            <li>Comando <strong>UCC2 - Proibe Desengate</strong>: Configurar para <em>10 segundos</em> com sirene e
+                bloqueio.</li>
+            <li>Comando <strong>UCC2 - Proibe Carona</strong>: Configurar para <em>20 segundos</em> com sirene e
+                bloqueio.</li>
+        </ul>
+    </div>
+
+    <div class="flash success p-5">
+        <h2 class="fs-28">Check List</h2>
+        <p>Siga os passos abaixo para realizar o check list de forma adequada:</p>
+        
+        <ol>
+            <li>Confirmar se há um pedido de check list.</li>
+            <li>Na <strong>Autotrac</strong>:
+                <ul>
+                    <li>Ativar TESTE de botão de pânico.</li>
+                    <li>Confirmar com o motorista se o veículo é <strong>contêiner</strong> ou <strong>baú</strong>.
+                    </li>
+                    <li>Enviar o comando de início de check list <strong>com</strong> ou <strong>sem baú</strong>
+                        conforme a resposta (geralmente é contêiner, ou seja, sem baú).</li>
+                </ul>
+            </li>
+            <li>Pedir mensagem de teste.</li>
+            <li>Oriente o motorista sobre o procedimento de responder a <strong>contra senha do VIAGEM SEGUE NORMAL</strong></li>
+            <li>Enviar, opcionalmente, os comandos:
+                <ul>
+                    <li>Proibir engate.</li>
+                    <li>Proibir porta carona.</li>
+                </ul>
+            </li>
+            <li>Verificar violações no histórico (últimos comandos e alertas de OBC).</li>
+            <li>Solicitar tabela de status e verificar se ela veio vazia.</li>
+            <li>
+                Após as verificações:
+                <ul>
+                    <li>Enviar fim de check list <em>s/baú</em> ou com, dependendo.</li>
+                    <li>Liberar veículo com sirene.</li>
+                </ul>
+            </li>
+            <li>Na aba de Trafegus, atender a solicitação de check list.</li>
+            <li>Verificar no terminal os sensores gerados e instalados.</li>
+        </ol>
+    </div>
 
 
-    
 
-    
-    
+
+
+
+
+
+
+
+
     <script src="src/js/jquery.min.js"></script>
     <script src="src/js/bootstrap.bundle.min.js"></script>
     <script src="src/js/owl.carousel.min.js"></script>
@@ -106,4 +319,5 @@
     </script>
     <script src="src/js/main.js"></script>
 </body>
+
 </html>
