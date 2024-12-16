@@ -62,7 +62,7 @@ function copiar_texto_anotacoes() {
     document.execCommand("copy");
 }
 
-
+//Função copiar elementos pelo ID
 function copiarTextoPorId(idElemento) {
     const elemento = document.getElementById(idElemento);
     if (elemento) {
@@ -73,3 +73,46 @@ function copiarTextoPorId(idElemento) {
     }
 }
 
+ // Função para copiar texto
+ function copiarTextoPorId(idElemento) {
+    const elemento = document.getElementById(idElemento);
+    if (elemento) {
+        elemento.select();
+        document.execCommand("copy");
+        alert("Coordenadas copiadas para a área de transferência!");
+    } else {
+        console.error(`Elemento com ID '${idElemento}' não encontrado.`);
+    }
+}
+
+// Função para converter para o formato do Google Maps
+function converterParaGoogle() {
+    const entrada = document.getElementById('input').value;
+
+    // Passo 1: Substituir todas as vírgulas por pontos
+    let saida = entrada.replace(/,/g, '.');
+
+    // Passo 2: Substituir o ponto final entre coordenadas por espaço
+    saida = saida.replace(/(\d)\.(?=-)/g, '$1 ');
+
+    const outputElemento = document.getElementById('output');
+    outputElemento.value = saida.trim(); // Remove espaços desnecessários no início ou fim
+
+    copiarTextoPorId('output'); // Copiar automaticamente
+}
+
+// Função para converter para o formato do Trafegus
+function converterParaTrafegus() {
+    const entrada = document.getElementById('input').value;
+
+    // Passo 1: Substituir os espaços entre coordenadas por vírgula
+    let saida = entrada.replace(/(\d)\s+(?=-)/g, '$1,');
+
+    // Passo 2: Substituir pontos por vírgulas
+    saida = saida.replace(/\./g, ',');
+
+    const outputElemento = document.getElementById('output');
+    outputElemento.value = saida.trim(); // Remove espaços desnecessários no início ou fim
+
+    copiarTextoPorId('output'); // Copiar automaticamente
+}

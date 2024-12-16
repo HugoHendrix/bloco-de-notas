@@ -35,7 +35,19 @@
         <br>
         <button class="btn btn-success" onclick="salvar()">Salvar texto</button>
         <button class="btn btn-primary" onclick="copiar_texto_anotacoes()">Copiar texto</button>
+       
     </main>
+
+    <section class="section">
+        <h2 class="fs-28">Conversor de Coordenadas</h2>
+        <textarea id="input" placeholder="Cole aqui as coordenadas" rows="4" cols="50"></textarea>
+    <br>
+    <button class="btn btn-primary" onclick="converterParaGoogle()">Converter para Google Maps</button>
+    <button class="btn btn-secondary" onclick="converterParaTrafegus()">Converter para Trafegus</button>
+    <textarea id="output" placeholder="Coordenadas convertidas" rows="4" cols="50" readonly></textarea>
+    </section>
+
+    <br>
 
     <section class="ocorrencias">
         <h2>Ocorrências Frequentes</h2>
@@ -266,7 +278,7 @@
     <div class="flash success p-5">
         <h2 class="fs-28">Check List</h2>
         <p>Siga os passos abaixo para realizar o check list de forma adequada:</p>
-        
+
         <ol>
             <li>Confirmar se há um pedido de check list.</li>
             <li>Na <strong>Autotrac</strong>:
@@ -279,7 +291,8 @@
                 </ul>
             </li>
             <li>Pedir mensagem de teste.</li>
-            <li>Oriente o motorista sobre o procedimento de responder a <strong>contra senha do VIAGEM SEGUE NORMAL</strong></li>
+            <li>Oriente o motorista sobre o procedimento de responder a <strong>contra senha do VIAGEM SEGUE
+                    NORMAL</strong></li>
             <li>Enviar, opcionalmente, os comandos:
                 <ul>
                     <li>Proibir engate.</li>
