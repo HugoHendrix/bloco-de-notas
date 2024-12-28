@@ -35,16 +35,16 @@
         <br>
         <button class="btn btn-success" onclick="salvar()">Salvar texto</button>
         <button class="btn btn-primary" onclick="copiar_texto_anotacoes()">Copiar texto</button>
-       
+
     </main>
 
     <section class="section">
         <h2 class="fs-28">Conversor de Coordenadas</h2>
         <textarea id="input" placeholder="Cole aqui as coordenadas" rows="4" cols="50"></textarea>
-    <br>
-    <button class="btn btn-primary" onclick="converterParaGoogle()">Converter para Google Maps</button>
-    <button class="btn btn-secondary" onclick="converterParaTrafegus()">Converter para Trafegus</button>
-    <textarea id="output" placeholder="Coordenadas convertidas" rows="4" cols="50" readonly></textarea>
+        <br>
+        <button class="btn btn-primary" onclick="converterParaGoogle()">Converter para Google Maps</button>
+        <button class="btn btn-secondary" onclick="converterParaTrafegus()">Converter para Trafegus</button>
+        <textarea id="output" placeholder="Coordenadas convertidas" rows="4" cols="50" readonly></textarea>
     </section>
 
     <br>
@@ -126,75 +126,27 @@
         <h3>Informativo de viagem sem SM</h3>
         <strong>Insira o município de origem e destino dentro do asterisco</strong>
         <textarea
-            id="ocorrencia10">INFORMATIVO: VIAGEM SEM SM - PLACA: ** - Condutor informou Início de viagem carregado de ** com destino a ** e está sem SM.</textarea>
+            id="ocorrencia10">*INFORMATIVO: VIAGEM SEM SM* - PLACA: ** - Condutor informou Início de viagem carregado de ** com destino a ** e está sem SM.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia10')">Copiar</button>
 
+        <hr>
+
+        <h3>Ocorrência: Não inseriu da macro de manutenção</h3>
+        <textarea
+            id="ocorrencia11">Identificamos que foi registrada uma movimentação para manutenção, mas, ao chegar ao local, a macro de parada correspondente não foi enviada, e a previsão de conclusão não foi informada. Solicitamos que, em situações futuras, a macro de movimentação para manutenção seja enviada no início do deslocamento e, ao chegar ao local, a macro de parada seja registrada com todos os campos devidamente preenchidos, incluindo a previsão estimada. Essas atualizações são essenciais para o acompanhamento correto do veículo.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia11')">Copiar</button>
+
+        <hr>
+
+        <h3>Ocorrência: Parada/Chegada na Garagem Não Informada</h3>
+        <textarea
+            id="ocorrencia12">Identificamos que o veículo chegou à garagem, porém não foi registrada nenhuma macro de parada ou chegada. Mesmo em locais como garagens, é imprescindível seguir o procedimento de envio das macros correspondentes. Reforçamos a importância de registrar todas as paradas utilizando as macros específicas para garantir a atualização precisa das informações. Solicitamos que o motorista seja orientado a adotar este procedimento de forma consistente e regular.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia12')">Copiar</button>
 
     </section>
 
-    <section class="flash accent p-5 mb-50">
-        <h2 class="fs-32 text-center text-uppercase">Anotações Gerais</h2>
-
-        <h2 class="fs-24 text-uppercase">Locais e Destinos</h2>
-        <ul class="mb-30">
-            <li><span class="highlight">Casqueiro:</span> Bairro de Cubatão-SP.</li>
-            <li><span class="highlight">CEPALGO:</span> Cliente em Aparecida de Goiânia-GO</li>
-            <li><span class="highlight">Frigorífico Minerva:</span> Para veículos localizados na
-                <strong>Minerva</strong>, as posições devem ser
-                reportadas de forma mais branda, considerando a localização em áreas remotas e afastadas,
-                onde a perda de sinal é comum.
-            </li>
-        </ul>
-
-        <hr>
-
-        <h2 class="fs-24 text-uppercase">Contatos e Ramais</h2>
-        <ul>
-            <li><strong>Rocell/JD:</strong> 7861</li>
-            <li><strong>Dalastra/Satal:</strong> 7862</li>
-            <li><strong>Barra Mansa/Fernandes:</strong> 7863</li>
-            <li><strong>Horizonte:</strong> 7864</li>
-            <li><strong>Liderança:</strong> 7860</li>
-            <li><strong>Check List:</strong> 7859</li>
-            <li><strong>Gerente:</strong> 7853</li>
-        </ul>
-
-        <hr>
-    </section>
-
-    <div class="flash attention p-5">
-        <h2 class="fs-24 text-uppercase">Filtro para Identificar Perda de Sinal</h2>
-        <p>Para monitorar a perda de sinal de forma eficiente, configure os seguintes filtros:</p>
-        <ul>
-            <li>
-                <strong>Filtro - Data com.bordo:</strong> Insira valores superiores à data e hora desejada.
-                <br><em>Exemplo:</em> <code>> 10/12/2024 02:00</code>
-            </li>
-            <li>
-                <strong>Filtro - Proximidade:</strong> Configure para <em>não conter</em> veículos próximos às garagens.
-                <br><em>Exemplo:</em> <code>! *dalastra*</code>
-            </li>
-            <li>
-                <strong>Filtro - Observação:</strong> Inclua categorias específicas como <code>FROTA</code>,
-                <code>AGREGADO</code>, ou <code>PVZ</code> para refinar os resultados.
-            </li>
-        </ul>
-
-        <hr>
-
-    </div>
-
-    <div class="flash severe p-5">
-        <h2 class="fs-24 text-uppercase">Procedimentos Importantes</h2>
-        <ul class="mb-30">
-            <li>Na <span class="highlight">Omnilink</span>: Enviar comando de <strong>deslacre de motor</strong> para
-                veículos em reinicio de pernoite.</li>
-            <li>Rastreadores secundários: Utilize <span class="highlight">ucv (Consulte o login da liderança na
-                    Autotrac)</span> ou <span class="highlight">3S</span>.</li>
-            <li>Para veículos do projeto Caminhoneiro: mensagens de macros, se parecem com mensagens de texto livre,
-                devem ser consideradas.</li>
-        </ul>
-    </div>
+    <br>
+    <hr>
 
     <section class="section p-5">
         <h2 class="fs-24 text-center text-uppercase mb-30">Anotações GRID</h2>
@@ -261,6 +213,98 @@
         </table>
     </section>
 
+    <br>
+    <hr>
+
+    <section class="flash accent p-5 mb-50">
+        <h2 class="fs-32 text-center text-uppercase">Anotações Gerais</h2>
+
+        <h2 class="fs-24 text-uppercase">Locais e Destinos</h2>
+        <ul class="mb-30">
+            <li><span class="highlight">Casqueiro:</span> Bairro de Cubatão-SP.</li>
+            <li><span class="highlight">CEPALGO:</span> Cliente em Aparecida de Goiânia-GO</li>
+            <li><span class="highlight">Frigorífico Minerva:</span> Para veículos localizados na
+                <strong>Minerva</strong>, as posições devem ser
+                reportadas de forma mais branda, considerando a localização em áreas remotas e afastadas,
+                onde a perda de sinal é comum.
+            </li>
+        </ul>
+
+        <hr>
+
+        <h2 class="fs-24 text-uppercase">Contatos e Ramais</h2>
+        <ul>
+            <li><strong>Rocell/JD:</strong> 7861</li>
+            <li><strong>Dalastra/Satal:</strong> 7862</li>
+            <li><strong>Barra Mansa/Fernandes:</strong> 7863</li>
+            <li><strong>Horizonte:</strong> 7864</li>
+            <li><strong>Liderança:</strong> 7860</li>
+            <li><strong>Check List:</strong> 7859</li>
+            <li><strong>Gerente:</strong> 7853</li>
+        </ul>
+
+        <hr>
+
+        <h2 class="fs-24 text-uppercase">Consultando se já foi realizado o check list</h2>
+        <ol>
+            <li>Acesse o <strong>menu "Relatório"</strong> no sistema.</li>
+            <li>Selecione a opção <strong>"Check List"</strong>.</li>
+            <li>Insira a <strong>placa do veículo</strong> no campo de busca.</li>
+            <li>Role a barra lateral até o final para visualizar as informações.</li>
+            <li>Verifique os campos <strong>data de início</strong>, <strong>data de fim</strong> e
+                <strong>validade</strong> do check list.
+            </li>
+        </ol>
+
+        <hr>
+
+        <h2 class="fs-24 text-uppercase">Como Registrar os Problemas nos Atuadores</h2>
+        <ol>
+            <li>Copie o <strong>número do terminal</strong>, que normalmente está nas propriedades do veículo.</li>
+            <li>Clique em <strong>"Novo"</strong> para iniciar o registro.</li>
+            <li>Insira o <strong>número do terminal</strong> no campo correspondente.</li>
+            <li>Insira o <strong>periférico</strong> associado ao problema.</li>
+        </ol>
+
+
+    </section>
+
+    <div class="flash attention p-5">
+        <h2 class="fs-24 text-uppercase">Filtro para Identificar Perda de Sinal</h2>
+        <p>Para monitorar a perda de sinal de forma eficiente, configure os seguintes filtros:</p>
+        <ul>
+            <li>
+                <strong>Filtro - Data com.bordo:</strong> Insira valores superiores à data e hora desejada.
+                <br><em>Exemplo:</em> <code>> 10/12/2024 02:00</code>
+            </li>
+            <li>
+                <strong>Filtro - Proximidade:</strong> Configure para <em>não conter</em> veículos próximos às garagens.
+                <br><em>Exemplo:</em> <code>! *dalastra*</code>
+            </li>
+            <li>
+                <strong>Filtro - Observação:</strong> Inclua categorias específicas como <code>FROTA</code>,
+                <code>AGREGADO</code>, ou <code>PVZ</code> para refinar os resultados.
+            </li>
+        </ul>
+
+        <hr>
+
+    </div>
+
+    <div class="flash severe p-5">
+        <h2 class="fs-24 text-uppercase">Procedimentos Importantes</h2>
+        <ul class="mb-30">
+            <li>Na <span class="highlight">Omnilink</span>: Enviar comando de <strong>deslacre de motor</strong> para
+                veículos em reinicio de pernoite.</li>
+            <li>Rastreadores secundários: Utilize <span class="highlight">ucv (Consulte o login da liderança na
+                    Autotrac)</span> ou <span class="highlight">3S</span>.</li>
+            <li>Para veículos do projeto Caminhoneiro: mensagens de macros, se parecem com mensagens de texto livre,
+                devem ser consideradas.</li>
+        </ul>
+    </div>
+
+
+
     <div class="flash variant p-5">
         <h2 class="fs-24">Excesso de Funções Lógicas</h2>
         <p>Estas ações devem ser realizadas apenas para veículos monitorados pela nossa <strong>GR</strong> na Autotrac:
@@ -275,8 +319,13 @@
         </ul>
     </div>
 
+    <hr>
+    <hr>
+
+    <h2 class="fs-36 text-uppercase mb-30">CHECK LIST, EMBARQUE DE MACROS E CONFIGURAÇÕES</h2>
+
     <div class="flash success p-5">
-        <h2 class="fs-28">Check List</h2>
+        <h2 class="fs-28">Check List Autotrac</h2>
         <p>Siga os passos abaixo para realizar o check list de forma adequada:</p>
 
         <ol>
@@ -311,6 +360,140 @@
             <li>Na aba de Trafegus, atender a solicitação de check list.</li>
             <li>Verificar no terminal os sensores gerados e instalados.</li>
         </ol>
+    </div>
+
+    <div class="flash variant bd-variant p-5">
+        <h2 class="fs-24 text-uppercase">PROCEDIMENTO OMNILINK CHECK LIST</h2>
+        <ol>
+            <li><strong>Testar Funções Básicas do Veículo:</strong>
+                <ul>
+                    <li>Testar o <strong>teclado</strong>.</li>
+                    <li>Pedir para o motorista <strong>realizar uma macro</strong>.</li>
+                    <li>Colocar o <strong>veículo em trânsito</strong>.</li>
+                    <li>Acionar o <strong>botão de pânico</strong>.</li>
+                    <li>Abrir a <strong>porta do motorista</strong>.</li>
+                    <li><strong>Desengatar o veículo</strong>.</li>
+                </ul>
+            </li>
+            <li><strong>Consultar Violações e Mensagens:</strong>
+                <ul>
+                    <li>Acesse <strong>Históricos > Alarme</strong> para verificar se as violações foram geradas.</li>
+                    <li>Acesse <strong>Mensagens > Mensagens Recebidas</strong> para consultar as mensagens enviadas.
+                    </li>
+                </ul>
+            </li>
+            <li><strong>Ações de Correção (se as violações forem geradas):</strong>
+                <ul>
+                    <li>Solicite ao motorista que <strong>engate e feche a porta do motorista</strong>.</li>
+                    <li>Solicite ao motorista que <strong>abra a porta carona</strong>.</li>
+                    <li><strong>Confirmar se está com o bloqueio e a sirene</strong>.</li>
+                    <li>Caso o veículo tenha <strong>baú</strong>, coloque-o em trânsito e peça ao motorista para
+                        <strong>abrir o baú</strong> sem enviar o comando para testar a trava.</li>
+                    <li>Envie o <strong>comando de desbloqueio</strong>, coloque o veículo em <strong>local
+                            autorizado</strong> (menu chegada) e envie o comando de <strong>abrir baú</strong>.</li>
+                    <li>Confirme se o <strong>baú chegou</strong> corretamente.</li>
+                </ul>
+            </li>
+            <li><strong>Verificar Retorno da Antena:</strong>
+                <ul>
+                    <li>Verifique os <strong>alarmes</strong>, <strong>tele-eventos</strong> e
+                        <strong>tele-comandos</strong>.</li>
+                    <li>Se estiver tudo certo, aparecerá um <strong>OK</strong> ou <strong>erro</strong> caso haja
+                        inconformidade.</li>
+                </ul>
+            </li>
+            <li><strong>Finalização:</strong>
+                <ul>
+                    <li>Ao terminar, <strong>envie a desativação</strong>.</li>
+                    <li><strong>Oriente o motorista sobre a contra senha</strong>.</li>
+                </ul>
+            </li>
+        </ol>
+        
+
+        <section>
+            <h2 class="fs-24 text-uppercase">PROCEDIMENTO OMNILINK EMBARQUE DE MACROS</h2>
+            <ol>
+                <li><strong>Envio de Comandos:</strong>
+                    <ul>
+                        <li><strong>Liberar o uso de funções programáveis RI.</strong></li>
+                        <li><strong>Inibir funções programáveis.</strong></li>
+                    </ul>
+                </li>
+                <li><strong>Características do Veículo:</strong>
+                    <ul>
+                        <li>Opção <strong>Comunicação</strong>.</li>
+                        <li><strong>Comportamento do veículo nas exceções</strong>.</li>
+                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                        <li>Clique em <strong>Transmitir</strong>.</li>
+                    </ul>
+                </li>
+                <li><strong>Transmissão de Teleeventos:</strong>
+                    <ul>
+                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                        <li>Clique em <strong>Transmitir</strong>.</li>
+                    </ul>
+                </li>
+                <li><strong>Configurações:</strong>
+                    <ul>
+                        <li>Opção de <strong>Segurança</strong>.</li>
+                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                        <li><strong>Verifique o que está habilitado</strong>. Caso não esteja,
+                            <strong>habilite</strong>.</li>
+                        <li>Clique em <strong>Transmitir</strong>.</li>
+                    </ul>
+                </li>
+                <li><strong>Opções Gerais de Modo Interativo:</strong>
+                    <ul>
+                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                        <li>Clique em <strong>Transmitir</strong>.</li>
+                    </ul>
+                </li>
+                <li><strong>Atuadores:</strong>
+                    <ul>
+                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                        <li>Clique em <strong>Transmitir</strong>.</li>
+                    </ul>
+                </li>
+                <li><strong>Senha do Motorista:</strong>
+                    <ul>
+                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                        <li><strong>Transmitir a senha do motorista</strong> (pode ser alterada, se necessário).</li>
+                    </ul>
+                </li>
+                <li><strong>Configuração de Histórico:</strong>
+                    <ul>
+                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                        <li><strong>Envio imediato</strong>.</li>
+                        <li>Clique em <strong>Transmitir</strong>.</li>
+                    </ul>
+                </li>
+                <li><strong>Parâmetros do Veículo:</strong>
+                    <ul>
+                        <li>Selecione a seção <strong>Modo de Economia</strong>.</li>
+                        <li>Clique em <strong>Transmitir</strong>.</li>
+                    </ul>
+                </li>
+                <li><strong>Mensagens:</strong>
+                    <ul>
+                        <li><strong>Transmitir mensagens pré-definidas</strong>.</li>
+                        <li>Perfil <strong>TCELL 4484</strong>.</li>
+                        <li>Clique em <strong>Transmitir</strong>.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        <section>
+            <h2 class="fs-24 text-uppercase">TESTE NA ANTENA SATELITAL</h2>
+            <ol>
+                <li>Acesse o <strong>menu superior</strong> do veículo e clique em <strong>Teste de
+                        Comunicação</strong>.</li>
+                <li>Localize a <strong>placa do veículo</strong> e marque o <strong>X</strong> na opção <strong>Teste
+                        Satélite</strong>.</li>
+                <li>Clique em <strong>Transmitir</strong>.</li>
+            </ol>
+        </section>
     </div>
 
 

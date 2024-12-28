@@ -78,8 +78,7 @@ function copiarTextoPorId(idElemento) {
     const elemento = document.getElementById(idElemento);
     if (elemento) {
         elemento.select();
-        document.execCommand("copy");
-        alert("Coordenadas copiadas para a área de transferência!");
+        document.execCommand("copy");        
     } else {
         console.error(`Elemento com ID '${idElemento}' não encontrado.`);
     }
