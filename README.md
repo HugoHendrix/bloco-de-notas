@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 14a777f7bff6e6081b82b113ae6bf13694f93e5f
 # Technocel - Anotações e Ferramentas de Monitoramento
 
 Bem-vindo ao repositório de anotações e ferramentas desenvolvidas para facilitar o dia a dia de operadores de monitoramento na **Technocel - Gerenciamento de Risco**. Este documento serve como guia e referência para tarefas rotineiras, incluindo acompanhamento de veículos, filtragem de dados, checklists e muito mais.
