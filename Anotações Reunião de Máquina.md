@@ -6,8 +6,8 @@
 - Verificar pasta Dalastra.  
 
 ### **Tratamento de Desvios**
-- Verificar como tratar os desvios utilizando os códigos.  
-- Definir que a entrega, em casos de desvio, será marcada como marco zero.  
+- Verificar como tratar os desvios e outros eventos.  
+- Tratar eventos de desvio onde a rota esta marco zero, como entrega.  
 
 ### **Autorizados e Bloqueios**
 - Informar-se mais sobre os autorizados.  
@@ -39,7 +39,7 @@
 ---
 
 ### **Ocorrências do Final de Semana**
-- Garantir sinal de 24 horas.  
+- Garantir ocorrência de sinal de 24 horas.  
 - Limpar a estação e inativar veículos quando necessário.  
 - Registrar rotas para correção, coletando o máximo de informações possíveis:  
   - Código da viagem, origem, destino, etc.  
