@@ -1,3 +1,0 @@
-NÃO INSERIU MACRO DE MANUTENCAO
-
-Motorista inseriu movimentação para manutenção, chegou no local e não inseriu parada para manutenção, não foi informado previsão. Por favor orientadar o motorista a realizar o envio da macro de movimentação para manutencao e ao chegar no local enviar parada manutenção com todos os campos preenchidos corretamente.
