@@ -10,3 +10,23 @@ header.titulo h1 { font-size: 4.2rem; font-weight: 800; }
 .ocorrencias textarea { margin-bottom: 5px; padding: 15px; }
 .ocorrencias button { margin-bottom: 50px; }
 
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 29px;
+    cursor: pointer;
+    display: none; /* Inicialmente escondido */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: #0056b3;
+}

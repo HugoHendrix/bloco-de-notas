@@ -18,16 +18,34 @@
 </head>
 
 <body class="bg-default">
-
-    <header class="text-center titulo">
-        <div class="datetime">
+  
+    <header class="titulo">
+       <div class="datetime text-center">
             <h1>Bloco De Notas Digital</h1>
             <div id="greeting"></div>
             <div id="date"></div>
             <div id="time"></div>
         </div>
-    </header>
+        <nav class="nav">
+            <div class="container">
+                <a href="/index.html" class="logo">Bloco de Notas Digital</a>
+                <ul class="nav-links">
+                    <li><a href="#conversor">Conversor de Coordenadas</a></li>
+                    <li><a href="#ocorrencias-frequentes">Ocorrências Frequentes</a></li>
+                    <li><a href="#anotacoes-gerais">Anotações Gerais</a></li>
+                    <li><a href="#anotacoes-grid">Anotações Grid</a></li>
+                    <li><a href="#check-list">Check list e Configurações</a>
+                        <ul>
+                            <li><a href="#omnilink">Omnilink</a>
+                            <li><a href="#onix">Onix Sat</a>
 
+                        </ul>
+                    </li>
+                    <li><a href="#manual-sascar">Manual Sascar</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <!-- PASSAGEM DE TURNO -->
 
     <main class="mb-80 titulo">
@@ -40,7 +58,7 @@
 
     </main>
 
-    <section class="section">
+    <section class="section" id="conversor">
         <h2 class="fs-28">Conversor de Coordenadas</h2>
         <textarea id="input" placeholder="Cole aqui as coordenadas" rows="4" cols="50"></textarea>
         <br>
@@ -53,7 +71,7 @@
 
     <!-- OCORRÊNCIAS -->
 
-    <section class="ocorrencias">
+    <section class="ocorrencias" id="ocorrencias-frequentes">
         <h2>Ocorrências Frequentes</h2>
         <h3>Problema no atuador bloqueio</h3>
         <strong>Código 189</strong>
@@ -164,7 +182,7 @@
 
     <!-- ANOTAÇOES GERAIS -->
 
-    <section class="flash accent p-5 mb-50">
+    <section class="flash accent p-5 mb-50" id="anotacoes-gerais">
         <h2 class="fs-32 text-center text-uppercase">Anotações Gerais</h2>
 
         <h2 class="fs-24 text-uppercase">Locais e Destinos</h2>
@@ -270,7 +288,7 @@
 
     <!-- ANOTAÇOES DE GRID -->
 
-    <section class="section p-5">
+    <section class="section p-5" id="anotacoes-grid">
         <h2 class="fs-24 text-center text-uppercase mb-30">Anotações GRID</h2>
         <table>
             <thead>
@@ -340,7 +358,7 @@
 
     <!-- CONFIGURAÇOES GERAIS DE VEICULOS -->
 
-    <h2 class="fs-36 text-uppercase mb-30">CHECK LIST, EMBARQUE DE MACROS E CONFIGURAÇÕES</h2>
+    <h2 class="fs-36 text-uppercase mb-30" id="check-list">CHECK LIST, EMBARQUE DE MACROS E CONFIGURAÇÕES</h2>
 
     <!-- AUTOTRAC -->
     <div class="flash success p-5">
@@ -382,7 +400,7 @@
     </div>
 
     <!-- OMNILINK -->
-    <div class="flash variant bd-variant p-5">
+    <div class="flash variant bd-variant p-5" id="omnilink">
         <h2 class="fs-28 text-uppercase">CHECK LIST OMNILINK</h2>
         <ol class="mb-10">
             <li class="mb-5"><strong>Testar Funções Básicas do Veículo:</strong>
@@ -523,7 +541,7 @@
     </div>
 
     <!-- ONIX SAT  -->
-    <div class="flash active p-5">
+    <div class="flash active p-5" id="onix">
         <section>
             <h2 class="fs-28 text-uppercase">CHECK LIST ONIX</h2>
             <ol>
@@ -633,7 +651,7 @@
         </section>
     </div>
 
-    <div class="container p-5">
+    <div class="container p-5" id="manual-sascar">
         <h4 class="fs-28 text-uppercase mb-30">Tabela de Manuais da SASCAR</h4>
         <hr>
         <table>
@@ -730,7 +748,8 @@
                 <tr>
                     <td>Dalastra - Macros</td>
                     <td>AUTOTRAC</td>
-                    <td><a href="./manuais/Dalastra - Macros Autotrac.pdf" target="_blank" rel="noopener noreferrer">Acessar</a>
+                    <td><a href="./manuais/Dalastra - Macros Autotrac.pdf" target="_blank"
+                            rel="noopener noreferrer">Acessar</a>
                     </td>
                 </tr>
                 <tr>
@@ -741,6 +760,9 @@
                 </tr>
             </tbody>
         </table>
+
+        <!-- Botão de Voltar ao Topo -->
+    <button id="back-to-top" title="Voltar ao topo">&uarr;</button>
     </div>
 
 

@@ -115,3 +115,23 @@ function converterParaTrafegus() {
 
     copiarTextoPorId('output'); // Copiar automaticamente
 }
+
+ // Obtenha o botão
+ const backToTopButton = document.getElementById("back-to-top");
+
+ // Mostrar ou esconder o botão com base na rolagem
+ window.onscroll = function () {
+     if (window.scrollY > 300) { // Aparece após rolar 300px
+         backToTopButton.style.display = "block";
+     } else {
+         backToTopButton.style.display = "none";
+     }
+ };
+
+ // Rolar para o topo quando o botão for clicado
+ backToTopButton.onclick = function () {
+     window.scrollTo({
+         top: 0,
+         behavior: "smooth" // Suaviza o scroll
+     });
+ };
