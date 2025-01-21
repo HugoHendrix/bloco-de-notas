@@ -18,9 +18,9 @@
 </head>
 
 <body class="bg-default">
-  
-    <header class="titulo mb-50">
-       <div class="datetime text-center">
+
+    <header class="titulo mb-50 header">
+        <div class="datetime text-center">
             <h1>Bloco De Notas Technocel</h1>
             <div id="greeting"></div>
             <div id="date"></div>
@@ -28,7 +28,7 @@
         </div>
         <nav class="nav containerNav">
             <div class="container">
-                <a href="/index.html" >Bloco de Notas Digital</a>
+                <a href="/index.html">Bloco de Notas Digital</a>
                 <ul class="nav-links">
                     <li><a href="#conversor">Conversor de Coordenadas</a></li>
                     <li><a href="#ocorrencias-frequentes">Ocorrências Frequentes</a></li>
@@ -397,10 +397,54 @@
             <li>Na aba de Trafegus, atender a solicitação de check list.</li>
             <li>Verificar no terminal os sensores gerados e instalados.</li>
         </ol>
+
+        <hr>
+
+        <div class="container">
+            <header class="header">
+                <h2 class="fs-28">Desbloqueio Offline Autotrac</h2>
+            </header>
+            <ol class="list">
+                <li>
+                    <strong>Acesse o menu inicial</strong> e selecione a opção <code>VER STATUS</code>.
+                </li>
+                <li>
+                    <strong>Encontre o número do MCT/UCC do veículo:</strong>
+                    <ul>
+                        <li>Use a <kbd>seta para baixo</kbd> até chegar na opção <code>Nº SERIAL UNIDADE</code>.</li>
+                        <li>O número MCT/UCC do veículo aparecerá na tela.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Digite o número MCT/UCC:</strong>
+                    <ul>
+                        <li>Insira o número diretamente no teclado. <em>Nada aparecerá na tela enquanto você
+                                digita.</em>
+                        </li>
+                        <li>Após digitar, pressione <kbd>Enter</kbd>.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Acesse as configurações do veículo:</strong>
+                    <ul>
+                        <li>Use as <kbd>setas</kbd> para navegar até as opções disponíveis:</li>
+                        <li><strong>SEQUENCIAL:</strong> Para desbloquear o veículo por senha.</li>
+                        <li><strong>REINICIAR EQUIPAMENTO:</strong> Para resetar o equipamento diretamente pelo teclado.
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+
+            <figure class="text-center">
+                <img src="./src/img/teclado-autotrac.jpg" alt="Teclado do equipamento Autotrac" class="image responsive" />
+                <figcaption>Teclado do equipamento Autotrac</figcaption>
+              </figure>
+        </div>
+
     </div>
 
     <!-- OMNILINK -->
-    <div class="flash variant bd-variant p-5" id="omnilink">
+    <div class="flash variant p-5" id="omnilink">
         <h2 class="fs-28 text-uppercase">CHECK LIST OMNILINK</h2>
         <ol class="mb-10">
             <li class="mb-5"><strong>Testar Funções Básicas do Veículo:</strong>
@@ -451,7 +495,7 @@
         </ol>
     </div>
 
-    <div class="flash variant bd-danger p-5">
+    <div class="flash variant p-5">
         <section>
             <h2 class="fs-28 text-uppercase">EMBARQUE DE MACROS OMNILINK</h2>
             <ol>
@@ -651,6 +695,7 @@
         </section>
     </div>
 
+    <!-- TABELA DE MANUAIS SASCAR -->
     <div class="container p-5" id="manual-sascar">
         <h4 class="fs-28 text-uppercase mb-30">Tabela de Manuais da SASCAR</h4>
         <hr>
@@ -762,13 +807,8 @@
         </table>
 
         <!-- Botão de Voltar ao Topo -->
-    <button id="back-to-top" title="Voltar ao topo">&uarr;</button>
+        <button id="back-to-top" title="Voltar ao topo">&uarr;</button>
     </div>
-
-
-
-
-
 
 
     <script src="src/js/jquery.min.js"></script>
