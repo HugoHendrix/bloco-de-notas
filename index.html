@@ -32,17 +32,23 @@
                 <ul class="nav-links">
                     <li><a href="#conversor">Conversor de Coordenadas</a></li>
                     <li><a href="#ocorrencias-frequentes">Ocorrências Frequentes</a></li>
-                    <li><a href="#anotacoes-gerais">Anotações Gerais</a></li>
-                    <li><a href="#anotacoes-grid">Anotações Grid</a></li>
+                    <li><a href="#anotacoes-gerais">Anotações Gerais</a>
+                        <ul>
+                            <li><a href="#anotacoes-grid">Anotações do Grid</a></li>
+                            <li><a href="#otan">Alfabeto Fonético da OTAN</a></li>
+
+                        </ul>
+                    
+                    </li>
                     <li><a href="#check-list" class="logo">Check list e Configurações</a>
                         <ul>
                             <li><a href="#teclado-autotrac">Desbloqueio Offline Autotrac</a></li>
                             <li><a href="#omnilink">Omnilink</a>
                             <li><a href="#onix">Onix Sat</a>
-
+                            <li><a href="#manual-sascar">Manual Sascar</a></li>
                         </ul>
                     </li>
-                    <li><a href="#manual-sascar">Manual Sascar</a></li>
+                   
                 </ul>
             </div>
         </nav>
@@ -89,7 +95,7 @@
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia2')">Copiar</button>
 
         <hr>
-
+    
         <h3>PROCEDIMENTO INCORRETO - SAINDO DA FRIGOL SEM INFORMAR (Água Azul do Norte)</h3>
         <strong>Código 169</strong>
         <textarea
@@ -129,24 +135,29 @@
 
         <!-- DESENGATE -->
 
-        <h3>DESENGATE AUTORIZADO PARA MANUTENÇÃO</h3>
-        <strong>Código 249</strong>
-        <p>Solicitado pelo Apoio DALASTRA</p>
-        <textarea
-            id="ocorrencia8">REGISTRAMOS QUE O APOIO DALASTRA SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia8')">Copiar</button>
-
-
-        <p>Solicitado pelo Bruno</p>
-        <textarea
-            id="ocorrencia9">REGISTRAMOS QUE O RESPONSÁVEL BRUNO SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia9')">Copiar</button>
-
-
-        <p>Solicitado pelo Felipe</p>
-        <textarea
-            id="ocorrencia9">REGISTRAMOS QUE O RESPONSÁVEL FELIPE SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia9')">Copiar</button>
+        <details>
+            <summary><strong>DESENGATE AUTORIZADO PARA MANUTENÇÃO - Código 249</strong></summary>
+            <div>
+                <p>Solicitado pelo Apoio DALASTRA</p>
+                <textarea
+                    id="ocorrencia8">REGISTRAMOS QUE O APOIO DALASTRA SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia8')">Copiar</button>
+            </div>
+            <div>
+                <p>Solicitado pelo Bruno</p>
+                <textarea
+                    id="ocorrencia9">REGISTRAMOS QUE O RESPONSÁVEL BRUNO SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia9')">Copiar</button>
+            </div>
+            <div>
+                <p>Solicitado pelo Felipe</p>
+                <textarea
+                    id="ocorrencia10">REGISTRAMOS QUE O RESPONSÁVEL FELIPE SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia10')">Copiar</button>
+            </div>
+        </details>
+        
+        <hr>        
 
         <h3>Informativo de viagem sem SM</h3>
         <strong>Insira o município de origem e destino dentro do asterisco</strong>
@@ -290,7 +301,7 @@
     <!-- ANOTAÇOES DE GRID -->
 
     <section class="section p-5" id="anotacoes-grid">
-        <h2 class="fs-24 text-center text-uppercase mb-30">Anotações GRID</h2>
+        <h2 class="fs-24 text-center text-uppercase mb-30">Anotações do GRID</h2>
         <table>
             <thead>
                 <tr>
@@ -355,6 +366,57 @@
     </section>
 
     <hr>
+
+    <section class="container mt-4" id="otan">
+        <h3 class="fs-32">Alfabeto Fonético da OTAN</h3>
+        <hr>
+        <p class="content">
+            Um recurso muito útil para uma comunicação clara e precisa é o uso do alfabeto fonético da OTAN. 
+            Esse alfabeto define palavras-chave para cada letra do alfabeto inglês, permitindo uma comunicação 
+            eficaz mesmo em situações críticas.
+        </p>
+        <p class="content">
+            Ao lidar com liberações de veículos sem sinal ou para transmitir a placa de algum veículo para a equipe, 
+            é altamente recomendado o uso desse alfabeto. Isso garante que as combinações alfanuméricas (letras e números) 
+            possam ser pronunciadas e entendidas com facilidade por quem transmite e recebe as mensagens por rádio ou telefone.
+        </p>
+        <p class="content">
+            Portanto, como operador de monitoramento, é importante estar familiarizado com o alfabeto fonético da OTAN e usá-lo 
+            sempre que necessário. Isso ajudará a garantir uma comunicação clara e precisa, evitando erros e problemas de entendimento.
+        </p>
+        <details class="box">
+            <summary class="is-size-5 has-text-weight-bold">Alfabeto da OTAN</summary>
+            <ul class="list mt-2">
+                <li><strong>A</strong> - Alfa</li>
+                <li><strong>B</strong> - Bravo</li>
+                <li><strong>C</strong> - Charlie</li>
+                <li><strong>D</strong> - Delta</li>
+                <li><strong>E</strong> - Eco</li>
+                <li><strong>F</strong> - Foxtrot</li>
+                <li><strong>G</strong> - Golf</li>
+                <li><strong>H</strong> - Hotel</li>
+                <li><strong>I</strong> - Índia</li>
+                <li><strong>J</strong> - Juliet</li>
+                <li><strong>K</strong> - Kilo</li>
+                <li><strong>L</strong> - Lima</li>
+                <li><strong>M</strong> - Mike</li>
+                <li><strong>N</strong> - November</li>
+                <li><strong>O</strong> - Oscar</li>
+                <li><strong>P</strong> - Papa</li>
+                <li><strong>Q</strong> - Quebec</li>
+                <li><strong>R</strong> - Romeo</li>
+                <li><strong>S</strong> - Sierra</li>
+                <li><strong>T</strong> - Tango</li>
+                <li><strong>U</strong> - Uniform</li>
+                <li><strong>V</strong> - Victor</li>
+                <li><strong>W</strong> - Whiskey</li>
+                <li><strong>X</strong> - Xray</li>
+                <li><strong>Y</strong> - Yankee</li>
+                <li><strong>Z</strong> - Zulu</li>
+            </ul>
+        </details>
+    </section>    
+
     <hr>
 
     <!-- CONFIGURAÇOES GERAIS DE VEICULOS -->
@@ -807,7 +869,7 @@
             </tbody>
         </table>
     </div>
-    
+
      <!-- Botão de Voltar ao Topo -->
      <button id="back-to-top" title="Voltar ao topo">↑</button>
 
