@@ -1,4 +1,3 @@
-
 # Technocel - Anotações e Ferramentas de Monitoramento
 
 Bem-vindo ao repositório de anotações e ferramentas desenvolvidas para facilitar o dia a dia de operadores de monitoramento na **Technocel - Gerenciamento de Risco**. Este documento serve como guia e referência para tarefas rotineiras, incluindo acompanhamento de veículos, filtragem de dados, checklists e muito mais.
@@ -9,23 +8,27 @@ O objetivo deste projeto é centralizar as informações mais relevantes, automa
 ---
 
 ## Funcionalidades
-### 1. **Gerenciamento de Risco**
-- **Perda de Sinal:** Orientações para configurar filtros eficazes e relatórios claros.
-- **Monitoramento Específico:** Procedimentos diferenciados para casos como o da Minerva.
 
-### 2. **Anotações Grid**
-Tabela detalhada de abreviações e descrições usadas no monitoramento diário, como IVO (Início de Viagem na Origem) e CAR (Veículo Carregado).
+### 1. **Bloco de Notas Digital**
+Ponto de partida para acessar ferramentas e informações úteis no dia a dia do monitoramento.
 
-### 3. **Excesso de Funções Lógicas**
-Passos para configurar comandos na Autotrac, como:
-- UCC2 - Proibir Desengate.
-- UCC2 - Proibir Carona.
+### 2. **Conversor de Coordenadas**
+Ferramenta prática para conversão de coordenadas utilizadas em operações de rastreamento.
 
-### 4. **Check List**
-Guia detalhado para realizar o checklist, incluindo:
-- Confirmação de tipo de veículo (contêiner ou baú).
-- Envio de comandos específicos.
-- Verificação de violações e sensores.
+### 3. **Ocorrências Frequentes**
+Seção dedicada às situações comuns enfrentadas no monitoramento, com orientações e soluções.
+
+### 4. **Anotações Gerais**
+Conjunto de informações para suporte nas atividades diárias:
+- **Anotações do Grid:** Tabela detalhada de abreviações e descrições usadas no monitoramento, como IVO (Início de Viagem na Origem) e CAR (Veículo Carregado).
+- **Alfabeto Fonético da OTAN:** Guia completo para facilitar a comunicação.
+- **Código Q:** Tabela com códigos padrão utilizados na comunicação.
+
+### 5. **Check List e Configurações**
+Orientações detalhadas para checklist e ajustes em sistemas de rastreamento:
+- **Desbloqueio Offline Autotrac:** Procedimentos para solucionar problemas offline.
+- **Omnilink:** Configurações específicas para o sistema Omnilink.
+- **Onix Sat:** Guia para configurações no Onix Sat.
+- **Manual Sascar:** Referência para o sistema Sascar.
 
 ---
-
