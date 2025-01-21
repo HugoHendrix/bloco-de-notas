@@ -19,9 +19,9 @@
 
 <body class="bg-default">
 
-    <header class="titulo mb-50 header">
+    <header class="header mb-50">
         <div class="datetime text-center">
-            <h1>Bloco De Notas Technocel</h1>
+            <h1 class="titulo">Bloco De Notas Technocel</h1>
             <div id="greeting"></div>
             <div id="date"></div>
             <div id="time"></div>
@@ -36,6 +36,7 @@
                     <li><a href="#anotacoes-grid">Anotações Grid</a></li>
                     <li><a href="#check-list" class="logo">Check list e Configurações</a>
                         <ul>
+                            <li><a href="#teclado-autotrac">Desbloqueio Offline Autotrac</a></li>
                             <li><a href="#omnilink">Omnilink</a>
                             <li><a href="#onix">Onix Sat</a>
 
@@ -48,8 +49,8 @@
     </header>
     <!-- PASSAGEM DE TURNO -->
 
-    <main class="mb-80 titulo">
-        <h2 class="text-center">Passagem de Turno</h2>
+    <main class="mb-80">
+        <h2 class="titulo text-center">Passagem de Turno</h2>
         <textarea class="custom-textarea" name="anotacoes" id="anotacoes" cols="100" rows="12"
             placeholder="Digite o texto"></textarea>
         <br>
@@ -400,7 +401,7 @@
 
         <hr>
 
-        <div class="container">
+        <div class="container" id="teclado-autotrac">
             <header class="header">
                 <h2 class="fs-28">Desbloqueio Offline Autotrac</h2>
             </header>
@@ -805,10 +806,10 @@
                 </tr>
             </tbody>
         </table>
-
-        <!-- Botão de Voltar ao Topo -->
-        <button id="back-to-top" title="Voltar ao topo">&uarr;</button>
     </div>
+    
+     <!-- Botão de Voltar ao Topo -->
+     <button id="back-to-top" title="Voltar ao topo">↑</button>
 
 
     <script src="src/js/jquery.min.js"></script>
