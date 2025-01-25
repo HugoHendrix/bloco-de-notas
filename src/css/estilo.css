@@ -1,16 +1,52 @@
-.containerNav { position: absolute; top: 10px; left: 10px; z-index: 2; }
-h1.titulo { font-size: 4.2rem; font-weight: 800; }
-h2.titulo { font-size: 3.5rem; font-weight: 500; }
+.containerNav {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+}
 
-.datetime { font-size: 2.3rem; font-weight: 300; }
+h1.titulo {
+    font-size: 4.2rem;
+    font-weight: 800;
+}
 
-.ocorrencias h2 { margin-bottom: 30px; font-size: 4rem; font-weight: 700; }
-.ocorrencias h3 { margin-bottom: 5px; font-size: 3rem; font-weight: 400; text-transform: uppercase; }
-.ocorrencias strong { margin-bottom: 7px } 
-.ocorrencias textarea { margin-bottom: 5px; padding: 15px; }
-.ocorrencias button { margin-bottom: 50px; }
+h2.titulo {
+    font-size: 3.5rem;
+    font-weight: 500;
+}
 
-#back-to-top { 
+.datetime {
+    font-size: 2.3rem;
+    font-weight: 300;
+}
+
+.ocorrencias h2 {
+    margin-bottom: 30px;
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.ocorrencias h3 {
+    margin-bottom: 5px;
+    font-size: 3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.ocorrencias strong {
+    margin-bottom: 7px
+}
+
+.ocorrencias textarea {
+    margin-bottom: 5px;
+    padding: 15px;
+}
+
+.ocorrencias button {
+    margin-bottom: 50px;
+}
+
+#back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -22,7 +58,7 @@ h2.titulo { font-size: 3.5rem; font-weight: 500; }
     height: 50px;
     font-size: 29px;
     cursor: pointer;
-    display: none; 
+    display: none;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     transition: opacity 0.3s ease;
 }
