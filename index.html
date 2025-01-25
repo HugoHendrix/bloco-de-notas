@@ -83,11 +83,48 @@
 
     <section class="ocorrencias" id="ocorrencias-frequentes">
         <h2>Ocorrências Frequentes</h2>
-        <h3>Problema no atuador bloqueio</h3>
-        <strong>Código 189</strong>       
+        <details>
+            <summary><strong>PROCEDIMENTO INCORRETO INICIO E PROBLEMA NO EQUIPAMENTO</strong></summary>
+            <div>
+                <h3>NÃO INFORMOU INÍCIO DE VIAGEM CARREGADO</h3>
+                <strong>Código 253</strong>
+                <textarea
+                    id="ocorrencia253">Identificamos que o motorista não informou o início da viagem carregado, conforme solicitado. Registrar o início da viagem com a carga é crucial para o correto rastreamento e monitoramento do trajeto. A ausência dessa informação pode afetar o controle da operação e gerar inconsistências no sistema. Solicitamos que o motorista seja orientado a sempre registrar o início de viagem carregado antes de iniciar o trajeto, garantindo o correto andamento da viagem e evitando falhas no processo de monitoramento.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia253')">Copiar</button>
+                <hr>
+            </div>
+            <div>
+                <h3>NÃO INFORMOU INÍCIO DE VIAGEM VAZIO</h3>
+                <strong>Código 262</strong>
+                <textarea
+                    id="ocorrencia262">Identificamos que o motorista não registrou o início de viagem com a carga vazia, conforme solicitado. Esse procedimento é fundamental para o controle adequado do trajeto e das condições de transporte. A falta desse registro pode gerar inconsistências nos dados e dificultar o planejamento das próximas etapas. É importante que o motorista sempre informe o início da viagem, mesmo quando estiver sem carga, para garantir a precisão das informações e evitar bloqueios desnecessários no sistema. Solicitamos que o motorista seja orientado a realizar esse procedimento corretamente.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia262')">Copiar</button>
+                <hr>
+            </div>
+            <div>
+                <h3>PROCEDIMENTO INCORRETO + PROBLEMA NO BLOQUEIO</h3>
+                <strong>Código 206</strong>
+                <textarea id="ocorrencia206">Identificamos que o motorista não seguiu o procedimento correto, o que agravou o problema no sistema de bloqueio do veículo. O bloqueio deveria impedir a movimentação do veículo, porém, devido ao defeito no atuador, ele não está funcionando como deveria. Em caso de sinistro, o não funcionamento do bloqueio pode comprometer a segurança, pois o veículo pode ser movimentado sem a devida proteção. Além disso, o motorista não está realizando corretamente o envio das macros necessárias, o que dificulta ainda mais o rastreamento e controle do veículo. Reforçamos que, para evitar maiores complicações, o veículo deve ser imediatamente encaminhado para manutenção para corrigir a falha no bloqueio. Também é fundamental que o motorista seja orientado a seguir todos os procedimentos corretamente.
+                </textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia206')">Copiar</button>
+                <hr>
+                <div>
+                    <h3>PROCEDIMENTO INCORRETO + PROBLEMA NA SIRENE</h3>
+                    <strong>Código 206</strong>
+                    <textarea id="ocorrencia206sirene">Identificamos que, embora o atuador da sirene esteja acionado via sistema, fisicamente a sirene não emite som, pois o motorista não solicitou o desligamento do atuador. A sirene é crucial para a localização do veículo em caso de sinistro, e sua falha pode comprometer a segurança. Recomendamos que o veículo passe por manutenção para corrigir o problema e que o motorista siga os procedimentos corretamente, incluindo o envio das macros necessárias.</textarea>
+                    <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia206sirene')">Copiar</button>
+                    <hr>
+                </div>
+            </div>
+        </details>
+
+        <hr>
+
+        <h3>Problema no atuador bloqueio (VIAGEM NÃO RECOMENDADA)</h3>
+        <strong>Código 189</strong>
 
         <textarea
-            id="ocorrencia1">Identificamos que o veículo apresenta defeito no atuador de bloqueio. O veículo consegue trafegar normalmente com o atuador acionado, recomendamos que seja realizada a manutenção necessária o quanto antes para garantir o pleno funcionamento e evitar problemas futuros.</textarea>
+            id="ocorrencia1">Identificamos que o veículo apresenta um defeito no atuador de bloqueio. Esse problema impede o funcionamento correto do bloqueio, comprometendo a segurança do veículo, especialmente em situações de roubo. Por esse motivo, não recomendamos a realização da viagem nessas condições. Reforçamos a importância de realizar a manutenção necessária o quanto antes, garantindo o pleno funcionamento e prevenindo problemas futuros.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia1')">Copiar</button>
 
         <hr>
@@ -95,7 +132,7 @@
         <h3>Não informa macro de Reinicio de Viagem</h3>
         <strong>Código 247</strong>
         <textarea
-            id="ocorrencia2">Identificamos que o motorista realiza paradas, porém não informa a macro de reinício e, após essa parada, segue viagem sem realizar o procedimento de reinício. Isso pode comprometer o processo e gerar inconsistências no sistema, portanto, é fundamental que o motorista siga todas as etapas do procedimento corretamente, incluindo o registro da macro de reinício, para garantir o correto funcionamento do processo.</textarea>
+            id="ocorrencia2">Identificamos que o motorista realiza paradas, mas não registra a macro de reinício antes de continuar a viagem. Esse procedimento é importante porque, normalmente, a macro de parada é registrada antes da reinicialização. Se o veículo começar a se mover sem o registro da macro de reinício, a central pode entender que o veículo foi roubado, já que o trajeto precisa ser informado corretamente. Por isso, é fundamental que o motorista siga o procedimento completo e registre a macro de reinício para evitar erros no sistema e evitar falsas sinalizações de incidentes.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia2')">Copiar</button>
 
         <hr>
@@ -111,7 +148,7 @@
         <h3>Não informa macro de PARADA</h3>
         <strong>Código 246</strong>
         <textarea
-            id="ocorrencia4">Identificamos que o motorista realizou paradas durante o trajeto, mas não registrou a macro de parada correspondente. É fundamental que todas as paradas sejam devidamente informadas por meio da macro específica, garantindo a correta atualização das informações. Solicitamos que o motorista seja orientado a seguir este procedimento de forma consistente.</textarea>
+            id="ocorrencia4">Identificamos que o motorista fez paradas durante o trajeto, mas não registrou a macro de parada correspondente. É importante que o motorista sempre informe o motivo das paradas usando a macro adequada. Caso não encontre a opção correspondente, ele deve registrar o motivo por meio de uma mensagem livre no teclado. Garantir o correto preenchimento dessas informações é essencial para a atualização precisa do sistema. Solicitamos que o motorista seja orientado a seguir esse procedimento de forma consistente.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia4')">Copiar</button>
 
         <hr>
@@ -124,8 +161,9 @@
         <hr>
 
         <h3>Não informa macro de chegada no cliente</h3>
+        <strong>Código 248</strong>
         <textarea
-            id="ocorrencia6">Gostaria de informar que o motorista não tem informado a macro de chegada conforme solicitado. Essa informação é essencial para o controle adequado das viagens e o planejamento das próximas etapas. Solicitamos que o motorista seja orientado a sempre realizar o procedimento.</textarea>
+            id="ocorrencia6">Observamos que o motorista não tem registrado a macro de chegada no cliente, conforme solicitado. Não inserir essa macro quando o veículo chega ao cliente pode causar bloqueios desnecessários, já que o sistema pode entender que a viagem não foi concluída corretamente. Essa informação é essencial para o controle adequado das viagens e o planejamento das próximas etapas. Reforçamos a importância de seguir esse procedimento e solicitamos que o motorista seja orientado.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia6')">Copiar</button>
 
         <hr>
