@@ -19,7 +19,7 @@
 
 <body class="bg-default">
 
-    <header class="header mb-50">
+    <header class="header mb-80">
         <div class="datetime text-center">
             <h1 class="titulo">Bloco De Notas Technocel</h1>
             <div id="greeting"></div>
@@ -28,7 +28,7 @@
         </div>
         <nav class="nav containerNav">
             <div class="container">
-                <a href="/index.html">Bloco de Notas Digital</a>
+                <a href="/index.html">Menu Bloco de Notas</a>
                 <ul class="nav-links">
                     <li><a href="#conversor">Conversor de Coordenadas</a></li>
                     <li><a href="#ocorrencias-frequentes">Ocorrências Frequentes</a></li>
@@ -44,6 +44,7 @@
                     <li><a href="#check-list" class="logo">Check list e Configurações</a>
                         <ul>
                             <li><a href="#teclado-autotrac">Desbloqueio Offline Autotrac</a></li>
+                            <li><a href="#macros">Lista de Macros SATEL / Dalastra</a></li>
                             <li><a href="#omnilink">Omnilink</a>
                             <li><a href="#onix">Onix Sat</a>
                             <li><a href="#manual-sascar">Manual Sascar</a></li>
@@ -164,8 +165,8 @@
         <h3>Informativo de viagem sem SM</h3>
         <strong>Insira o município de origem e destino dentro do asterisco</strong>
         <textarea
-            id="ocorrencia10">*INFORMATIVO: VIAGEM SEM SM* - PLACA: ** - Condutor informou Início de viagem carregado de ** com destino a ** e está sem SM.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia10')">Copiar</button>
+            id="ocorrenciasm">*INFORMATIVO: VIAGEM SEM SM* - PLACA: ** - Condutor informou Início de viagem carregado de ** com destino a ** e está sem SM.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrenciasm')">Copiar</button>
 
         <hr>
 
@@ -888,16 +889,19 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+    
+    <hr>
 
-        <hr>
-        <h4 class="fs-28 text-uppercase mb-30">Tabela de Macros da Autotrac</h4>
+    <section class="section mb-50">
+        <h4 id="macros" class="fs-28 text-uppercase mb-30">Lista de Macros Satel / Dalastra</h4>
         <hr>
 
         <table>
             <thead>
                 <tr>
                     <th>Cliente</th>
-                    <th>MACROS</th>
+                    <th>Tecnologia do Rastreador</th>
                     <th>Link</th>
                 </tr>
             </thead>
@@ -910,14 +914,84 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Satel - Marcros</td>
+                    <td>Satel - Macros</td>
                     <td>AUTOTRAC</td>
                     <td><a href="./manuais/Satel - Macros Autotrac.pdf" target="_blank"
                             rel="noopener noreferrer">Acessar</a></td>
                 </tr>
+                <tr>
+                    <td>Manual de Macros e orientações SASCAR</td>
+                    <td>SASCAR</td>
+                    <td><a href="./manuais/Manual Sascar.pdf" target="_blank"
+                            rel="noopener noreferrer">Acessar</a></td>
+                </tr>
+                <tr>
+                    <td>Manual de Macros e orientações Omnilink</td>
+                    <td>OMNILINK</td>
+                    <td><a href="./manuais/Manual Omnilink.pdf" target="_blank"
+                            rel="noopener noreferrer">Acessar</a></td>
+                </tr>
+                <tr>
+                    <td>Manual de Macros e orientações OnixSat</td>
+                    <td>ONIX SAT</td>
+                    <td><a href="./manuais/Manual Onix.pdf" target="_blank"
+                            rel="noopener noreferrer">Acessar</a></td>
+                </tr>
             </tbody>
         </table>
-    </div>
+
+        <hr>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Padrão Technocel Gerenciamento de Risco</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Padrão de Grid Trafegus</td>
+                    <td><a href="./manuais/PADRÃO DE GRID TRAFEGUS.pdf" target="_blank"
+                            rel="noopener noreferrer">Acessar</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>FLUXOGRAMA DE AÇÕES PARA EVENTOS</td>
+                    <td><a href="./manuais/FLUXOGRAMA EVENTOS TECHNOCEL GR.pdf" target="_blank"
+                            rel="noopener noreferrer">Acessar</a></td>
+                </tr>
+                <tr>
+                    <td>SLA - Manual do Operador</td>
+                    <td><a href="./manuais/SLA Manual do Operador - Technocel.pdf" target="_blank"
+                            rel="noopener noreferrer">Acessar</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </section>
+
+    <hr>
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <p>Contato:</p>
+            <ul>
+                <li><a href="mailto:hugohendrixc@gmail.com">hugohendrixc@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/hugohendrix/">LinkedIn</a></li>
+                <li><a href="https://github.com/HugoHendrix/">GitHub</a></li>
+            </ul>
+            <p>Links úteis:</p>
+            <ul>
+                <li><a href="https://www.sascar.com.br" target="_blank">Sascar</a></li>
+                <li><a href="https://www.omnilink.com.br" target="_blank">Omnilink</a></li>
+                <li><a href="https://www.onixsat.com.br" target="_blank">Onix Sat</a></li>
+                <li><a href="https://www.autotrac.com.br" target="_blank">Autotrac</a></li>
+            </ul>
+            <p>&copy; 2025 Hugo Hendrix | Technocel - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
 
      <!-- Botão de Voltar ao Topo -->
      <button id="back-to-top" title="Voltar ao topo">↑</button>

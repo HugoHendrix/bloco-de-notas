@@ -31,4 +31,51 @@ h2.titulo { font-size: 3.5rem; font-weight: 500; }
     background-color: #0056b3;
 }
 
+.footer {
+    background-color: #1a1a1a;
+    color: #dcdcdc;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 14px;
+    border-top: 2px solid #4c77af;
+    ;
+}
 
+.footer a {
+    color: #4c77af;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.footer p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer .social-links {
+    margin-top: 20px;
+}
+
+.footer .social-links a {
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.footer .social-links a:hover {
+    color: #fff;
+}
