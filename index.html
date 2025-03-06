@@ -45,6 +45,7 @@
                     </li>
                     <li><a href="#check-list" class="logo">Check list e Configurações</a>
                         <ul>
+                            <li><a href="#orientacao-teste">Orientações Check List</a></li>
                             <li><a href="#teclado-autotrac">Desbloqueio Offline Autotrac</a></li>
                             <li><a href="#macros">Lista de Macros SATEL / Dalastra</a></li>
                             <li><a href="#omnilink">Omnilink</a>
@@ -98,17 +99,18 @@
                 <option value="parada_sem_macro">Parada sem envio de macro</option>
                 <option value="sem_reinicio">Trafegando sem reinício de viagem</option>
                 <option value="perda_sinal">Perda de sinal</option>
+                <option value="porta_motorista">Porta Motorista</option>
+                <option value="porta_carona">Porta Carona</option>
+                <option value="desengate_carreta">Desengate de Carreta</option>
             </select>
     
             <button type="submit" class="btn btn-info mb-20">Gerar Mensagem</button>
         </form>
-
-        <br>
     
         <div class="message-output">
             <h2>Mensagem Gerada:</h2>
             <p id="generatedMessage"></p>
-            <button onclick="copiarTextoPorId('generatedMessage')" class="btn btn-primary">Copiar Mensagem</button> <!-- Botão de copiar -->
+            <button onclick="copiarTextoPorId('generatedMessage')">Copiar</button>
         </div>
     </section>
 
@@ -269,12 +271,22 @@
 
         <h3>INFORMATIVO SOBRE ESPELHAMENTO ONIX SAT</h3>
         <textarea
-            id="ocorrencia14">INFORMATIVO SOBRE ESPELHAMENTO ONIX SAT
-
-            VEÍCULO PLACA: 
-                        
-            Para podermos aproveitar ao máximo os recursos do seu Onix Sat, precisamos que você refaça o espelhamento, ativando a opção de inteligência embarcada.</textarea>
+            id="ocorrencia14">*INFORMATIVO SOBRE ESPELHAMENTO ONIX SAT* - VEÍCULO PLACA: ** - Para podermos aproveitar ao máximo os recursos da Onix Sat, precisamos que refaça o espelhamento, ativando a opção de inteligência embarcada.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia14')">Copiar</button>
+
+        <hr>
+        
+        <h3>OCORRÊNCIA SOBRE ESPELHAMENTO ONIX SAT</h3>
+        <strong>COD 183</strong>
+        <textarea id="ocorrencia15">O veículo está prosseguindo com a viagem sem o espelhamento ativo com a inteligência embarcada. Consequentemente, não é possível configurar o veículo de acordo com as regras de segurança estabelecidas pelo PGR (Plano de Gerenciamento de Riscos). O grupo foi notificado sobre a situação.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia15')">Copiar</button>
+
+          
+        <h3>Modo Assistência Autotrac</h3>
+        <strong>COD 200</strong>
+        <textarea id="ocorrencia16">REGISTRAMOS QUE O SENHOR THIAGO SOLICITOU A CONFIGURAR O VEICULO EM MODO ASSISTÊNCIA PARA MANUTENÇÃO.</textarea>
+        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia16')">Copiar</button>
+
 
 
 
@@ -581,6 +593,24 @@
     <!-- CONFIGURAÇOES GERAIS DE VEICULOS -->
 
     <h2 class="fs-36 text-uppercase mb-30" id="check-list">CHECK LIST, EMBARQUE DE MACROS E CONFIGURAÇÕES</h2>
+
+    <!-- ORIENTAÇÕES CHECK LIST  -->
+    <h3 id="orientacao-teste">ORIENTAÇÕES PARA O MOTORISTA INICIAR O CHECK LIST</h3>
+    <strong>Enviar via WhatsApp</strong>
+    <textarea
+        id="orientado">- Coloca macro de *Inicio de Viagem* por favor
+
+        - Manda mensagem livre escrito *TESTE*
+        
+        - Aperta o botão de pânico 5 segundos
+        
+        - Abre as portas
+        
+        - Retira a tomada da carreta
+        
+        *Quando terminar me avise por favor*</textarea>
+    <button class="btn btn-primary" onclick="copiarTextoPorId('orientado')">Copiar</button>
+
 
     <!-- AUTOTRAC -->
     <div class="flash success p-5">

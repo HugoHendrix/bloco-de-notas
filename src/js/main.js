@@ -180,7 +180,7 @@ document.getElementById('messageForm').addEventListener('submit', function (even
 });
   });
 
-  // Função para copiar texto
+// Função para copiar texto
 function copiarTextoPorId(idElemento) {
     const elemento = document.getElementById(idElemento);
     if (elemento) {
@@ -191,6 +191,7 @@ function copiarTextoPorId(idElemento) {
         tempInput.select(); // Seleciona o texto
         document.execCommand("copy"); // Copia o texto
         document.body.removeChild(tempInput); // Remove o elemento temporário
+        
     } else {
         console.error(`Elemento com ID '${idElemento}' não encontrado.`);
     }
@@ -212,7 +213,13 @@ document.getElementById('messageForm').addEventListener('submit', function (even
     } else if (incidentType === 'sem_reinicio') {
         message = `Olá senhor ${driverName}, identificamos a placa ${plate} trafegando sem enviar o reinício de viagem. É o senhor que está no veículo? Está tudo bem?`;
     } else if (incidentType === 'perda_sinal') {
-        message = `Olá Boa Tarde Sr. ${driverName}, tudo bem com você?\n\nEstamos com PERDA DE SINAL no rastreador do veículo. Qual sua localização por gentileza?\n\n${plate} - VIAGEM SEGUE NORMAL?`;
+        message = `Olá Boa Tarde Sr. ${driverName}, tudo bem? Estamos com PERDA DE SINAL no rastreador do veículo. Qual sua localização por gentileza?\n\n${plate} - VIAGEM SEGUE NORMAL?`;
+    } else if (incidentType === 'porta_motorista') {
+        message = `${plate} - Gerou alerta de porta do motorista aberta. Em contato com o motorista, senhor ${driverName} foi questionado "VIAGEM SEGUE NORMAL" e ele respondeu corretamente. Enviamos os comandos de liberação para o veículo.`;
+    } else if (incidentType === 'porta_carona') {
+        message = `${plate} - Gerou alerta de porta da carona aberta. Em contato com o motorista, senhor ${driverName} foi questionado "VIAGEM SEGUE NORMAL" e ele respondeu corretamente. Enviamos os comandos de liberação para o veículo.`;
+    } else if (incidentType === 'desengate_carreta') {
+        message = `${plate} - Gerou alerta de desengate de carreta. Em contato com o motorista, senhor ${driverName}, foi questionado "VIAGEM SEGUE NORMAL" e ele respondeu corretamente. Enviamos os comandos de liberação para o veículo.`;
     }
 
     // Exibe a mensagem gerada
