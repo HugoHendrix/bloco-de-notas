@@ -93,8 +93,6 @@ h2.titulo {
 
 /* Rodapé */
 .footer {
-    background-color: #1a1a1a;
-    color: #dcdcdc;
     text-align: center;
     padding: 4rem 2rem;
     font-size: 1.4rem;
@@ -137,5 +135,5 @@ h2.titulo {
 }
 
 .footer .social-links a:hover {
-    color: #fff;
+    color: #055b66;
 }
