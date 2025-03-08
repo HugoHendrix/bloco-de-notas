@@ -11,4 +11,7 @@ O objetivo deste projeto é centralizar as informações mais relevantes, automa
 
 ---
 
+<<<<<<< HEAD
 ![Logo Technocel](technocel-logo.png)
+=======
+>>>>>>> 757975fa0960fe5cde5efe7fe413d28188b7240a
