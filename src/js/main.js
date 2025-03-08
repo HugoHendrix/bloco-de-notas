@@ -67,23 +67,23 @@ function copiarTextoPorId(idElemento) {
     const elemento = document.getElementById(idElemento);
     if (elemento) {
         elemento.select();
-        document.execCommand("copy");      
+        document.execCommand("copy");
     } else {
         console.error(`Elemento com ID '${idElemento}' não encontrado.`);
     }
 }
 
-// Função para copiar texto
 function copiarTextoPorId(idElemento) {
     const elemento = document.getElementById(idElemento);
     if (elemento) {
         // Cria um elemento de texto temporário
         const tempInput = document.createElement("textarea");
-        tempInput.value = elemento.textContent; // Pega o conteúdo de texto do elemento
+        tempInput.value = elemento.value || elemento.textContent; // Pega o valor ou o conteúdo de texto do elemento
         document.body.appendChild(tempInput);
         tempInput.select(); // Seleciona o texto
         document.execCommand("copy"); // Copia o texto
         document.body.removeChild(tempInput); // Remove o elemento temporário
+        console.log("Texto copiado com sucesso!"); // Feedback no console
     } else {
         console.error(`Elemento com ID '${idElemento}' não encontrado.`);
     }
@@ -121,25 +121,26 @@ function converterParaTrafegus() {
     copiarTextoPorId('output'); // Copiar automaticamente
 }
 
- // Obtenha o botão
- const backToTopButton = document.getElementById("back-to-top");
+// Obtenha o botão
+const backToTopButton = document.getElementById("back-to-top");
 
- // Mostrar ou esconder o botão com base na rolagem
- window.onscroll = function () {
-     if (window.scrollY > 300) { // Aparece após rolar 300px
-         backToTopButton.style.display = "block";
-     } else {
-         backToTopButton.style.display = "none";
-     }
- };
+// Mostrar ou esconder o botão com base na rolagem
+window.onscroll = function () {
+    if (window.scrollY > 300) { // Aparece após rolar 300px
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+};
 
- // Rolar para o topo quando o botão for clicado
- backToTopButton.onclick = function () {
-     window.scrollTo({
-         top: 0,
-         behavior: "smooth" // Suaviza o scroll
-     });
- };
+// Rolar para o topo quando o botão for clicado
+backToTopButton.onclick = function () {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Suaviza o scroll
+    });
+};
+
 
 // Automatizar mensagem do WhatsApp
 document.getElementById('messageForm').addEventListener('submit', function (event) {

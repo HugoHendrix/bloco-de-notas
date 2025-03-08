@@ -21,8 +21,8 @@
 
     <header class="header mb-80">
         <div class="datetime text-center">
-            <h1 class="titulo">📘 Bloco De Notas Technocel</h1>
-            <p class="fs-12">Telefone Trafegus - Plantão: <a href="tel:+554930267777">(49) 3026-7777</a></p>
+            <h1 class="titulo">Bloco De Notas Technocel</h1>
+            <p class="fs-16">Telefone Trafegus - Plantão: <a href="tel:+554930267777">(49) 3026-7777</a></p>
             <p></p>
             <div id="greeting"></div>
             <div id="date"></div>
@@ -33,6 +33,7 @@
                 <a href="/index.html">Menu Bloco de Notas</a>
                 <ul class="nav-links">
                     <li><a href="#conversor">Conversor de Coordenadas</a></li>
+                    <li><a href="#automatizador">Automatizador de Mensagens</a></li>
                     <li><a href="#ocorrencias-frequentes">Ocorrências Frequentes</a></li>
                     <li><a href="#anotacoes-gerais">Anotações Gerais</a>
                         <ul>
@@ -84,15 +85,15 @@
 
     <!-- Automatizador de Mensagens -->
 
-    <section class="container p-50">
+    <section class="container p-10" id="automatizador">
         <h2 class="fs-28 mb-20">📲 Automatizador de Mensagens WhatsApp</h2>
-        <form id="messageForm">
+        <form id="messageForm" class="p-30">
             <label for="driverName" class="mb-10">Nome do Motorista:</label>
             <input type="text" id="driverName" class="mb-20" placeholder="Digite o nome do motorista" required>
-    
+
             <label for="plate" class="mb-10">Placa do Veículo:</label>
             <input type="text" id="plate" class="mb-20" placeholder="Digite a placa do veículo" required>
-    
+
             <label for="incidentType">Tipo de Ocorrência:</label>
             <select id="incidentType" required class="mb-20">
                 <option value="">Selecione o tipo de ocorrência</option>
@@ -104,14 +105,14 @@
                 <option value="desengate_carreta">Desengate de Carreta</option>
                 <option value="desvio_rota">Desvio de Rota</option>
             </select>
-    
-            <button type="submit" class="btn btn-info mb-20">Gerar Mensagem</button>
+
+            <button type="submit" class="btn-outline-primary mb-20">Gerar Mensagem</button>
         </form>
-    
+
         <div class="message-output">
             <h2>Mensagem Gerada:</h2>
             <p id="generatedMessage"></p>
-            <button onclick="copiarTextoPorId('generatedMessage')" class="btn btn-info mb-20" >Copiar mensagem</button>
+            <button onclick="copiarTextoPorId('generatedMessage')" class="btn btn-info">Copiar mensagem</button>
         </div>
     </section>
 
@@ -276,17 +277,19 @@
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia14')">Copiar</button>
 
         <hr>
-        
+
         <h3>OCORRÊNCIA SOBRE ESPELHAMENTO ONIX SAT</h3>
         <strong>COD 183</strong>
-        <textarea id="ocorrencia15">O veículo está prosseguindo com a viagem sem o espelhamento ativo com a inteligência embarcada. Consequentemente, não é possível configurar o veículo de acordo com as regras de segurança estabelecidas pelo PGR (Plano de Gerenciamento de Riscos). O grupo foi notificado sobre a situação.</textarea>
+        <textarea
+            id="ocorrencia15">O veículo está prosseguindo com a viagem sem o espelhamento ativo com a inteligência embarcada. Consequentemente, não é possível configurar o veículo de acordo com as regras de segurança estabelecidas pelo PGR (Plano de Gerenciamento de Riscos). O grupo foi notificado sobre a situação.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia15')">Copiar</button>
 
         <hr>
-          
+
         <h3>Modo Assistência Autotrac</h3>
         <strong>COD 200</strong>
-        <textarea id="ocorrencia16">REGISTRAMOS QUE O SENHOR THIAGO SOLICITOU A CONFIGURAR O VEICULO EM MODO ASSISTÊNCIA PARA MANUTENÇÃO.</textarea>
+        <textarea
+            id="ocorrencia16">REGISTRAMOS QUE O SENHOR THIAGO SOLICITOU A CONFIGURAR O VEICULO EM MODO ASSISTÊNCIA PARA MANUTENÇÃO.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia16')">Copiar</button>
 
 
