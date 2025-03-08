@@ -84,7 +84,6 @@ function copiarTextoPorId(idElemento) {
         tempInput.select(); // Seleciona o texto
         document.execCommand("copy"); // Copia o texto
         document.body.removeChild(tempInput); // Remove o elemento temporário
-        alert("Mensagem copiada com sucesso!"); // Feedback para o usuário
     } else {
         console.error(`Elemento com ID '${idElemento}' não encontrado.`);
     }
@@ -142,61 +141,6 @@ function converterParaTrafegus() {
      });
  };
 
-//  Automatizar mensagem do WhatsApp
- document.getElementById('messageForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Evita o recarregamento da página
-  
-    // Captura os valores dos campos
-    const driverName = document.getElementById('driverName').value;
-    const plate = document.getElementById('plate').value;
-    const incidentType = document.getElementById('incidentType').value;
-  
-// Gerar mensagem
-document.getElementById('messageForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Evita o recarregamento da página
-
-    // Captura os valores dos campos
-    const driverName = document.getElementById('driverName').value;
-    const plate = document.getElementById('plate').value;
-    const incidentType = document.getElementById('incidentType').value;
-
-    // Gera a mensagem com base no tipo de ocorrência
-    let message = '';
-    if (incidentType === 'parada_sem_macro') {
-        message = `Olá senhor ${driverName}, identificamos a placa ${plate} parada, mas sem envio de macros. Está tudo bem?`;
-    } else if (incidentType === 'sem_reinicio') {
-        message = `Olá senhor ${driverName}, identificamos a placa ${plate} trafegando sem enviar o reinício de viagem. É o senhor que está no veículo? Está tudo bem?`;
-    } else if (incidentType === 'perda_sinal') {
-        message = `Olá Boa Tarde Sr. ${driverName}, tudo bem com você?\n\nEstamos com PERDA DE SINAL no rastreador do veículo. Qual sua localização por gentileza?\n\n${plate} - VIAGEM SEGUE NORMAL?`;
-    }
-
-    // Exibe a mensagem gerada
-    const generatedMessageElement = document.getElementById('generatedMessage');
-    generatedMessageElement.textContent = message;
-
-    // Exibe o botão de copiar
-    const copyButton = document.querySelector('.message-output button');
-    copyButton.style.display = 'block';
-});
-  });
-
-// Função para copiar texto
-function copiarTextoPorId(idElemento) {
-    const elemento = document.getElementById(idElemento);
-    if (elemento) {
-        // Cria um elemento de texto temporário
-        const tempInput = document.createElement("textarea");
-        tempInput.value = elemento.textContent; // Pega o conteúdo de texto do elemento
-        document.body.appendChild(tempInput);
-        tempInput.select(); // Seleciona o texto
-        document.execCommand("copy"); // Copia o texto
-        document.body.removeChild(tempInput); // Remove o elemento temporário
-        
-    } else {
-        console.error(`Elemento com ID '${idElemento}' não encontrado.`);
-    }
-}
-
 // Automatizar mensagem do WhatsApp
 document.getElementById('messageForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Evita o recarregamento da página
@@ -209,17 +153,19 @@ document.getElementById('messageForm').addEventListener('submit', function (even
     // Gera a mensagem com base no tipo de ocorrência
     let message = '';
     if (incidentType === 'parada_sem_macro') {
-        message = `Olá senhor ${driverName}, identificamos a placa ${plate} parada, mas sem envio de macros. Está tudo bem?`;
+        message = `Olá *senhor ${driverName}*, identificamos a placa *${plate}* parada, mas sem envio de macros. Está tudo bem?`;
     } else if (incidentType === 'sem_reinicio') {
-        message = `Olá senhor ${driverName}, identificamos a placa ${plate} trafegando sem enviar o reinício de viagem. É o senhor que está no veículo? Está tudo bem?`;
+        message = `Olá *senhor ${driverName}*, identificamos a placa *${plate}* trafegando sem enviar o reinício de viagem. É o senhor que está no veículo? Está tudo bem?`;
     } else if (incidentType === 'perda_sinal') {
-        message = `Olá Boa Tarde Sr. ${driverName}, tudo bem? Estamos com PERDA DE SINAL no rastreador do veículo. Qual sua localização por gentileza?\n\n${plate} - VIAGEM SEGUE NORMAL?`;
+        message = `Olá *senhor ${driverName}*, tudo bem?\n\nEstamos com PERDA DE SINAL no rastreador do veículo *${plate}*. Qual sua localização por gentileza?\n\n - VIAGEM SEGUE NORMAL?`;
     } else if (incidentType === 'porta_motorista') {
-        message = `${plate} - Gerou alerta de porta do motorista aberta. Em contato com o motorista, senhor ${driverName} foi questionado "VIAGEM SEGUE NORMAL" e ele respondeu corretamente. Enviamos os comandos de liberação para o veículo.`;
+        message = `${plate} - Gerou alerta de porta do motorista aberta. Em contato com o motorista, *senhor ${driverName}*, foi questionado "VIAGEM SEGUE NORMAL" e ele respondeu corretamente. Enviamos os comandos de liberação para o veículo.`;
     } else if (incidentType === 'porta_carona') {
-        message = `${plate} - Gerou alerta de porta da carona aberta. Em contato com o motorista, senhor ${driverName} foi questionado "VIAGEM SEGUE NORMAL" e ele respondeu corretamente. Enviamos os comandos de liberação para o veículo.`;
+        message = `${plate} - Gerou alerta de porta da carona aberta. Em contato com o motorista, *senhor ${driverName}*, foi questionado "VIAGEM SEGUE NORMAL" e ele respondeu corretamente. Enviamos os comandos de liberação para o veículo.`;
     } else if (incidentType === 'desengate_carreta') {
-        message = `${plate} - Gerou alerta de desengate de carreta. Em contato com o motorista, senhor ${driverName}, foi questionado "VIAGEM SEGUE NORMAL" e ele respondeu corretamente. Enviamos os comandos de liberação para o veículo.`;
+        message = `${plate} - Gerou alerta de desengate de carreta. Em contato com o motorista, *senhor ${driverName}*, foi questionado "VIAGEM SEGUE NORMAL" e ele respondeu corretamente. Enviamos os comandos de liberação para o veículo.`;
+    } else if (incidentType === 'desvio_rota') {
+        message = `Olá *senhor ${driverName}*, identificamos a placa *${plate}* em desvio de rota. Viagem segue normal?`;
     }
 
     // Exibe a mensagem gerada

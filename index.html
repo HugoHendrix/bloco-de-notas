@@ -102,6 +102,7 @@
                 <option value="porta_motorista">Porta Motorista</option>
                 <option value="porta_carona">Porta Carona</option>
                 <option value="desengate_carreta">Desengate de Carreta</option>
+                <option value="desvio_rota">Desvio de Rota</option>
             </select>
     
             <button type="submit" class="btn btn-info mb-20">Gerar Mensagem</button>
@@ -110,7 +111,7 @@
         <div class="message-output">
             <h2>Mensagem Gerada:</h2>
             <p id="generatedMessage"></p>
-            <button onclick="copiarTextoPorId('generatedMessage')">Copiar</button>
+            <button onclick="copiarTextoPorId('generatedMessage')" class="btn btn-info mb-20" >Copiar mensagem</button>
         </div>
     </section>
 
@@ -281,6 +282,7 @@
         <textarea id="ocorrencia15">O veículo está prosseguindo com a viagem sem o espelhamento ativo com a inteligência embarcada. Consequentemente, não é possível configurar o veículo de acordo com as regras de segurança estabelecidas pelo PGR (Plano de Gerenciamento de Riscos). O grupo foi notificado sobre a situação.</textarea>
         <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia15')">Copiar</button>
 
+        <hr>
           
         <h3>Modo Assistência Autotrac</h3>
         <strong>COD 200</strong>
@@ -595,10 +597,10 @@
     <h2 class="fs-36 text-uppercase mb-30" id="check-list">CHECK LIST, EMBARQUE DE MACROS E CONFIGURAÇÕES</h2>
 
     <!-- ORIENTAÇÕES CHECK LIST  -->
-    <h3 id="orientacao-teste">ORIENTAÇÕES PARA O MOTORISTA INICIAR O CHECK LIST</h3>
+    <h3 id="orientacao-teste" class="mb-10">ORIENTAÇÕES PARA O MOTORISTA INICIAR O CHECK LIST</h3>
     <strong>Enviar via WhatsApp</strong>
-    <textarea
-        id="orientado">- Coloca macro de *Inicio de Viagem* por favor
+    <textarea id="orientado" rows="8" cols="55" class="mb-15">
+        - Coloca macro de *Inicio de Viagem* por favor
 
         - Manda mensagem livre escrito *TESTE*
         
@@ -608,8 +610,9 @@
         
         - Retira a tomada da carreta
         
-        *Quando terminar me avise por favor*</textarea>
-    <button class="btn btn-primary" onclick="copiarTextoPorId('orientado')">Copiar</button>
+        *Quando terminar me avise por favor*
+    </textarea>
+    <button class="btn btn-primary mb-50" onclick="copiarTextoPorId('orientado')">Copiar orientações</button>
 
 
     <!-- AUTOTRAC -->
