@@ -177,3 +177,51 @@ document.getElementById('messageForm').addEventListener('submit', function (even
     const copyButton = document.querySelector('.message-output button');
     copyButton.style.display = 'block';
 });
+
+
+// ORIENTADO DO VSN NO CHECK LIST
+
+function updateResponse() {
+    const system = document.getElementById("system").value;
+    const textarea = document.getElementById("response");
+
+    let respostaSeguranca = "";
+
+    // Texto base
+    const textoBase = `Durante a viagem, caso ocorra um bloqueio ou qualquer situação identificada pela central, o motorista receberá uma pergunta de segurança.
+
+*PERGUNTA DE SEGURANÇA*:
+"A viagem segue normal? / Tudo bem?"
+
+*RESPOSTA DE SEGURANÇA*:
+*✔ Se estiver tudo bem*: `;
+
+    const textoPerigo = `
+
+*🚧 Se estiver em perigo*:  Responda com qualquer outra informação (ex: 'sim / 'tudo bem'). 
+Estamos preparados para identificar isso como um sinal de perigo e acionar imediatamente o plano de contingência.`;
+
+    // Atualiza a resposta conforme o sistema selecionado
+    switch (system) {
+        case "autotrac":
+            respostaSeguranca = textoBase + " 4 primeiros dígitos do CPF (DALASTRA/SATEL)." + textoPerigo;
+            break;
+        case "sascar":
+            respostaSeguranca = textoBase + " Data do dia." + textoPerigo;
+            break;
+        case "omnilink":
+            respostaSeguranca = textoBase + " NÃO – NEGATIVO." + textoPerigo;
+            break;
+        case "onixsat":
+            respostaSeguranca = textoBase + " PARADA EM ADUANA." + textoPerigo;
+            break;
+        default:
+            respostaSeguranca = textoBase + " 4 primeiros dígitos do CPF." + textoPerigo;
+    }
+
+    // Atualiza o conteúdo do textarea
+    textarea.value = respostaSeguranca;
+}
+
+// Inicializa a resposta ao carregar a página
+window.onload = updateResponse;

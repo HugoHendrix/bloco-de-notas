@@ -22,7 +22,10 @@
     <header class="header mb-80">
         <div class="datetime text-center">
             <h1 class="titulo">Bloco De Notas Technocel</h1>
-            <p class="fs-14">Trafegus WhatsApp Suporte: <a id="telefone-trafegus" href="https://wa.me/554930267777" target="_blank" rel="noopener noreferrer" title="Chamar suporte via WhatsApp">(049) 3026-7777</a> <button onclick="copiarTextoPorId('telefone-trafegus')" class="btn-outline-secondary" >Copiar telefone Trafegus</button></p>
+            <p class="fs-14">Trafegus WhatsApp Suporte: <a id="telefone-trafegus" href="https://wa.me/554930267777"
+                    target="_blank" rel="noopener noreferrer" title="Chamar suporte via WhatsApp">(049) 3026-7777</a>
+                <button onclick="copiarTextoPorId('telefone-trafegus')" class="btn-outline-secondary">Copiar telefone
+                    Trafegus</button></p>
             <p></p>
             <div id="greeting"></div>
             <div id="date"></div>
@@ -547,7 +550,7 @@
 
     <!-- CODIGO Q -->
 
-    <section class="container mt-4" id="codigoq">
+    <section class="container mt-4 mb-60" id="codigoq">
         <h3 class="fs-32">Código Q</h3>
         <hr>
         <p class="content">
@@ -597,12 +600,13 @@
 
     <!-- CONFIGURAÇOES GERAIS DE VEICULOS -->
 
-    <h2 class="fs-36 text-uppercase mb-30" id="check-list">CHECK LIST, EMBARQUE DE MACROS E CONFIGURAÇÕES</h2>
+    <h2 class="fs-32 text-uppercase mb-40" id="check-list">CHECK LIST, EMBARQUE DE MACROS E CONFIGURAÇÕES</h2>
 
     <!-- ORIENTAÇÕES CHECK LIST  -->
     <h3 id="orientacao-teste" class="mb-10">ORIENTAÇÕES PARA O MOTORISTA INICIAR O CHECK LIST</h3>
     <strong>Enviar via WhatsApp</strong>
-    <textarea id="orientado" rows="8" cols="55" class="mb-15">
+    <textarea id="orientado" rows="14" cols="18" class="mb-5">
+
         - Coloca macro de *Inicio de Viagem* por favor
 
         - Manda mensagem livre escrito *TESTE*
@@ -614,8 +618,39 @@
         - Retira a tomada da carreta
         
         *Quando terminar me avise por favor*
+
     </textarea>
     <button class="btn btn-primary mb-50" onclick="copiarTextoPorId('orientado')">Copiar orientações</button>
+
+    <!-- ORIENTAÇÃO VIAGEN SEGUE NORMAL -->
+
+    <h3 class="fs-24">Orientações para o motorista responder a Resposta de Segurança</h3>
+    <strong>Enviar via WhatsApp</strong>
+
+
+    <!-- Seleção do Sistema -->
+    <label for="system">Selecione a Tecnologia:</label>
+    <select id="system" onchange="updateResponse()" class="mb-15">
+        <option value="default">Padrão</option>
+        <option value="autotrac">AUTOTRAC</option>
+        <option value="sascar">SASCAR</option>
+        <option value="omnilink">OMNILINK</option>
+        <option value="onixsat">ONIXSAT</option>
+    </select>
+
+    <!-- Textarea para a Resposta -->
+    <textarea id="response" readonly rows="12" cols="18" class="mb-10">
+PERGUNTA DE SEGURANÇA:
+"A viagem segue normal?"
+
+RESPOSTA DE SEGURANÇA:
+
+Se estiver tudo bem: 4 primeiros dígitos do CPF.
+
+
+Se estiver em perigo: Responda com qualquer outra informação (ex: 'sim', 'não', 'tudo bem'). Nossos operadores estão preparados para identificar isso como um sinal de perigo e acionar imediatamente o plano de contingência.
+    </textarea>
+    <button class="btn btn-primary mb-50" onclick="copiarTextoPorId('response')">Copiar orientações</button>
 
 
     <!-- AUTOTRAC -->
@@ -1024,7 +1059,8 @@
                 <tr>
                     <td>Guia teclado TD50</td>
                     <td>Teclado TD50</td>
-                    <td><a href="./manuais/Guia_do_Teclado (1).pdf" target="_blank" rel="noopener noreferrer">Acessar</a>
+                    <td><a href="./manuais/Guia_do_Teclado (1).pdf" target="_blank"
+                            rel="noopener noreferrer">Acessar</a>
                     </td>
                 </tr>
                 <tr>
@@ -1119,11 +1155,13 @@
 
                 <tr>
                     <td>Manual Operacional Trafegus</td>
-                    <td><a href="./manuais/19 - Manual operacional Technocel.pdf" target="_blank" rel="noopener noreferrer">Acessar</a></td>
+                    <td><a href="./manuais/19 - Manual operacional Technocel.pdf" target="_blank"
+                            rel="noopener noreferrer">Acessar</a></td>
                 </tr>
                 <tr>
                     <td>Check List Processos</td>
-                    <td><a href="./manuais/CHECK LIST - Processos.pdf" target="_blank" rel="noopener noreferrer">Acessar</a></td>
+                    <td><a href="./manuais/CHECK LIST - Processos.pdf" target="_blank"
+                            rel="noopener noreferrer">Acessar</a></td>
                 </tr>
             </tbody>
         </table>
