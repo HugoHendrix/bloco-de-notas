@@ -23,6 +23,42 @@ h2.titulo {
     font-weight: 300;
 }
 
+/* Card estilo post-it */
+.post-it {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff9c4;
+    /* Amarelo suave */
+    border: 1px solid #ffeb3b;
+    /* Borda amarela */
+    border-radius: 8px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+/* Título do card */
+.post-it h2 {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Lista de respostas */
+.post-it ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.post-it li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
 /* Ocorrências */
 .ocorrencias h2 {
     margin-bottom: 2rem;
