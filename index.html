@@ -123,7 +123,7 @@
     <br>
 
     <!-- Card fixo no canto da tela -->
-    <div class="post-it">
+    <div class="post-it flash severe">
         <h2>RESPOSTA VIAGEM SEGUE NORMAL</h2>
         <ul>
             <li><strong>AUTOTRAC:</strong></li>
@@ -135,6 +135,19 @@
             <li><strong>OMNILINK:</strong> NÃO NEGATIVO</li>
             <li><strong>ONIXSAT:</strong> PARADA EM ADUANA</li>
         </ul>
+    </div>
+
+    <div class="post-it-2 flash accent">
+        <h2>TRATATIVAS PARA DESVIO DE ROTA</h2>
+        <li>ENTREGA</li>
+        <li>PARALELO</li>
+        <li>VARIACAO DE GPS</li>
+        <li>AUTORIZADO</li>
+
+
+
+
+
     </div>
 
     <br>
@@ -420,20 +433,95 @@
 
         <hr>
 
-        <h2 class="fs-24 text-uppercase">Excesso de Funções Lógicas</h2>
-        <p>Estas ações devem ser realizadas apenas para veículos monitorados pela nossa <strong>GR</strong> na Autotrac:
-        </p>
-        <ul>
-            <li>Limpar todas as funções.</li>
-            <li>Enviar <strong>Geral Prime/Híbrido + Segurança</strong> (configuração básica).</li>
-            <li>Comando <strong>UCC2 - Proibe Desengate</strong>: Configurar para <em>10 segundos</em> com sirene e
-                bloqueio.</li>
-            <li>Comando <strong>UCC2 - Proibe Carona</strong>: Configurar para <em>20 segundos</em> com sirene e
-                bloqueio.</li>
-        </ul>
+        <h1 class="h1 mb-0">Tutorial: Como Retirar um Veículo Agregado</h1>
+        <h2 class="h5 text-secondary mb-3">Passo a Passo para Remover um Veículo do Sistema</h2>
 
+        <ol class="list-group-numbered">
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Acesse o Menu Principal</div>
+                    Entre no sistema e localize o menu principal.
+                </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Navegue até Cadastro de Veículos</div>
+                    No menu, selecione: <span class="badge bg-secondary">CADASTRO</span> > <span
+                        class="badge bg-secondary">VEICULO</span>
+                </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Acesse a Consulta Unificada</div>
+                    Dentro da seção de veículos, clique em <span class="badge bg-info text-dark">CONSULTA
+                        UNIFICADA</span>
+                </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Pesquise o Veículo</div>
+                    Insira a placa do veículo que deseja modificar no campo indicado
+                </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Acesse os Detalhes do Veículo</div>
+                    Dê um duplo clique sobre a placa do veículo na lista de resultados
+                </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Altere o Status do Veículo</div>
+                    Localize o campo "Status" e altere o valor para <span class="badge bg-warning text-dark">2</span>
+                    (isso indica que o veículo será retirado)
+                </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Acesse a Associação de Terminais</div>
+                    Volte ao menu principal e selecione: <span class="badge bg-secondary">MENU</span> > <span
+                        class="badge bg-secondary">ASSOCIAR TERMINAL</span>
+                </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Localize o Terminal do Veículo</div>
+                    Clique na <span class="badge bg-primary text-white">pastinha azul</span> correspondente ao veículo
+                    que está modificando
+                </div>
+            </li>
+
+            <li class="list-group-item d-flex justify-content-between align-items-start">
+                <div class="ms-2 me-auto">
+                    <div class="fw-bold">Altere o Status do Terminal</div>
+                    Modifique o status do terminal para:<br>
+                    <span class="badge bg-danger">5</span> se desejar desativar o terminal<br>
+                    <span class="badge bg-success">1</span> se for reativar o terminal posteriormente
+                </div>
+            </li>
+        </ol>
+
+        <div class="alert alert-info mt-4">
+            <h3 class="h6 text-info">Observações Importantes:</h3>
+            <ul class="mb-0">
+                <li>O status <span class="badge bg-warning text-dark">2</span> para veículos indica que ele está sendo
+                    retirado do sistema</li>
+                <li>O status <span class="badge bg-danger">5</span> para terminais significa desativação</li>
+                <li>Use o status <span class="badge bg-success">1</span> para terminais que devem permanecer ativos</li>
+            </ul>
+            <p class="mt-2 mb-0">Lembre-se de confirmar todas as alterações antes de sair do sistema!</p>
+        </div>
 
     </section>
+
+
 
 
     <br>
@@ -441,8 +529,8 @@
 
     <!-- ANOTAÇOES DE GRID -->
 
-    <section class="section p-5" id="anotacoes-grid">
-        <h2 class="fs-24 text-center text-uppercase mb-30">Anotações do GRID</h2>
+    <section class="section p-5 flash muted" id="anotacoes-grid">
+        <h2 class="fs-32 text-center mb-30">Anotações do GRID</h2>
         <table>
             <thead>
                 <tr>
@@ -510,7 +598,7 @@
 
     <!-- ALFABETO OTAN -->
 
-    <section class="container mt-4" id="otan">
+    <section class="container p-5 mt-4 flash muted" id="otan">
         <h3 class="fs-32">Alfabeto Fonético da OTAN</h3>
         <hr>
         <p class="content">
@@ -568,7 +656,7 @@
 
     <!-- CODIGO Q -->
 
-    <section class="container mt-4 mb-60" id="codigoq">
+    <section class="container p-5 mt-4 flash muted mb-60" id="codigoq">
         <h3 class="fs-32">Código Q</h3>
         <hr>
         <p class="content">
@@ -618,12 +706,13 @@
 
     <!-- CONFIGURAÇOES GERAIS DE VEICULOS -->
 
-    <h2 class="fs-32 text-uppercase mb-40" id="check-list">CHECK LIST, EMBARQUE DE MACROS E CONFIGURAÇÕES</h2>
+    <div class="section p-5 mt-50 flash muted">
+        <h2 class="fs-32 text-uppercase mb-40" id="check-list">CHECK LIST, EMBARQUE DE MACROS E CONFIGURAÇÕES</h2>
 
-    <!-- ORIENTAÇÕES CHECK LIST  -->
-    <h3 id="orientacao-teste" class="mb-10">ORIENTAÇÕES PARA O MOTORISTA INICIAR O CHECK LIST</h3>
-    <strong>Enviar via WhatsApp</strong>
-    <textarea id="orientado" rows="14" cols="18" class="mb-5">
+        <!-- ORIENTAÇÕES CHECK LIST  -->
+        <h3 id="orientacao-teste" class="mb-10">ORIENTAÇÕES PARA O MOTORISTA INICIAR O CHECK LIST</h3>
+        <strong>Enviar via WhatsApp</strong>
+        <textarea id="orientado" rows="14" cols="18" class="mb-5">
 
         - Coloca macro de *Inicio de Viagem* por favor
 
@@ -638,26 +727,26 @@
         *Quando terminar me avise por favor*
 
     </textarea>
-    <button class="btn btn-primary mb-50" onclick="copiarTextoPorId('orientado')">Copiar orientações</button>
+        <button class="btn btn-primary mb-50" onclick="copiarTextoPorId('orientado')">Copiar orientações</button>
 
-    <!-- ORIENTAÇÃO VIAGEN SEGUE NORMAL -->
+        <!-- ORIENTAÇÃO VIAGEN SEGUE NORMAL -->
 
-    <h3 class="fs-24">Orientações para o motorista responder a Resposta de Segurança</h3>
-    <strong>Enviar via WhatsApp</strong>
+        <h3 class="fs-24">Orientações para o motorista responder a Resposta de Segurança</h3>
+        <strong>Enviar via WhatsApp</strong>
 
 
-    <!-- Seleção do Sistema -->
-    <label for="system">Selecione a Tecnologia:</label>
-    <select id="system" onchange="updateResponse()" class="mb-15">
-        <option value="default">Padrão</option>
-        <option value="autotrac">AUTOTRAC</option>
-        <option value="sascar">SASCAR</option>
-        <option value="omnilink">OMNILINK</option>
-        <option value="onixsat">ONIXSAT</option>
-    </select>
+        <!-- Seleção do Sistema -->
+        <label for="system">Selecione a Tecnologia:</label>
+        <select id="system" onchange="updateResponse()" class="mb-15">
+            <option value="default">Padrão</option>
+            <option value="autotrac">AUTOTRAC</option>
+            <option value="sascar">SASCAR</option>
+            <option value="omnilink">OMNILINK</option>
+            <option value="onixsat">ONIXSAT</option>
+        </select>
 
-    <!-- Textarea para a Resposta -->
-    <textarea id="response" readonly rows="12" cols="18" class="mb-10">
+        <!-- Textarea para a Resposta -->
+        <textarea id="response" readonly rows="12" cols="18" class="mb-10">
 PERGUNTA DE SEGURANÇA:
 "A viagem segue normal?"
 
@@ -668,7 +757,10 @@ Se estiver tudo bem: 4 primeiros dígitos do CPF.
 
 Se estiver em perigo: Responda com qualquer outra informação (ex: 'sim', 'não', 'tudo bem'). Nossos operadores estão preparados para identificar isso como um sinal de perigo e acionar imediatamente o plano de contingência.
     </textarea>
-    <button class="btn btn-primary mb-50" onclick="copiarTextoPorId('response')">Copiar orientações</button>
+        <button class="btn btn-primary mb-50" onclick="copiarTextoPorId('response')">Copiar orientações</button>
+    </div>
+
+    <hr>
 
 
     <!-- AUTOTRAC -->
@@ -753,7 +845,25 @@ Se estiver em perigo: Responda com qualquer outra informação (ex: 'sim', 'não
             </figure>
         </div>
 
+        <hr>
+        <br>
+
+        <h2 class="fs-24 text-uppercase">Excesso de Funções Lógicas</h2>
+        <p>Estas ações devem ser realizadas apenas para veículos monitorados pela nossa <strong>GR</strong> na Autotrac:
+        </p>
+        <ul>
+            <li>Limpar todas as funções.</li>
+            <li>Enviar <strong>Geral Prime/Híbrido + Segurança</strong> (configuração básica).</li>
+            <li>Comando <strong>UCC2 - Proibe Desengate</strong>: Configurar para <em>10 segundos</em> com sirene e
+                bloqueio.</li>
+            <li>Comando <strong>UCC2 - Proibe Carona</strong>: Configurar para <em>20 segundos</em> com sirene e
+                bloqueio.</li>
+        </ul>
+        <br>
+
     </div>
+
+    <hr>
 
     <!-- OMNILINK -->
     <div class="flash variant p-5" id="omnilink">
@@ -896,6 +1006,8 @@ Se estiver em perigo: Responda com qualquer outra informação (ex: 'sim', 'não
         </section>
     </div>
 
+    <hr>
+
     <!-- ONIX SAT  -->
     <div class="flash active p-5" id="onix">
         <section>
@@ -1007,8 +1119,10 @@ Se estiver em perigo: Responda com qualquer outra informação (ex: 'sim', 'não
         </section>
     </div>
 
+    <hr>
+
     <!-- TABELA DE MANUAIS SASCAR -->
-    <div class="container p-5" id="manual-sascar">
+    <div class="container p-5 flash muted" id="manual-sascar">
         <h4 class="fs-28 text-uppercase mb-30">Tabela de Manuais da SASCAR</h4>
         <hr>
         <table>
@@ -1099,7 +1213,7 @@ Se estiver em perigo: Responda com qualquer outra informação (ex: 'sim', 'não
 
     <hr>
 
-    <section class="section mb-50">
+    <section class="section p-5 mb-50 flash muted">
         <h4 id="macros" class="fs-28 text-uppercase mb-30">Lista de Macros Satel / Dalastra</h4>
         <hr>
 
@@ -1189,44 +1303,50 @@ Se estiver em perigo: Responda com qualquer outra informação (ex: 'sim', 'não
     <hr>
     <br>
 
+    <!-- PADRAO DE ROTAS CRIANDO SM -->
     <section>
         <h1>Padronização e Organização de Rotas</h1>
 
-    <p>Temos observado a criação de diversas rotas sem um padrão definido, além da duplicação de rotas já existentes. Para garantir a padronização e a organização, solicitamos que sejam seguidas as seguintes recomendações:</p>
+        <p>Temos observado a criação de diversas rotas sem um padrão definido, além da duplicação de rotas já
+            existentes. Para garantir a padronização e a organização, solicitamos que sejam seguidas as seguintes
+            recomendações:</p>
 
-    <h2>Nomenclatura das Rotas</h2>
-    <p>A nomenclatura das rotas deve conter:</p>
-    <ul>
-        <li>Nome do responsável pela rota</li>
-        <li>Cidade de origem (cliente)</li>
-        <li>Cidade de destino (cliente)</li>
-    </ul>
-    <p>Caso haja alguma entrega ou passagem por um local específico, essa informação deve ser inserida entre colchetes <code>[ ]</code>.</p>
+        <h2>Nomenclatura das Rotas</h2>
+        <p>A nomenclatura das rotas deve conter:</p>
+        <ul>
+            <li>Nome do responsável pela rota</li>
+            <li>Cidade de origem (cliente)</li>
+            <li>Cidade de destino (cliente)</li>
+        </ul>
+        <p>Caso haja alguma entrega ou passagem por um local específico, essa informação deve ser inserida entre
+            colchetes <code>[ ]</code>.</p>
 
-    <div class="example">
-        <strong>Exemplo:</strong><br>
-        <code>SATEL – SANTOS – SP (TECON) X COLATINA – ES (FRISA) [VIA BR116]</code>
-    </div>
+        <div class="example">
+            <strong>Exemplo:</strong><br>
+            <code>SATEL – SANTOS – SP (TECON) X COLATINA – ES (FRISA) [VIA BR116]</code>
+        </div>
 
-    <h2>Criação de Novas Rotas</h2>
-    <ul>
-        <li>Evite utilizar apenas o nome da cidade. Utilize sempre o nome do cliente correspondente.</li>
-        <li>Para saídas de Santos/Guarujá, informe corretamente o local de saída, especificando o terminal ou porto adequado, evitando designações genéricas.</li>
-    </ul>
+        <h2>Criação de Novas Rotas</h2>
+        <ul>
+            <li>Evite utilizar apenas o nome da cidade. Utilize sempre o nome do cliente correspondente.</li>
+            <li>Para saídas de Santos/Guarujá, informe corretamente o local de saída, especificando o terminal ou porto
+                adequado, evitando designações genéricas.</li>
+        </ul>
 
-    <h2>Exemplos Específicos para Importação e Exportação</h2>
-    <p>Para melhor compreensão das (OC), seguem exemplos específicos para importação e exportação:</p>
+        <h2>Exemplos Específicos para Importação e Exportação</h2>
+        <p>Para melhor compreensão das (OC), seguem exemplos específicos para importação e exportação:</p>
 
-    <div class="card mb-30">
-        <img src="src/img/sm-satel1.png" width="100%" alt="SM SATEL">
-    </div>
-    <div class="card">
-        <img src="src/img/sm-satel2.png" width="100%" alt="SM SATEL">
-    </div>
+        <div class="card mb-30">
+            <img src="src/img/sm-satel1.png" width="100%" alt="SM SATEL">
+        </div>
+        <div class="card">
+            <img src="src/img/sm-satel2.png" width="100%" alt="SM SATEL">
+        </div>
 
-    <hr class="divider">
+        <hr class="divider">
 
-    <p>Esperamos que essas diretrizes ajudem a manter a consistência e a clareza na criação e manutenção das rotas. Agradecemos a colaboração de todos.</p>
+        <p>Esperamos que essas diretrizes ajudem a manter a consistência e a clareza na criação e manutenção das rotas.
+            Agradecemos a colaboração de todos.</p>
     </section>
 
     <hr>
