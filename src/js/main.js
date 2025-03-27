@@ -190,11 +190,9 @@ function updateResponse() {
     // Texto base
     const textoBase = `Durante a viagem, caso ocorra um bloqueio ou qualquer situação identificada pela central, o motorista receberá uma pergunta de segurança.
 
-*PERGUNTA DE SEGURANÇA*:
-"A viagem segue normal? / Tudo bem?"
+*PERGUNTA DE SEGURANÇA*: "A viagem segue normal? / Tudo bem?"
 
-*RESPOSTA DE SEGURANÇA*:
-*✔ Se estiver tudo bem*: `;
+*RESPOSTA DE SEGURANÇA (Se estiver tudo bem)*:`;
 
     const textoPerigo = `
 
