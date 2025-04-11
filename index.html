@@ -69,12 +69,25 @@
     <!-- PASSAGEM DE TURNO -->
 
     <main class="mb-80">
-        <h2 class="titulo text-center">📣 Passagem de Turno</h2>
-        <textarea class="custom-textarea" name="anotacoes" id="anotacoes" cols="100" rows="12"
-            placeholder="Digite o texto"></textarea>
-        <br>
-        <button class="btn btn-success" onclick="salvar()">Salvar texto</button>
-        <button class="btn btn-primary" onclick="copiar_texto_anotacoes()">Copiar texto</button>
+        <section class="mb-60">
+            <h2 class="titulo text-center">📣 Passagem de Turno</h2>
+            <textarea class="custom-textarea" name="anotacoes" id="anotacoes" cols="100" rows="12"
+                placeholder="Digite o texto"></textarea>
+            <br>
+            <button class="btn btn-success" onclick="salvar()">Salvar texto</button>
+            <button class="btn btn-primary" onclick="copiar_texto_anotacoes()">Copiar texto</button>
+        </section>
+
+        <section>
+            <h2 class="titulo">✍ Anotações</h2>
+            <textarea id="anotacoes-gerais" cols="100" rows="19">
+ 
+            </textarea>
+            <br>
+            <button class="btn btn-success" onclick="salvar()">Salvar texto</button>
+            <button class="btn btn-primary mr-50" onclick="copiarTextoPorId('anotacoes-gerais')">Copiar texto</button>
+            <button class="btn btn-danger" onclick="document.getElementById('anotacoes-gerais').value = ''">Limpar Texto</button>
+        </section>
 
     </main>
 

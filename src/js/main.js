@@ -55,6 +55,12 @@ function salvar() {
     localStorage.setItem("anotacoes", document.querySelector("#anotacoes").value);
 }
 
+//Função salvar a anotação geral
+document.querySelector("#anotacoes-gerais").value = localStorage.getItem("anotacoes-gerais");
+function salvar() {
+    localStorage.setItem("anotacoes-gerais", document.querySelector("#anotacoes-gerais").value);
+}
+
 //Função copiar pasagem de turno
 function copiar_texto_anotacoes() {
     var textoCopiado = document.getElementById("anotacoes");
