@@ -81,7 +81,7 @@
             <!-- Passagem de Turno -->
             <section class="mb-50" id="passagem">
                 <h2 class="titulo">📣 Passagem de Turno</h2>
-                <textarea id="anotacoes" rows="18" cols="100" placeholder=" Digite a passagem de turno..."></textarea>
+                <textarea id="anotacoes" class="custom-textarea" placeholder=" Digite a passagem de turno..."></textarea>
                 <br>
                 <button class="btn btn-success" onclick="salvar('anotacoes')">Salvar texto</button>
                 <button class="btn btn-primary" onclick="copiarTextoPorId('anotacoes')">Copiar texto</button>
@@ -90,7 +90,7 @@
             <!-- Anotações Gerais -->         
             <section>
                 <h2 class="titulo">✍ Anotações</h2>
-                <textarea id="anotacoes-gerais" cols="100" rows="19"></textarea>
+                <textarea id="anotacoes-gerais" class="custom-textarea"></textarea>
                 <br>
                 <button class="btn btn-success" onclick="salvar('anotacoes-gerais')">Salvar texto</button>
                 <button class="btn btn-primary mr-50" onclick="copiarTextoPorId('anotacoes-gerais')">Copiar
@@ -162,20 +162,20 @@
             <hr>
 
             <!-- CONVERSOR DE COORDENADAS -->
-            <section class="section" id="conversor">
+            <section class="mb-50" id="conversor">
                 <h2 class="titulo">📍 Conversor de Coordenadas</h2>
-                <textarea id="input" placeholder="Ex: -23.550520,-46.633308 ou -23 33 01.87 -46 37 58.14" rows="4" cols="50"></textarea>
+                <textarea id="input" placeholder="Ex: -23.550520,-46.633308 ou -23 33 01.87 -46 37 58.14" rows="2" cols="50"></textarea>
                 <br>
                 <button class="btn btn-primary" onclick="converterParaGoogle()">Converter para Google Maps</button>
                 <button class="btn btn-secondary" onclick="converterParaTrafegus()">Converter para Trafegus</button>
                 <br><br>
                 <textarea id="output" placeholder="Resultado aparecerá aqui" rows="2" cols="10" readonly></textarea>
-                <button class="btn btn-primary" onclick="copiarTextoPorId('output')">Copiar Resultado</button>
+                <button class="btn btn-primary mt-5 mb-10" onclick="copiarTextoPorId('output')">Copiar Resultado</button>
             </section>
 
             <hr>
 
-            <section class="ocorrencias" id="ocorrencias-frequentes">
+            <section class="mb-25" id="ocorrencias-frequentes">
                 <h2 class="titulo">📣 Ocorrências Frequentes</h2>
                 <details>
                     <summary><strong>PROCEDIMENTO INCORRETO INICIO E PROBLEMA NO EQUIPAMENTO</strong></summary>
