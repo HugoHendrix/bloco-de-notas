@@ -81,23 +81,22 @@
             <!-- Passagem de Turno -->
             <section class="mb-50" id="passagem">
                 <h2 class="titulo">📣 Passagem de Turno</h2>
-                <textarea id="anotacoes" rows="18" cols="100"
-                    placeholder=" Digite a passagem de turno..."></textarea>
+                <textarea id="anotacoes" rows="18" cols="100" placeholder=" Digite a passagem de turno..."></textarea>
                 <br>
                 <button class="btn btn-success" onclick="salvar('anotacoes')">Salvar texto</button>
                 <button class="btn btn-primary" onclick="copiarTextoPorId('anotacoes')">Copiar texto</button>
             </section>
 
-            <!-- Anotações Gerais -->
- <!-- Seção de Anotações -->
-<section>
-    <h2 class="titulo">✍ Anotações</h2>
-    <textarea id="anotacoes-gerais" cols="100" rows="19"></textarea>
-    <br>
-    <button class="btn btn-success" onclick="salvar('anotacoes-gerais')">Salvar texto</button>
-    <button class="btn btn-primary mr-50" onclick="copiarTextoPorId('anotacoes-gerais')">Copiar texto</button>
-    <button class="btn btn-danger" onclick="limparTexto('anotacoes-gerais')">Limpar Texto</button>
-</section>
+            <!-- Anotações Gerais -->         
+            <section>
+                <h2 class="titulo">✍ Anotações</h2>
+                <textarea id="anotacoes-gerais" cols="100" rows="19"></textarea>
+                <br>
+                <button class="btn btn-success" onclick="salvar('anotacoes-gerais')">Salvar texto</button>
+                <button class="btn btn-primary mr-50" onclick="copiarTextoPorId('anotacoes-gerais')">Copiar
+                    texto</button>
+                <button class="btn btn-danger" onclick="limparTexto('anotacoes-gerais')">Limpar Texto</button>
+            </section>
 
 
             <!-- Card fixo no canto da tela -->
@@ -165,11 +164,13 @@
             <!-- CONVERSOR DE COORDENADAS -->
             <section class="section" id="conversor">
                 <h2 class="titulo">📍 Conversor de Coordenadas</h2>
-                <textarea id="input" placeholder="Cole aqui as coordenadas" rows="4" cols="50"></textarea>
+                <textarea id="input" placeholder="Ex: -23.550520,-46.633308 ou -23 33 01.87 -46 37 58.14" rows="4" cols="50"></textarea>
                 <br>
                 <button class="btn btn-primary" onclick="converterParaGoogle()">Converter para Google Maps</button>
                 <button class="btn btn-secondary" onclick="converterParaTrafegus()">Converter para Trafegus</button>
-                <textarea id="output" placeholder="Coordenadas convertidas" rows="4" cols="50" readonly></textarea>
+                <br><br>
+                <textarea id="output" placeholder="Resultado aparecerá aqui" rows="2" cols="10" readonly></textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('output')">Copiar Resultado</button>
             </section>
 
             <hr>
@@ -1119,7 +1120,7 @@
                     </ol>
                 </div>
             </section>
-            
+
             <hr>
 
             <section class="p-5 flash variant" id="omnilink">
@@ -1313,21 +1314,23 @@
                                 <li>Confirme o <strong>bloqueio/sirene</strong>.</li>
                                 <li>Solicite a <strong>mensagem de teste</strong>.</li>
                                 <li>Peça para o motorista fechar tudo e engatar.</li>
-                                <li>Envie o <strong>desbloqueio</strong> e consulte se está tudo fechado, apenas com a ignição
+                                <li>Envie o <strong>desbloqueio</strong> e consulte se está tudo fechado, apenas com a
+                                    ignição
                                     ligada.</li>
                             </ul>
                         </li>
                     </ol>
                 </section>
             </div>
-        
+
             <div class="flash active p-5">
                 <section>
                     <h2 class="fs-28 text-uppercase">EMBARQUE DE MACROS ONIX SAT</h2>
                     <ol>
                         <li class="mb-5"><strong>Adicionar Veículo ao Grupo:</strong>
                             <ul>
-                                <li>Caso o veículo não esteja disponível no grid, clique em <strong>Administração</strong> e
+                                <li>Caso o veículo não esteja disponível no grid, clique em
+                                    <strong>Administração</strong> e
                                     selecione <strong>Adicionar veículo ao grupo</strong>.</li>
                             </ul>
                         </li>
@@ -1335,7 +1338,8 @@
                             <ul>
                                 <li>Clique com o botão direito e vá para <strong>Inteligência Embarcada</strong>.</li>
                                 <li>Selecione <strong>Limpar Inteligência Embarcada</strong>.</li>
-                                <li><strong>Atenção:</strong> Cuidado ao clicar nas opções, se clicar errado, o padrão Onix será
+                                <li><strong>Atenção:</strong> Cuidado ao clicar nas opções, se clicar errado, o padrão
+                                    Onix será
                                     embarcado novamente.
                                     <ul>
                                         <li><strong>Primeira opção:</strong> SIM.</li>
@@ -1354,21 +1358,24 @@
                                     <ul>
                                         <li>Selecione <strong>Macros Sequenciadas</strong>.</li>
                                         <li>Clique no ícone de <strong>...</strong>.</li>
-                                        <li>Selecione o nome da empresa (<strong>Ex.: DALASTRA/SATEL (SEM BAU)</strong>).</li>
+                                        <li>Selecione o nome da empresa (<strong>Ex.: DALASTRA/SATEL (SEM
+                                                BAU)</strong>).</li>
                                         <li><strong>Opção SIM</strong>.</li>
                                         <li>Clique em <strong>Próximo</strong>.</li>
                                         <li>Clique em <strong>Li e Concordo</strong>.</li>
                                         <li>Clique no ícone <strong>+</strong>.</li>
                                         <li>Clique no ícone de <strong>...</strong>.</li>
                                         <li>Selecione novamente o nome da empresa com <strong>Raio de Manobra</strong>
-                                            (<strong>Ex.: DALASTRA/SATEL SAÍDA DE RAIO DE MANOBRA (S/BAU)</strong>).</li>
+                                            (<strong>Ex.: DALASTRA/SATEL SAÍDA DE RAIO DE MANOBRA (S/BAU)</strong>).
+                                        </li>
                                         <li>Clique em <strong>OK</strong> e <strong>Salvar</strong>.</li>
                                     </ul>
                                 </li>
                                 <li>Dê um duplo clique no nome da configuração.</li>
                                 <li>Clique em <strong>Próximo</strong> e depois em <strong>Finalizar</strong>.</li>
                                 <li>Avance para as próximas etapas e aguarde o embarque da configuração.</li>
-                                <li><strong>Importante:</strong> Certifique-se de que o sinal está <strong>atualizado</strong> e
+                                <li><strong>Importante:</strong> Certifique-se de que o sinal está
+                                    <strong>atualizado</strong> e
                                     em <strong>GSM</strong>.</li>
                             </ul>
                         </li>
@@ -1388,15 +1395,15 @@
                     </ol>
                 </section>
             </div>
-        
+
             </section>
-        
+
             <section class="p-5 flash muted">
                 <!-- ORIENTAÇÕES CHECK LIST  -->
                 <h3 id="orientacao-teste" class="h1 mb-10">ORIENTAÇÕES PARA O MOTORISTA INICIAR O CHECK LIST</h3>
                 <strong>Enviar via WhatsApp</strong>
                 <textarea id="orientado" rows="14" cols="18" class="mb-5">
-        
+
                 - Coloca macro de *Inicio de Viagem* por favor
         
                 - Manda mensagem livre escrito *TESTE*
@@ -1412,13 +1419,13 @@
             </textarea>
                 <button class="btn btn-primary mb-50" onclick="copiarTextoPorId('orientado')">Copiar
                     orientações</button>
-        
+
                 <!-- ORIENTAÇÃO VIAGEN SEGUE NORMAL -->
-        
+
                 <h3 class="fs-24">Orientações para o motorista responder a Resposta de Segurança</h3>
                 <strong>Enviar via WhatsApp</strong>
-        
-        
+
+
                 <!-- Seleção do Sistema -->
                 <label for="system">Selecione a Tecnologia:</label>
                 <select id="system" onchange="updateResponse()" class="mb-15">
@@ -1428,7 +1435,7 @@
                     <option value="omnilink">OMNILINK</option>
                     <option value="onixsat">ONIXSAT</option>
                 </select>
-        
+
                 <!-- Textarea para a Resposta -->
                 <textarea id="response" readonly rows="12" cols="18" class="mb-10">
         PERGUNTA DE SEGURANÇA:
@@ -1443,14 +1450,14 @@
             </textarea>
                 <button class="btn btn-primary mb-50" onclick="copiarTextoPorId('response')">Copiar orientações</button>
             </section>
-        
+
             <hr>
-        
-        
-        
-        
+
+
+
+
             <hr>
-        
+
 
 
 
