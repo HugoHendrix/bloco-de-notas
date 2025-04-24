@@ -81,7 +81,7 @@
             <!-- Passagem de Turno -->
             <section class="mb-50" id="passagem">
                 <h2 class="titulo">📣 Passagem de Turno</h2>
-                <textarea class="custom-textarea" id="anotacoes" rows="18" cols="100"
+                <textarea id="anotacoes" rows="18" cols="100"
                     placeholder=" Digite a passagem de turno..."></textarea>
                 <br>
                 <button class="btn btn-success" onclick="salvar('anotacoes')">Salvar texto</button>
@@ -89,15 +89,15 @@
             </section>
 
             <!-- Anotações Gerais -->
-            <section class="mb-50" id="anotacoes-gerais">
-                <h2 class="titulo">✍ Anotações</h2>
-                <textarea id="anotacoes-gerais" rows="18" cols="100" placeholder=" Digite suas anotações..."></textarea>
-                <br>
-                <button class="btn btn-success" onclick="salvar('anotacoes-gerais')">Salvar texto</button>
-                <button class="btn btn-primary mr-50" onclick="copiarTextoPorId('anotacoes-gerais')">Copiar
-                    texto</button>
-                <button class="btn btn-danger" onclick="limparTexto('anotacoes-gerais')">Limpar Texto</button>
-            </section>
+ <!-- Seção de Anotações -->
+<section>
+    <h2 class="titulo">✍ Anotações</h2>
+    <textarea id="anotacoes-gerais" cols="100" rows="19"></textarea>
+    <br>
+    <button class="btn btn-success" onclick="salvar('anotacoes-gerais')">Salvar texto</button>
+    <button class="btn btn-primary mr-50" onclick="copiarTextoPorId('anotacoes-gerais')">Copiar texto</button>
+    <button class="btn btn-danger" onclick="limparTexto('anotacoes-gerais')">Limpar Texto</button>
+</section>
 
 
             <!-- Card fixo no canto da tela -->

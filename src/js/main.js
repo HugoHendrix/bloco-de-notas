@@ -64,8 +64,13 @@ function salvar(id) {
 function copiarTextoPorId(id) {
     const elemento = document.getElementById(id);
     if (elemento) {
-        elemento.select();
+        // Cria um textarea temporário
+        const tempInput = document.createElement("textarea");
+        tempInput.value = elemento.value; // Pega o valor REAL do textarea
+        document.body.appendChild(tempInput);
+        tempInput.select();
         document.execCommand("copy");
+        document.body.removeChild(tempInput);
         
     }
 }
@@ -109,43 +114,6 @@ function converterParaTrafegus() {
 
     copiarTextoPorId('output'); // Copiar automaticamente
 }
-
-// Obtenha o botão
-const backToTopButton = document.getElementById("back-to-top");
-
-// Mostrar ou esconder o botão com base na rolagem
-window.onscroll = function () {
-    if (window.scrollY > 300) { // Aparece após rolar 300px
-        backToTopButton.style.display = "block";
-    } else {
-        backToTopButton.style.display = "none";
-    }
-};
-
-// Rolar para o topo quando o botão for clicado
-backToTopButton.onclick = function () {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth" // Suaviza o scroll
-    });
-};
-
-
-// Função para copiar texto de qualquer elemento pelo ID (genérica)
-function copiarTextoPorId(id) {
-    const elemento = document.getElementById(id);
-    if (elemento) {
-        const tempInput = document.createElement("textarea");
-        tempInput.value = elemento.textContent || elemento.value;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        document.execCommand("copy");
-        document.body.removeChild(tempInput);
-        
-    }
-}
-
-
 
 
 // ORIENTADO DO VSN NO CHECK LIST
