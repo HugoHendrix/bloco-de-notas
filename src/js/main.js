@@ -24,7 +24,7 @@ function updateTime() {
     const horaFormatada = horaAtual.toLocaleTimeString();
 
     dateElement.textContent = `Hoje é ${dataFormatada}`;
-    timeElement.textContent = `⏰ ${horaFormatada}`;
+    timeElement.textContent = ` ${horaFormatada} ⏰`;
     greetingElement.textContent = saudacao;
 
     dateTimeElement.style.display = 'block';
@@ -49,52 +49,35 @@ window.addEventListener('load', function () {
 });
 
 
-//Função salvar a pasagem de turno
-document.querySelector("#anotacoes").value = localStorage.getItem("anotacoes");
-function salvar() {
-    localStorage.setItem("anotacoes", document.querySelector("#anotacoes").value);
+// Funções Genéricas
+function carregarSalvos() {
+    document.querySelector("#anotacoes").value = localStorage.getItem("anotacoes") || "";
+    document.querySelector("#anotacoes-gerais").value = localStorage.getItem("anotacoes-gerais") || "";
 }
 
-//Função salvar a anotação geral
-document.querySelector("#anotacoes-gerais").value = localStorage.getItem("anotacoes-gerais");
-function salvar() {
-    localStorage.setItem("anotacoes-gerais", document.querySelector("#anotacoes-gerais").value);
+function salvar(id) {
+    const texto = document.getElementById(id).value;
+    localStorage.setItem(id, texto);
+    
 }
 
-//Função copiar pasagem de turno
-function copiar_texto_anotacoes() {
-    var textoCopiado = document.getElementById("anotacoes");
-    textoCopiado.select();
-    document.execCommand("copy");
-}
-
-//Função copiar elementos pelo ID
-function copiarTextoPorId(idElemento) {
-    const elemento = document.getElementById(idElemento);
+function copiarTextoPorId(id) {
+    const elemento = document.getElementById(id);
     if (elemento) {
         elemento.select();
         document.execCommand("copy");
-    } else {
-        console.error(`Elemento com ID '${idElemento}' não encontrado.`);
+        
     }
 }
 
-function copiarTextoPorId(idElemento) {
-    const elemento = document.getElementById(idElemento);
-    if (elemento) {
-        // Cria um elemento de texto temporário
-        const tempInput = document.createElement("textarea");
-        tempInput.value = elemento.value || elemento.textContent; // Pega o valor ou o conteúdo de texto do elemento
-        document.body.appendChild(tempInput);
-        tempInput.select(); // Seleciona o texto
-        document.execCommand("copy"); // Copia o texto
-        document.body.removeChild(tempInput); // Remove o elemento temporário
-        console.log("Texto copiado com sucesso!"); // Feedback no console
-    } else {
-        console.error(`Elemento com ID '${idElemento}' não encontrado.`);
-    }
+function limparTexto(id) {
+    document.getElementById(id).value = "";
 }
 
+
+
+// Inicialização
+document.addEventListener("DOMContentLoaded", carregarSalvos);
 // Função para converter para o formato do Google Maps
 function converterParaGoogle() {
     const entrada = document.getElementById('input').value;
@@ -148,41 +131,21 @@ backToTopButton.onclick = function () {
 };
 
 
-// Automatizar mensagem do WhatsApp
-document.getElementById('messageForm').addEventListener('submit', function (event) {
-    event.preventDefault(); // Evita o recarregamento da página
-
-    // Captura os valores dos campos
-    const driverName = document.getElementById('driverName').value;
-    const plate = document.getElementById('plate').value;
-    const incidentType = document.getElementById('incidentType').value;
-
-    // Gera a mensagem com base no tipo de ocorrência
-    let message = '';
-    if (incidentType === 'parada_sem_macro') {
-        message = `Olá *senhor ${driverName}*, identificamos a placa *${plate}* parada, mas sem envio de macros. Está tudo bem?`;
-    } else if (incidentType === 'sem_reinicio') {
-        message = `Olá *senhor ${driverName}*, identificamos a placa *${plate}* trafegando sem enviar o reinício de viagem. É o senhor que está no veículo? Está tudo bem?`;
-    } else if (incidentType === 'perda_sinal') {
-        message = `Olá *senhor ${driverName}*, tudo bem?\n\nEstamos com PERDA DE SINAL no rastreador do veículo *${plate}*. Qual sua localização por gentileza?\n\n - VIAGEM SEGUE NORMAL?`;
-    } else if (incidentType === 'porta_motorista') {
-        message = `${plate} - Gerou alerta de porta do motorista aberta. Em contato com o motorista, *senhor ${driverName}*, foi questionado "VIAGEM SEGUE NORMAL" e ele respondeu corretamente. Enviamos os comandos de liberação para o veículo.`;
-    } else if (incidentType === 'porta_carona') {
-        message = `${plate} - Gerou alerta de porta da carona aberta. Em contato com o motorista, *senhor ${driverName}*, foi questionado "VIAGEM SEGUE NORMAL" e ele respondeu corretamente. Enviamos os comandos de liberação para o veículo.`;
-    } else if (incidentType === 'desengate_carreta') {
-        message = `${plate} - Gerou alerta de desengate de carreta. Em contato com o motorista, *senhor ${driverName}*, foi questionado "VIAGEM SEGUE NORMAL" e ele respondeu corretamente. Enviamos os comandos de liberação para o veículo.`;
-    } else if (incidentType === 'desvio_rota') {
-        message = `Olá *senhor ${driverName}*, identificamos a placa *${plate}* em desvio de rota. Viagem segue normal?`;
+// Função para copiar texto de qualquer elemento pelo ID (genérica)
+function copiarTextoPorId(id) {
+    const elemento = document.getElementById(id);
+    if (elemento) {
+        const tempInput = document.createElement("textarea");
+        tempInput.value = elemento.textContent || elemento.value;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+        
     }
+}
 
-    // Exibe a mensagem gerada
-    const generatedMessageElement = document.getElementById('generatedMessage');
-    generatedMessageElement.textContent = message;
 
-    // Exibe o botão de copiar
-    const copyButton = document.querySelector('.message-output button');
-    copyButton.style.display = 'block';
-});
 
 
 // ORIENTADO DO VSN NO CHECK LIST

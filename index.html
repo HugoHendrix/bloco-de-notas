@@ -17,1410 +17,1445 @@
     <title>Bloco de Notas</title>
 </head>
 
-<body class="bg-default">
+<body>
 
-    <header class="header mb-80">
-        <div class="datetime text-center">
-            <h1 class="titulo">Bloco De Notas Technocel</h1>
-            <p class="fs-14">Trafegus WhatsApp Suporte: <a id="telefone-trafegus" href="https://wa.me/554930267777"
-                    target="_blank" rel="noopener noreferrer" title="Chamar suporte via WhatsApp">(049) 3026-7777</a>
-                <button onclick="copiarTextoPorId('telefone-trafegus')" class="btn-outline-secondary">Copiar telefone
-                    Trafegus</button>
-            </p>
-            <p></p>
-            <div id="greeting"></div>
-            <div id="date"></div>
-            <div id="time"></div>
-        </div>
-        <nav class="nav containerNav">
-            <div class="container">
-                <a href="/index.html">Menu Bloco de Notas</a>
-                <ul class="nav-links">
-                    <li><a href="#conversor">Conversor de Coordenadas</a></li>
-                    <li><a href="#automatizador">Automatizador de Mensagens</a></li>
-                    <li><a href="#ocorrencias-frequentes">Ocorrências Frequentes</a></li>
-                    <li><a href="#anotacoes-gerais">Anotações Gerais</a>
-                        <ul>
-                            <li><a href="#anotacoes-grid">Anotações do Grid</a></li>
-                            <li><a href="#otan">Alfabeto Fonético da OTAN</a></li>
-                            <li><a href="#codigoq">Código Q</a></li>
-                            <li><a href="#sm-satel">Como Criar SM SATEL</a></li>
-                            <li><a href="#teclado-autotrac">Desbloqueio Offline Autotrac</a></li>
-                            <li><a href="#macros">Lista de Macros SATEL / Dalastra</a></li>
-                            <li><a href="#manual-sascar">Manual Sascar</a></li>
-                            <li><a href="#orientacao-rota">Padronização de Rotas</a></li>
-                            
-                        </ul>
-                        
-                    </li>
-                    <li><a href="#check-list" class="logo">Check list e Configurações</a>
-                        <ul>
-                            <li><a href="#orientacao-teste">Orientações Check List</a></li>
-                            <li><a href="#omnilink">Omnilink</a>
-                            <li><a href="#onix">Onix Sat</a>
-                        </ul>
-                    </li>
+    <div class="container">
+        <!-- Barra Lateral -->
+        <nav class="sidebar">
+            <menu>
+                <nav>
+                    <ul>
+                        <li><a href="#bloco">Bloco de Notas</a></li>
+                        <li><a href="#passagem">Passagem de Turno</a></li>
+                        <li><a href="#anotacoes-gerais">Anotações</a></li>
+                        <li><a href="#conversor">Conversor de Coordenadas</a></li>
+                        <li><a href="#ocorrencias-frequentes">Ocorrências Frequentes</a></li>
+                        <li><a href="#dicas-rapidas">Dicas Rápidas</a>
+                            <ul>
+                                <li><a href="#padrao-grid">Padrão de Grid</a></li>
+                                <li><a href="#otan">Alfabeto Fonético da OTAN</a></li>
+                                <li><a href="#codigoq">Código Q</a></li>
+                                <li><a href="#sm-satel">Como Criar SM SATEL</a></li>
+                                <li><a href="#padrao-rota">Padronização de Rotas</a></li>
+                                <li><a href="#desbloqueio-offline-autotrac">Desbloqueio Offline Autotrac</a></li>
+                                <li><a href="#excesso-funcoes">Excesso de Funções Lógicas</a></li>
+                                <li><a href="#macros">Lista de Macros SATEL / Dalastra</a></li>
+                                <li><a href="#manual-sascar">Manual Sascar</a></li>
+                                <li><a href="#parada-indevida-omnilink">Parada indevida OMNILINK</a></li>
 
-                </ul>
-            </div>
+
+                            </ul>
+                        </li>
+
+                        <li><a href="#check-list">Check list e Configurações</a>
+                            <ul>
+                                <li><a href="#omnilink">Omnilink</a>
+                                <li><a href="#onix">Onix Sat</a>
+                                <li><a href="#orientacao-teste">Orientações Check List</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </nav>
+            </menu>
         </nav>
-    </header>
 
-    <!-- PASSAGEM DE TURNO -->
+        <main class="content">
+            <section id="bloco">
+                <div class="datetime">
+                    <h1 class="container-relogio" data-aos="fade-up" data-aos-duration="1000">
+                        <span>Bloco de Notas</span>
+                        <span id="time"></span>
+                    </h1>
+                    <strong id="date"></strong>
 
-    <main class="mb-80">
-        <section class="mb-60">
-            <h2 class="titulo text-center">📣 Passagem de Turno</h2>
-            <textarea class="custom-textarea" name="anotacoes" id="anotacoes" cols="100" rows="12"
-                placeholder="Digite o texto"></textarea>
-            <br>
-            <button class="btn btn-success" onclick="salvar()">Salvar texto</button>
-            <button class="btn btn-primary" onclick="copiar_texto_anotacoes()">Copiar texto</button>
-        </section>
+                    <div id="greeting"></div>
+                </div>
+                <p>Esse bloco de notas é um projeto pessoal, onde estou armazenando informações úteis para o dia a dia.
+                    O objetivo é facilitar o acesso a essas informações e compartilhar com outras pessoas que possam se
+                    beneficiar delas.</p>
+            </section>
 
-        <section>
-            <h2 class="titulo">✍ Anotações</h2>
-            <textarea id="anotacoes-gerais" cols="100" rows="19">
- 
-            </textarea>
-            <br>
-            <button class="btn btn-success" onclick="salvar()">Salvar texto</button>
-            <button class="btn btn-primary mr-50" onclick="copiarTextoPorId('anotacoes-gerais')">Copiar texto</button>
-            <button class="btn btn-danger" onclick="document.getElementById('anotacoes-gerais').value = ''">Limpar Texto</button>
-        </section>
+            <hr>
+            <!-- Passagem de Turno -->
+            <section class="mb-50" id="passagem">
+                <h2 class="titulo">📣 Passagem de Turno</h2>
+                <textarea class="custom-textarea" id="anotacoes" rows="18" cols="100"
+                    placeholder=" Digite a passagem de turno..."></textarea>
+                <br>
+                <button class="btn btn-success" onclick="salvar('anotacoes')">Salvar texto</button>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('anotacoes')">Copiar texto</button>
+            </section>
 
-    </main>
+            <!-- Anotações Gerais -->
+            <section class="mb-50" id="anotacoes-gerais">
+                <h2 class="titulo">✍ Anotações</h2>
+                <textarea id="anotacoes-gerais" rows="18" cols="100" placeholder=" Digite suas anotações..."></textarea>
+                <br>
+                <button class="btn btn-success" onclick="salvar('anotacoes-gerais')">Salvar texto</button>
+                <button class="btn btn-primary mr-50" onclick="copiarTextoPorId('anotacoes-gerais')">Copiar
+                    texto</button>
+                <button class="btn btn-danger" onclick="limparTexto('anotacoes-gerais')">Limpar Texto</button>
+            </section>
 
-    <section class="section" id="conversor">
-        <h2 class="fs-28">📍 Conversor de Coordenadas</h2>
-        <textarea id="input" placeholder="Cole aqui as coordenadas" rows="4" cols="50"></textarea>
-        <br>
-        <button class="btn btn-primary" onclick="converterParaGoogle()">Converter para Google Maps</button>
-        <button class="btn btn-secondary" onclick="converterParaTrafegus()">Converter para Trafegus</button>
-        <textarea id="output" placeholder="Coordenadas convertidas" rows="4" cols="50" readonly></textarea>
-    </section>
 
-    <br>
+            <!-- Card fixo no canto da tela -->
+            <section class="post-it-container">
+                <section class="post-it flash severe">
+                    <h3>RESPOSTA VSN</h3>
+                    <ul>
+                        <li><strong>AUTOTRAC</strong></li>
+                        <ul>
+                            <li>SATEL: SATEL</li>
+                            <li>Dalastra: 4 primeiros dígitos do CPF</li>
+                        </ul>
+                        <li><strong>SASCAR</strong>:</li>
+                        <ul>
+                            <li>SATEL: SATEL</li>
+                            <li>Dalastra: Data do dia</li>
+                        </ul>
 
-    <!-- Automatizador de Mensagens -->
+                        <li><strong>OMNILINK:</strong> NÃO NEGATIVO</li>
+                        <li><strong>ONIXSAT:</strong> PARADA EM ADUANA</li>
+                    </ul>
+                </section>
 
-    <section class="container p-10" id="automatizador">
-        <h2 class="fs-28 mb-20">📲 Automatizador de Mensagens WhatsApp</h2>
-        <form id="messageForm" class="p-30">
-            <label for="driverName" class="mb-10">Nome do Motorista:</label>
-            <input type="text" id="driverName" class="mb-20" placeholder="Digite o nome do motorista" required>
+                <section class="post-it flash accent">
+                    <h4>TRATATIVAS PARA DESVIO DE ROTA</h4>
+                    <ul>
+                        <li>ENTREGA</li>
+                        <li>PARALELO</li>
+                        <li>VARIACAO DE GPS</li>
+                        <li>AUTORIZADO</li>
+                    </ul>
 
-            <label for="plate" class="mb-10">Placa do Veículo:</label>
-            <input type="text" id="plate" class="mb-20" placeholder="Digite a placa do veículo" required>
+                </section>
 
-            <label for="incidentType">Tipo de Ocorrência:</label>
-            <select id="incidentType" required class="mb-20">
-                <option value="">Selecione o tipo de ocorrência</option>
-                <option value="parada_sem_macro">Parada sem envio de macro</option>
-                <option value="sem_reinicio">Trafegando sem reinício de viagem</option>
-                <option value="perda_sinal">Perda de sinal</option>
-                <option value="porta_motorista">Porta Motorista</option>
-                <option value="porta_carona">Porta Carona</option>
-                <option value="desengate_carreta">Desengate de Carreta</option>
-                <option value="desvio_rota">Desvio de Rota</option>
-            </select>
+                <section class="post-it flash bd-variant">
 
-            <button type="submit" class="btn-outline-primary mb-20">Gerar Mensagem</button>
-        </form>
+                    <h2 class="fs-24 text-uppercase">Contatos e Ramais</h2>
+                    <ul>
+                        <li><strong>Rocell/JD:</strong> 7861</li>
+                        <li><strong>Dalastra/Satal:</strong> 7862</li>
+                        <li><strong>Barra Mansa:</strong> 7863</li>
+                        <li><strong>Horizonte:</strong> 7864</li>
+                        <li><strong>Liderança:</strong> 7860</li>
+                        <li><strong>Check List:</strong> 7859</li>
+                        <li><strong>Gerente:</strong> 7853</li>
+                    </ul>
 
-        <div class="message-output">
-            <h2>Mensagem Gerada:</h2>
-            <p id="generatedMessage"></p>
-            <button onclick="copiarTextoPorId('generatedMessage')" class="btn btn-primary">Copiar mensagem</button>
-        </div>
-    </section>
+                </section>
 
-    <br>
 
-    <!-- Card fixo no canto da tela -->
-    <div class="post-it flash severe">
-        <h2>RESPOSTA VIAGEM SEGUE NORMAL</h2>
-        <ul>
-            <li><strong>AUTOTRAC:</strong></li>
-            <li>- SATEL: SATEL</li>
-            <li>- Dalastra: 4 primeiros dígitos do CPF</li>
-            <li><strong>SASCAR:</strong></li>
-            <li>- SATEL: SATEL</li>
-            <li>- Dalastra: Data do dia</li>
-            <li><strong>OMNILINK:</strong> NÃO NEGATIVO</li>
-            <li><strong>ONIXSAT:</strong> PARADA EM ADUANA</li>
-        </ul>
-    </div>
+                <section class="post-it flash variant">
+                    <h2>APOIO DALASTRA - GOIÂNIA/CUBATÃO</h2>
+                    <ul>
+                        <li>06:00 | 12:00 - EMILLY</li>
+                        <li>12:00 | 18:00 - KARINA</li>
+                        <li>18:00 | 00:00 – ANA</li>
 
-    <div class="post-it-2 flash accent">
-        <h2>TRATATIVAS PARA DESVIO DE ROTA</h2>
-        <li>ENTREGA</li>
-        <li>PARALELO</li>
-        <li>VARIACAO DE GPS</li>
-        <li>AUTORIZADO</li>
-    </div>
+                    </ul>
+                    <p class="fs-14">CONTATO GERAL: (62) 98285-0317</p>
+                </section>
+            </section>
 
-    <br>
-    <hr>
+            <hr>
 
-    <!-- OCORRÊNCIAS -->
+            <!-- CONVERSOR DE COORDENADAS -->
+            <section class="section" id="conversor">
+                <h2 class="titulo">📍 Conversor de Coordenadas</h2>
+                <textarea id="input" placeholder="Cole aqui as coordenadas" rows="4" cols="50"></textarea>
+                <br>
+                <button class="btn btn-primary" onclick="converterParaGoogle()">Converter para Google Maps</button>
+                <button class="btn btn-secondary" onclick="converterParaTrafegus()">Converter para Trafegus</button>
+                <textarea id="output" placeholder="Coordenadas convertidas" rows="4" cols="50" readonly></textarea>
+            </section>
 
-    <section class="ocorrencias" id="ocorrencias-frequentes">
-        <h2>📣 Ocorrências Frequentes</h2>
-        <details>
-            <summary><strong>PROCEDIMENTO INCORRETO INICIO E PROBLEMA NO EQUIPAMENTO</strong></summary>
-            <div>
-                <h3>NÃO INFORMOU INÍCIO DE VIAGEM CARREGADO</h3>
-                <strong>Código 253</strong>
-                <textarea
-                    id="ocorrencia253">Identificamos que o motorista não informou o início da viagem carregado, conforme solicitado. Registrar o início da viagem com a carga é crucial para o correto rastreamento e monitoramento do trajeto. A ausência dessa informação pode afetar o controle da operação e gerar inconsistências no sistema. Solicitamos que o motorista seja orientado a sempre registrar o início de viagem carregado antes de iniciar o trajeto, garantindo o correto andamento da viagem e evitando falhas no processo de monitoramento.</textarea>
-                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia253')">Copiar</button>
+            <hr>
+
+            <section class="ocorrencias" id="ocorrencias-frequentes">
+                <h2 class="titulo">📣 Ocorrências Frequentes</h2>
+                <details>
+                    <summary><strong>PROCEDIMENTO INCORRETO INICIO E PROBLEMA NO EQUIPAMENTO</strong></summary>
+                    <div>
+                        <h3>NÃO INFORMOU INÍCIO DE VIAGEM CARREGADO</h3>
+                        <strong>Código 253</strong>
+                        <textarea
+                            id="ocorrencia253">Identificamos que o motorista não informou o início da viagem carregado, conforme solicitado. Registrar o início da viagem com a carga é crucial para o correto rastreamento e monitoramento do trajeto. A ausência dessa informação pode afetar o controle da operação e gerar inconsistências no sistema. Solicitamos que o motorista seja orientado a sempre registrar o início de viagem carregado antes de iniciar o trajeto, garantindo o correto andamento da viagem e evitando falhas no processo de monitoramento.</textarea>
+                        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia253')">Copiar</button>
+                        <hr>
+                    </div>
+                    <div>
+                        <h3>NÃO INFORMOU INÍCIO DE VIAGEM VAZIO</h3>
+                        <strong>Código 262</strong>
+                        <textarea
+                            id="ocorrencia262">Identificamos que o motorista não registrou o início de viagem com a carga vazia, conforme solicitado. Esse procedimento é fundamental para o controle adequado do trajeto e das condições de transporte. A falta desse registro pode gerar inconsistências nos dados e dificultar o planejamento das próximas etapas. É importante que o motorista sempre informe o início da viagem, mesmo quando estiver sem carga, para garantir a precisão das informações e evitar bloqueios desnecessários no sistema. Solicitamos que o motorista seja orientado a realizar esse procedimento corretamente.</textarea>
+                        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia262')">Copiar</button>
+                        <hr>
+                    </div>
+                    <div>
+                        <h3>PROCEDIMENTO INCORRETO + PROBLEMA NO BLOQUEIO</h3>
+                        <strong>Código 206</strong>
+                        <textarea id="ocorrencia206">Identificamos que o motorista não seguiu o procedimento correto, o que agravou o problema no sistema de bloqueio do veículo. O bloqueio deveria impedir a movimentação do veículo, porém, devido ao defeito no atuador, ele não está funcionando como deveria. Em caso de sinistro, o não funcionamento do bloqueio pode comprometer a segurança, pois o veículo pode ser movimentado sem a devida proteção. Além disso, o motorista não está realizando corretamente o envio das macros necessárias, o que dificulta ainda mais o rastreamento e controle do veículo. Reforçamos que, para evitar maiores complicações, o veículo deve ser imediatamente encaminhado para manutenção para corrigir a falha no bloqueio. Também é fundamental que o motorista seja orientado a seguir todos os procedimentos corretamente.
+                        </textarea>
+                        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia206')">Copiar</button>
+                        <hr>
+                        <div>
+                            <h3>PROCEDIMENTO INCORRETO + PROBLEMA NA SIRENE</h3>
+                            <strong>Código 206</strong>
+                            <textarea
+                                id="ocorrencia206sirene">Identificamos que, embora o atuador da sirene esteja acionado via sistema, fisicamente a sirene não emite som, pois o motorista não solicitou o desligamento do atuador. A sirene é crucial para a localização do veículo em caso de sinistro, e sua falha pode comprometer a segurança. Recomendamos que o veículo passe por manutenção para corrigir o problema e que o motorista siga os procedimentos corretamente, incluindo o envio das macros necessárias.</textarea>
+                            <button class="btn btn-primary"
+                                onclick="copiarTextoPorId('ocorrencia206sirene')">Copiar</button>
+                            <hr>
+                        </div>
+                    </div>
+                </details>
+
                 <hr>
-            </div>
-            <div>
-                <h3>NÃO INFORMOU INÍCIO DE VIAGEM VAZIO</h3>
-                <strong>Código 262</strong>
+
+                <h3>Problema no atuador bloqueio (VIAGEM NÃO RECOMENDADA)</h3>
+                <strong>Código 189</strong>
+
                 <textarea
-                    id="ocorrencia262">Identificamos que o motorista não registrou o início de viagem com a carga vazia, conforme solicitado. Esse procedimento é fundamental para o controle adequado do trajeto e das condições de transporte. A falta desse registro pode gerar inconsistências nos dados e dificultar o planejamento das próximas etapas. É importante que o motorista sempre informe o início da viagem, mesmo quando estiver sem carga, para garantir a precisão das informações e evitar bloqueios desnecessários no sistema. Solicitamos que o motorista seja orientado a realizar esse procedimento corretamente.</textarea>
-                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia262')">Copiar</button>
+                    id="ocorrencia1">Identificamos que o veículo apresenta um defeito no atuador de bloqueio. Esse problema impede o funcionamento correto do bloqueio, comprometendo a segurança do veículo, especialmente em situações de roubo. Por esse motivo, não recomendamos a realização da viagem nessas condições. Reforçamos a importância de realizar a manutenção necessária o quanto antes, garantindo o pleno funcionamento e prevenindo problemas futuros.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia1')">Copiar</button>
+
                 <hr>
-            </div>
-            <div>
-                <h3>PROCEDIMENTO INCORRETO + PROBLEMA NO BLOQUEIO</h3>
-                <strong>Código 206</strong>
-                <textarea id="ocorrencia206">Identificamos que o motorista não seguiu o procedimento correto, o que agravou o problema no sistema de bloqueio do veículo. O bloqueio deveria impedir a movimentação do veículo, porém, devido ao defeito no atuador, ele não está funcionando como deveria. Em caso de sinistro, o não funcionamento do bloqueio pode comprometer a segurança, pois o veículo pode ser movimentado sem a devida proteção. Além disso, o motorista não está realizando corretamente o envio das macros necessárias, o que dificulta ainda mais o rastreamento e controle do veículo. Reforçamos que, para evitar maiores complicações, o veículo deve ser imediatamente encaminhado para manutenção para corrigir a falha no bloqueio. Também é fundamental que o motorista seja orientado a seguir todos os procedimentos corretamente.
-                </textarea>
-                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia206')">Copiar</button>
+
+                <h3>Não informa macro de Reinicio de Viagem</h3>
+                <strong>Código 247</strong>
+                <textarea
+                    id="ocorrencia2">Identificamos que o motorista realiza paradas, mas não registra a macro de reinício antes de continuar a viagem. Esse procedimento é importante porque, normalmente, a macro de parada é registrada antes da reinicialização. Se o veículo começar a se mover sem o registro da macro de reinício, a central pode entender que o veículo foi roubado, já que o trajeto precisa ser informado corretamente. Por isso, é fundamental que o motorista siga o procedimento completo e registre a macro de reinício para evitar erros no sistema e evitar falsas sinalizações de incidentes.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia2')">Copiar</button>
+
                 <hr>
-                <div>
-                    <h3>PROCEDIMENTO INCORRETO + PROBLEMA NA SIRENE</h3>
-                    <strong>Código 206</strong>
-                    <textarea
-                        id="ocorrencia206sirene">Identificamos que, embora o atuador da sirene esteja acionado via sistema, fisicamente a sirene não emite som, pois o motorista não solicitou o desligamento do atuador. A sirene é crucial para a localização do veículo em caso de sinistro, e sua falha pode comprometer a segurança. Recomendamos que o veículo passe por manutenção para corrigir o problema e que o motorista siga os procedimentos corretamente, incluindo o envio das macros necessárias.</textarea>
-                    <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia206sirene')">Copiar</button>
-                    <hr>
-                </div>
-            </div>
-        </details>
 
-        <hr>
-
-        <h3>Problema no atuador bloqueio (VIAGEM NÃO RECOMENDADA)</h3>
-        <strong>Código 189</strong>
-
-        <textarea
-            id="ocorrencia1">Identificamos que o veículo apresenta um defeito no atuador de bloqueio. Esse problema impede o funcionamento correto do bloqueio, comprometendo a segurança do veículo, especialmente em situações de roubo. Por esse motivo, não recomendamos a realização da viagem nessas condições. Reforçamos a importância de realizar a manutenção necessária o quanto antes, garantindo o pleno funcionamento e prevenindo problemas futuros.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia1')">Copiar</button>
-
-        <hr>
-
-        <h3>Não informa macro de Reinicio de Viagem</h3>
-        <strong>Código 247</strong>
-        <textarea
-            id="ocorrencia2">Identificamos que o motorista realiza paradas, mas não registra a macro de reinício antes de continuar a viagem. Esse procedimento é importante porque, normalmente, a macro de parada é registrada antes da reinicialização. Se o veículo começar a se mover sem o registro da macro de reinício, a central pode entender que o veículo foi roubado, já que o trajeto precisa ser informado corretamente. Por isso, é fundamental que o motorista siga o procedimento completo e registre a macro de reinício para evitar erros no sistema e evitar falsas sinalizações de incidentes.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia2')">Copiar</button>
-
-        <hr>
-
-        <h3>PROCEDIMENTO INCORRETO - SAINDO DA FRIGOL SEM INFORMAR (Água Azul do Norte)</h3>
-        <strong>Código 169</strong>
-        <textarea
-            id="ocorrencia3">Identificamos que o motorista realiza a MOVIMENTAÇÃO sem comunicar as macros/mensagens. Ele sai da unidade Frigol (Água Azul do Norte) e se desloca até a lavador ou posto. Recomendamos que o motorista seja devidamente orientado a sempre informar as mensagens de macros.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia3')">Copiar</button>
-
-        <hr>
-
-        <h3>Não informa macro de PARADA</h3>
-        <strong>Código 246</strong>
-        <textarea
-            id="ocorrencia4">Identificamos que o motorista fez paradas durante o trajeto, mas não registrou a macro de parada correspondente. É importante que o motorista sempre informe o motivo das paradas usando a macro adequada. Caso não encontre a opção correspondente, ele deve registrar o motivo por meio de uma mensagem livre no teclado. Garantir o correto preenchimento dessas informações é essencial para a atualização precisa do sistema. Solicitamos que o motorista seja orientado a seguir esse procedimento de forma consistente.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia4')">Copiar</button>
-
-        <hr>
-
-        <h3>Saiu sem macros</h3>
-        <textarea
-            id="ocorrencia5">Gostaria de informar que o motorista não tem enviado as macros de movimentação de viagem conforme o procedimento. Esse envio é essencial para o acompanhamento das rotas e organização das operações. Solicitamos que o motorista seja orientado a sempre realizar o procedimento.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia5')">Copiar</button>
-
-        <hr>
-
-        <h3>Não informa macro de chegada no cliente</h3>
-        <strong>Código 248</strong>
-        <textarea
-            id="ocorrencia6">Observamos que o motorista não tem registrado a macro de chegada no cliente, conforme solicitado. Não inserir essa macro quando o veículo chega ao cliente pode causar bloqueios desnecessários, já que o sistema pode entender que a viagem não foi concluída corretamente. Essa informação é essencial para o controle adequado das viagens e o planejamento das próximas etapas. Reforçamos a importância de seguir esse procedimento e solicitamos que o motorista seja orientado.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia6')">Copiar</button>
-
-        <hr>
-
-        <h3>Não informa macro de parada/reinicio</h3>
-        <textarea
-            id="ocorrencia7">Prezados, Gostaríamos de informar que o motorista não está registrando as macros de parada e reinício de viagem conforme o procedimento estabelecido. Esse registro é fundamental para o acompanhamento adequado da viagem e para garantir a segurança e conformidade das operações.Solicitamos que o motorista seja orientado a seguir corretamente o procedimento de envio das macros de parada e reinício, garantindo que todas as etapas da viagem sejam devidamente informadas e registradas.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia7')">Copiar</button>
-
-        <hr>
-
-        <!-- DESENGATE -->
-
-        <details>
-            <summary><strong>DESENGATE AUTORIZADO PARA MANUTENÇÃO - Código 249</strong></summary>
-            <div>
-                <p>Solicitado pelo Apoio DALASTRA</p>
+                <h3>PROCEDIMENTO INCORRETO - SAINDO DA FRIGOL SEM INFORMAR (Água Azul do Norte)</h3>
+                <strong>Código 169</strong>
                 <textarea
-                    id="ocorrencia8">REGISTRAMOS QUE O APOIO DALASTRA SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
-                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia8')">Copiar</button>
-            </div>
-            <div>
-                <p>Solicitado pelo Bruno</p>
+                    id="ocorrencia3">Identificamos que o motorista realiza a MOVIMENTAÇÃO sem comunicar as macros/mensagens. Ele sai da unidade Frigol (Água Azul do Norte) e se desloca até a lavador ou posto. Recomendamos que o motorista seja devidamente orientado a sempre informar as mensagens de macros.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia3')">Copiar</button>
+
+                <hr>
+
+                <h3>Não informa macro de PARADA</h3>
+                <strong>Código 246</strong>
                 <textarea
-                    id="ocorrencia9">REGISTRAMOS QUE O RESPONSÁVEL BRUNO SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
-                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia9')">Copiar</button>
-            </div>
-            <div>
-                <p>Solicitado pelo Felipe</p>
+                    id="ocorrencia4">Identificamos que o motorista fez paradas durante o trajeto, mas não registrou a macro de parada correspondente. É importante que o motorista sempre informe o motivo das paradas usando a macro adequada. Caso não encontre a opção correspondente, ele deve registrar o motivo por meio de uma mensagem livre no teclado. Garantir o correto preenchimento dessas informações é essencial para a atualização precisa do sistema. Solicitamos que o motorista seja orientado a seguir esse procedimento de forma consistente.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia4')">Copiar</button>
+
+                <hr>
+
+                <h3>Saiu sem macros</h3>
                 <textarea
-                    id="ocorrencia10">REGISTRAMOS QUE O RESPONSÁVEL FELIPE SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
-                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia10')">Copiar</button>
-            </div>
-        </details>
-
-        <hr>
-
-        <h3>Informativo de viagem sem SM</h3>
-        <strong>Insira o município de origem e destino dentro do asterisco</strong>
-        <textarea
-            id="ocorrenciasm">*INFORMATIVO: VIAGEM SEM SM* - PLACA: ** - Condutor informou Início de viagem carregado de ** com destino a ** e está sem SM.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrenciasm')">Copiar</button>
-
-        <hr>
-
-        <h3>Ocorrência: Não inseriu da macro de manutenção</h3>
-        <textarea
-            id="ocorrencia11">Identificamos que foi registrada uma movimentação para manutenção, mas, ao chegar ao local, a macro de parada correspondente não foi enviada, e a previsão de conclusão não foi informada. Solicitamos que, em situações futuras, a macro de movimentação para manutenção seja enviada no início do deslocamento e, ao chegar ao local, a macro de parada seja registrada com todos os campos devidamente preenchidos, incluindo a previsão estimada. Essas atualizações são essenciais para o acompanhamento correto do veículo.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia11')">Copiar</button>
-
-        <hr>
-
-        <h3>Ocorrência: Parada/Chegada na Garagem Não Informada</h3>
-        <textarea
-            id="ocorrencia12">Identificamos que o veículo chegou à garagem, porém não foi registrada nenhuma macro de parada ou chegada. Mesmo em locais como garagens, é imprescindível seguir o procedimento de envio das macros correspondentes. Reforçamos a importância de registrar todas as paradas utilizando as macros específicas para garantir a atualização precisa das informações. Solicitamos que o motorista seja orientado a adotar este procedimento de forma consistente e regular.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia12')">Copiar</button>
-
-        <hr>
-
-        <h3>Não responde VSN</h3>
-        <textarea
-            id="ocorrencia13">Foi constatado que o motorista em questão não está cumprindo corretamente o envio da contra senha referente ao status "Viagem Segue Normal", respondendo de forma inadequada ou com atraso. Isso pode gerar interpretações equivocadas, como a de que está sob coerção, mesmo que não esteja. Reforçamos que é essencial que o motorista esteja sempre atento e cumpra o procedimento corretamente. Sempre que necessário, deve enviar a contra senha por mensagem livre para confirmar que a situação está sob controle. Além disso, caso seja questionado por telefone ou WhatsApp sobre o status "Viagem Segue Normal", o motorista deve responder prontamente, salvo em situações de risco. Lembramos que bloqueios acidentais podem ocorrer, mas são resolvidos rapidamente ao seguir essas orientações. A central está preparada para processar as informações e liberar os comandos com segurança e agilidade. Contamos com a atenção ao cumprimento dessas regras para garantir eficiência e segurança.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia13')">Copiar</button>
-
-        <hr>
-
-        <h3>INFORMATIVO SOBRE ESPELHAMENTO ONIX SAT</h3>
-        <textarea
-            id="ocorrencia14">*INFORMATIVO SOBRE ESPELHAMENTO ONIX SAT* - VEÍCULO PLACA: ** - Para podermos aproveitar ao máximo os recursos da Onix Sat, precisamos que refaça o espelhamento, ativando a opção de inteligência embarcada.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia14')">Copiar</button>
-
-        <hr>
-
-        <h3>OCORRÊNCIA SOBRE ESPELHAMENTO ONIX SAT</h3>
-        <strong>COD 183</strong>
-        <textarea
-            id="ocorrencia15">O veículo está prosseguindo com a viagem sem o espelhamento ativo com a inteligência embarcada. Consequentemente, não é possível configurar o veículo de acordo com as regras de segurança estabelecidas pelo PGR (Plano de Gerenciamento de Riscos). O grupo foi notificado sobre a situação.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia15')">Copiar</button>
-
-        <hr>
-
-        <h3>Modo Assistência Autotrac</h3>
-        <strong>COD 200</strong>
-        <textarea
-            id="ocorrencia16">REGISTRAMOS QUE O SENHOR THIAGO SOLICITOU A CONFIGURAR O VEICULO EM MODO ASSISTÊNCIA PARA MANUTENÇÃO.</textarea>
-        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia16')">Copiar</button>
-
-
-
-
-    </section>
-
-    <br>
-    <hr>
-
-    <!-- ANOTAÇOES GERAIS -->
-
-    <section class="flash accent p-5 mb-50" id="anotacoes-gerais">
-        <h2 class="fs-32 text-center text-uppercase">Anotações Gerais</h2>
-
-        <h2 class="fs-24 text-uppercase">Locais e Destinos</h2>
-        <ul class="mb-30">
-            <li><span class="highlight">Casqueiro:</span> Bairro de Cubatão-SP onde fica a garagem da Dalastra.</li>
-            <li><span class="highlight">CEPALGO:</span> Cliente em Aparecida de Goiânia-GO.</li>
-            <li><span class="highlight">KAAGAMA:</span> Centro de Distribuição em Cajamar-SP.</li>
-            <li><span class="highlight">LECHMAN:</span> Localizado no Guarujá, conhecido por suas operações portuárias e
-                logística.</li>
-            <li><span class="highlight">ALEMOA:</span> Um dos principais terminais portuários em Santos, SP, com grande
-                movimentação de carga.</li>
-            <li><span class="highlight">LSM:</span> Localizado em Santos, é um ponto estratégico para operações
-                logísticas e transporte de mercadorias.</li>
-            <li><span class="highlight">TRANSTEC:</span> Operadora com vários pátios em Santos.</li>
-            <li><span class="highlight">Transtec World:</span> Unidade localizada no Guarujá, com foco em logística
-                portuária e transporte integrado.</li>
-            <li><span class="highlight">KM 24 Anhanguera:</span> Localizado na SP-330, em Vila Jaguara, São
-                Paulo-SP, é a base da Dalastra, oferecendo suporte logístico e operações de transporte.</li>
-        </ul>
-
-
-        <hr>
-
-        <h2 class="fs-24 text-uppercase">Contatos e Ramais</h2>
-        <ul>
-            <li><strong>Rocell/JD:</strong> 7861</li>
-            <li><strong>Dalastra/Satal:</strong> 7862</li>
-            <li><strong>Barra Mansa/Fernandes:</strong> 7863</li>
-            <li><strong>Horizonte:</strong> 7864</li>
-            <li><strong>Liderança:</strong> 7860</li>
-            <li><strong>Check List:</strong> 7859</li>
-            <li><strong>Gerente:</strong> 7853</li>
-        </ul>
-
-        <hr>
-
-        <h2 class="fs-24 text-uppercase">Consultando se já foi realizado o check list</h2>
-        <ol>
-            <li>Acesse o <strong>menu "Relatório"</strong> no Trafegus.</li>
-            <li>Selecione a opção <strong>"Check List"</strong>.</li>
-            <li>Insira a <strong>placa do veículo</strong> no campo de busca.</li>
-            <li>Role a barra lateral até o final para visualizar as informações.</li>
-            <li>Verifique os campos <strong>data de início</strong>, <strong>data de fim</strong> e
-                <strong>validade</strong> do check list.
-            </li>
-        </ol>
-
-        <hr>
-
-        <h2 class="fs-24 text-uppercase">Como Registrar os Problemas nos Atuadores</h2>
-        <ol>
-            <li>Copie o <strong>número do terminal</strong>, que normalmente está nas propriedades do veículo.</li>
-            <li>Clique em <strong>"Novo"</strong> para iniciar o registro.</li>
-            <li>Insira o <strong>número do terminal</strong> no campo correspondente.</li>
-            <li>Insira o <strong>periférico</strong> associado ao problema.</li>
-        </ol>
-
-        <hr>
-
-        <h2 class="fs-24 text-uppercase">Filtro para Identificar Perda de Sinal</h2>
-        <p>Para monitorar a perda de sinal de forma eficiente, configure os seguintes filtros:</p>
-        <ul>
-            <li>
-                <strong>Filtro - Data com.bordo:</strong> Insira valores superiores à data e hora desejada.
-                <br><em>Exemplo:</em> <code>> 10/12/2024 02:00</code>
-            </li>
-            <li>
-                <strong>Filtro - Proximidade:</strong> Configure para <em>não conter</em> veículos próximos às garagens.
-                <br><em>Exemplo:</em> <code>! *dalastra*</code>
-            </li>
-            <li>
-                <strong>Filtro - Observação:</strong> Inclua categorias específicas como <code>FROTA</code>,
-                <code>AGREGADO</code>, ou <code>PVZ</code> para refinar os resultados.
-            </li>
-        </ul>
-
-        <hr>
-
-        <h2 class="fs-24 text-uppercase">Procedimentos e dicas Importantes</h2>
-        <ul class="mb-30">
-            <li>Na <span class="highlight">Omnilink</span>: Enviar comando de <strong>deslacre de motor</strong> para
-                veículos em reinicio de pernoite.</li>
-            <li>Rastreadores secundários: Utilize <span class="highlight">ucv (Consulte o login da liderança na
-                    Autotrac)</span> ou <span class="highlight">3S</span>.</li>
-            <li>Para veículos do projeto Caminhoneiro: mensagens de macros, se parecem com mensagens de texto livre,
-                devem ser consideradas.</li>
-            <li>Sempre verificar o motivo do bloqueio antes de enviar os comandos de liberação.</li>
-            <li>Caso a informação precise ser repassada a um responsável, garantir o máximo de detalhes possíveis.</li>
-            <li>Cobrar movimentação dos veículos na Baixada Santista.</li>
-            <li>Tratar eventos de desvio onde a rota esta marco zero, como entrega.</li>
-            <li>Passagem de Turno: Responder a passagem de turno no e-mail anterior. </li>
-            <li>Ao passar ficha, verificar embarque de macros.</li>
-        </ul>
-
-        <hr>
-
-        <h1 class="h1 mb-0">Tutorial: Como Retirar um Veículo Agregado</h1>
-        <h2 class="h5 text-secondary mb-3">Passo a Passo para Remover um Veículo do Sistema</h2>
-
-        <ol class="list-group-numbered">
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                    <div class="fw-bold">Acesse o Menu Principal</div>
-                    Entre no sistema e localize o menu principal.
-                </div>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                    <div class="fw-bold">Navegue até Cadastro de Veículos</div>
-                    No menu, selecione: <span class="badge bg-secondary">CADASTRO</span> > <span
-                        class="badge bg-secondary">VEICULO</span>
-                </div>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                    <div class="fw-bold">Acesse a Consulta Unificada</div>
-                    Dentro da seção de veículos, clique em <span class="badge bg-info text-dark">CONSULTA
-                        UNIFICADA</span>
-                </div>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                    <div class="fw-bold">Pesquise o Veículo</div>
-                    Insira a placa do veículo que deseja modificar no campo indicado
-                </div>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                    <div class="fw-bold">Acesse os Detalhes do Veículo</div>
-                    Dê um duplo clique sobre a placa do veículo na lista de resultados
-                </div>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                    <div class="fw-bold">Altere o Status do Veículo</div>
-                    Localize o campo "Status" e altere o valor para <span class="badge bg-warning text-dark">2</span>
-                    (isso indica que o veículo será retirado)
-                </div>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                    <div class="fw-bold">Acesse a Associação de Terminais</div>
-                    Volte ao menu principal e selecione: <span class="badge bg-secondary">MENU</span> > <span
-                        class="badge bg-secondary">ASSOCIAR TERMINAL</span>
-                </div>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                    <div class="fw-bold">Localize o Terminal do Veículo</div>
-                    Clique na <span class="badge bg-primary text-white">pastinha azul</span> correspondente ao veículo
-                    que está modificando
-                </div>
-            </li>
-
-            <li class="list-group-item d-flex justify-content-between align-items-start">
-                <div class="ms-2 me-auto">
-                    <div class="fw-bold">Altere o Status do Terminal</div>
-                    Modifique o status do terminal para:<br>
-                    <span class="badge bg-danger">5</span> se desejar desativar o terminal<br>
-                    <span class="badge bg-success">1</span> se for reativar o terminal posteriormente
-                </div>
-            </li>
-        </ol>
-
-        <div class="alert alert-info mt-4">
-            <h3 class="h6 text-info">Observações Importantes:</h3>
-            <ul class="mb-0">
-                <li>O status <span class="badge bg-warning text-dark">2</span> para veículos indica que ele está sendo
-                    retirado do sistema</li>
-                <li>O status <span class="badge bg-danger">5</span> para terminais significa desativação</li>
-                <li>Use o status <span class="badge bg-success">1</span> para terminais que devem permanecer ativos</li>
-            </ul>
-            <p class="mt-2 mb-0">Lembre-se de confirmar todas as alterações antes de sair do sistema!</p>
-        </div>
-
-    </section>
-
-
-
-
-    <br>
-    <hr>
-
-    <!-- ANOTAÇOES DE GRID -->
-
-    <section class="section p-5 flash muted" id="anotacoes-grid">
-        <h2 class="fs-32 text-center mb-30">Anotações do GRID</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Abreviação</th>
-                    <th>Descrição</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>IVO</strong></td>
-                    <td>Início de viagem na origem</td>
-                </tr>
-                <tr>
-                    <td><strong>IVN</strong></td>
-                    <td>Início de viagem aguardando</td>
-                </tr>
-                <tr>
-                    <td><strong>PVZ</strong></td>
-                    <td>Veículo parado vazio - informar movimentação</td>
-                </tr>
-                <tr>
-                    <td><strong>VZ</strong></td>
-                    <td>Veículo vazio</td>
-                </tr>
-                <tr>
-                    <td><strong>CAR</strong></td>
-                    <td>Veículo carregado</td>
-                </tr>
-                <tr>
-                    <td><strong>CCAR</strong></td>
-                    <td>Veículo carregado em acompanhamento</td>
-                </tr>
-                <tr>
-                    <td><strong>CVZ</strong></td>
-                    <td>Veículo vazio monitorado</td>
-                </tr>
-                <tr>
-                    <td><strong>ENT</strong></td>
-                    <td>Veículo em entrega</td>
-                </tr>
-                <tr>
-                    <td><strong>COL</strong></td>
-                    <td>Veículo em coleta</td>
-                </tr>
-                <tr>
-                    <td><strong>+ PG</strong></td>
-                    <td>Parada na garagem</td>
-                </tr>
-                <tr>
-                    <td><strong>- PE</strong></td>
-                    <td>Parada eventual</td>
-                </tr>
-                <td><strong>+ PTVB</strong></td>
-                <td>Parada pernoite/veículo bloqueado</td>
-                </tr>
-                <tr>
-                    <td><strong>OF</strong></td>
-                    <td>Ocorrência feita</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <hr>
-
-    <!-- ALFABETO OTAN -->
-
-    <section class="container p-5 mt-4 flash muted" id="otan">
-        <h3 class="fs-32">Alfabeto Fonético da OTAN</h3>
-        <hr>
-        <p class="content">
-            Um recurso muito útil para uma comunicação clara e precisa é o uso do alfabeto fonético da OTAN.
-            Esse alfabeto define palavras-chave para cada letra do alfabeto inglês, permitindo uma comunicação
-            eficaz mesmo em situações críticas.
-        </p>
-        <p class="content">
-            Ao lidar com liberações de veículos sem sinal ou para transmitir a placa de algum veículo para a equipe,
-            é altamente recomendado o uso desse alfabeto. Isso garante que as combinações alfanuméricas (letras e
-            números)
-            possam ser pronunciadas e entendidas com facilidade por quem transmite e recebe as mensagens por rádio ou
-            telefone.
-        </p>
-        <p class="content">
-            Portanto, como operador de monitoramento, é importante estar familiarizado com o alfabeto fonético da OTAN e
-            usá-lo
-            sempre que necessário. Isso ajudará a garantir uma comunicação clara e precisa, evitando erros e problemas
-            de entendimento.
-        </p>
-        <details class="box">
-            <summary class="is-size-5 has-text-weight-bold">Alfabeto da OTAN</summary>
-            <ul class="list mt-2">
-                <li><strong>A</strong> - Alfa</li>
-                <li><strong>B</strong> - Bravo</li>
-                <li><strong>C</strong> - Charlie</li>
-                <li><strong>D</strong> - Delta</li>
-                <li><strong>E</strong> - Eco</li>
-                <li><strong>F</strong> - Foxtrot</li>
-                <li><strong>G</strong> - Golf</li>
-                <li><strong>H</strong> - Hotel</li>
-                <li><strong>I</strong> - Índia</li>
-                <li><strong>J</strong> - Juliet</li>
-                <li><strong>K</strong> - Kilo</li>
-                <li><strong>L</strong> - Lima</li>
-                <li><strong>M</strong> - Mike</li>
-                <li><strong>N</strong> - November</li>
-                <li><strong>O</strong> - Oscar</li>
-                <li><strong>P</strong> - Papa</li>
-                <li><strong>Q</strong> - Quebec</li>
-                <li><strong>R</strong> - Romeo</li>
-                <li><strong>S</strong> - Sierra</li>
-                <li><strong>T</strong> - Tango</li>
-                <li><strong>U</strong> - Uniform</li>
-                <li><strong>V</strong> - Victor</li>
-                <li><strong>W</strong> - Whiskey</li>
-                <li><strong>X</strong> - Xray</li>
-                <li><strong>Y</strong> - Yankee</li>
-                <li><strong>Z</strong> - Zulu</li>
-            </ul>
-        </details>
-    </section>
-
-    <hr>
-
-    <!-- CODIGO Q -->
-
-    <section class="container p-5 mt-4 flash muted mb-60" id="codigoq">
-        <h3 class="fs-32">Código Q</h3>
-        <hr>
-        <p class="content">
-            O Código Q foi criado pelo governo britânico por volta de 1909, quando a comunicação via rádio começou a ser
-            utilizada comercialmente em navios por voz, substituindo o antigo sistema de código morse. Apenas três
-            letras
-            podiam transmitir informações ou perguntas pelo telégrafo, que eram compreendidas rapidamente.
-        </p>
-        <p class="content">
-            Embora o código morse tenha caído em desuso devido à tecnologia obsoleta dos telégrafos, o Código Q se
-            tornou
-            independente e é amplamente utilizado internacionalmente por organizações como forças militares, polícia,
-            SAMU,
-            vigilantes, aviação e empresas privadas. Esse código utiliza uma coleção padronizada de perguntas
-            pré-definidas,
-            realizadas por meio de três letras de fácil pronúncia, todas começando com a letra Q, o que torna a
-            comunicação
-            simples, rápida e de fácil compreensão.
-        </p>
-        <details class="box">
-            <summary class="is-size-5 has-text-weight-bold">Lista de Códigos Q</summary>
-            <ul class="list mt-2">
-                <li><strong>QAP</strong> - Na escuta</li>
-                <li><strong>QSL</strong> - Entendido</li>
-                <li><strong>TKS</strong> - Obrigado</li>
-                <li><strong>QAR</strong> - Desligar</li>
-                <li><strong>QRL</strong> - Estou ocupado</li>
-                <li><strong>QTH</strong> - Endereço</li>
-                <li><strong>QRX</strong> - Aguarde</li>
-                <li><strong>UM</strong> - Primeiro</li>
-                <li><strong>DOIS</strong> - Segundo</li>
-                <li><strong>TRÊS</strong> - Terceiro</li>
-                <li><strong>QUATRO</strong> - Quarto</li>
-                <li><strong>CINCO</strong> - Quinto</li>
-                <li><strong>SEIS</strong> - Sexto</li>
-                <li><strong>SETE</strong> - Sétimo</li>
-                <li><strong>OITO</strong> - Oitavo</li>
-                <li><strong>NOVE</strong> - Nono</li>
-                <li><strong>ZERO</strong> - Nulo / Negativo</li>
-            </ul>
-        </details>
-    </section>
-
-
-
-    <hr>
-
-    <!-- CONFIGURAÇOES GERAIS DE VEICULOS -->
-
-    <div class="section p-5 mt-50 flash muted">
-        <h2 class="fs-32 text-uppercase mb-40" id="check-list">CHECK LIST, EMBARQUE DE MACROS E CONFIGURAÇÕES</h2>
-
-        <!-- ORIENTAÇÕES CHECK LIST  -->
-        <h3 id="orientacao-teste" class="mb-10">ORIENTAÇÕES PARA O MOTORISTA INICIAR O CHECK LIST</h3>
-        <strong>Enviar via WhatsApp</strong>
-        <textarea id="orientado" rows="14" cols="18" class="mb-5">
-
-        - Coloca macro de *Inicio de Viagem* por favor
-
-        - Manda mensagem livre escrito *TESTE*
-        
-        - Aperta o botão de pânico 5 segundos
-        
-        - Abre as portas
-        
-        - Retira a tomada da carreta
-        
-        *Quando terminar me avise por favor*
-
-    </textarea>
-        <button class="btn btn-primary mb-50" onclick="copiarTextoPorId('orientado')">Copiar orientações</button>
-
-        <!-- ORIENTAÇÃO VIAGEN SEGUE NORMAL -->
-
-        <h3 class="fs-24">Orientações para o motorista responder a Resposta de Segurança</h3>
-        <strong>Enviar via WhatsApp</strong>
-
-
-        <!-- Seleção do Sistema -->
-        <label for="system">Selecione a Tecnologia:</label>
-        <select id="system" onchange="updateResponse()" class="mb-15">
-            <option value="default">Padrão</option>
-            <option value="autotrac">AUTOTRAC</option>
-            <option value="sascar">SASCAR</option>
-            <option value="omnilink">OMNILINK</option>
-            <option value="onixsat">ONIXSAT</option>
-        </select>
-
-        <!-- Textarea para a Resposta -->
-        <textarea id="response" readonly rows="12" cols="18" class="mb-10">
-PERGUNTA DE SEGURANÇA:
-"A viagem segue normal?"
-
-RESPOSTA DE SEGURANÇA:
-
-Se estiver tudo bem: 4 primeiros dígitos do CPF.
-
-
-Se estiver em perigo: Responda com qualquer outra informação (ex: 'sim', 'não', 'tudo bem'). Nossos operadores estão preparados para identificar isso como um sinal de perigo e acionar imediatamente o plano de contingência.
-    </textarea>
-        <button class="btn btn-primary mb-50" onclick="copiarTextoPorId('response')">Copiar orientações</button>
-    </div>
-
-    <hr>
-
-
-    <!-- AUTOTRAC -->
-    <div class="flash success p-5">
-        <h2 class="fs-28 text-uppercase">Check List Autotrac</h2>
-        <p>Siga os passos abaixo para realizar o check list de forma adequada:</p>
-
-        <ol>
-            <li>Confirmar se há um pedido de check list.</li>
-            <li>Na <strong>Autotrac</strong>:
-                <ul>
-                    <li>Ativar TESTE de botão de pânico.</li>
-                    <li>Confirmar com o motorista se o veículo é <strong>contêiner</strong> ou <strong>baú</strong>.
+                    id="ocorrencia5">Gostaria de informar que o motorista não tem enviado as macros de movimentação de viagem conforme o procedimento. Esse envio é essencial para o acompanhamento das rotas e organização das operações. Solicitamos que o motorista seja orientado a sempre realizar o procedimento.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia5')">Copiar</button>
+
+                <hr>
+
+                <h3>Não informa macro de chegada no cliente</h3>
+                <strong>Código 248</strong>
+                <textarea
+                    id="ocorrencia6">Observamos que o motorista não tem registrado a macro de chegada no cliente, conforme solicitado. Não inserir essa macro quando o veículo chega ao cliente pode causar bloqueios desnecessários, já que o sistema pode entender que a viagem não foi concluída corretamente. Essa informação é essencial para o controle adequado das viagens e o planejamento das próximas etapas. Reforçamos a importância de seguir esse procedimento e solicitamos que o motorista seja orientado.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia6')">Copiar</button>
+
+                <hr>
+
+                <h3>Não informa macro de parada/reinicio</h3>
+                <textarea
+                    id="ocorrencia7">Prezados, Gostaríamos de informar que o motorista não está registrando as macros de parada e reinício de viagem conforme o procedimento estabelecido. Esse registro é fundamental para o acompanhamento adequado da viagem e para garantir a segurança e conformidade das operações.Solicitamos que o motorista seja orientado a seguir corretamente o procedimento de envio das macros de parada e reinício, garantindo que todas as etapas da viagem sejam devidamente informadas e registradas.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia7')">Copiar</button>
+
+                <hr>
+
+                <!-- DESENGATE -->
+
+                <details>
+                    <summary><strong>DESENGATE AUTORIZADO PARA MANUTENÇÃO - Código 249</strong></summary>
+                    <div>
+                        <p>Solicitado pelo Apoio DALASTRA</p>
+                        <textarea
+                            id="ocorrencia8">REGISTRAMOS QUE O APOIO DALASTRA SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
+                        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia8')">Copiar</button>
+                    </div>
+                    <div>
+                        <p>Solicitado pelo Bruno</p>
+                        <textarea
+                            id="ocorrencia9">REGISTRAMOS QUE O RESPONSÁVEL BRUNO SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
+                        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia9')">Copiar</button>
+                    </div>
+                    <div>
+                        <p>Solicitado pelo Felipe</p>
+                        <textarea
+                            id="ocorrencia10">REGISTRAMOS QUE O RESPONSÁVEL FELIPE SOLICITOU A DESATIVAÇÃO DO SENSOR DE ENGATE PARA MANUTENÇÃO.</textarea>
+                        <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia10')">Copiar</button>
+                    </div>
+                </details>
+
+                <hr>
+
+                <h3>Informativo de viagem sem SM</h3>
+                <strong>Insira o município de origem e destino dentro do asterisco</strong>
+                <textarea
+                    id="ocorrenciasm">*INFORMATIVO: VIAGEM SEM SM* - PLACA: ** - Condutor informou Início de viagem carregado de ** com destino a ** e está sem SM.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrenciasm')">Copiar</button>
+
+                <hr>
+
+                <h3>Ocorrência: Não inseriu da macro de manutenção</h3>
+                <textarea
+                    id="ocorrencia11">Identificamos que foi registrada uma movimentação para manutenção, mas, ao chegar ao local, a macro de parada correspondente não foi enviada, e a previsão de conclusão não foi informada. Solicitamos que, em situações futuras, a macro de movimentação para manutenção seja enviada no início do deslocamento e, ao chegar ao local, a macro de parada seja registrada com todos os campos devidamente preenchidos, incluindo a previsão estimada. Essas atualizações são essenciais para o acompanhamento correto do veículo.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia11')">Copiar</button>
+
+                <hr>
+
+                <h3>Ocorrência: Parada/Chegada na Garagem Não Informada</h3>
+                <textarea
+                    id="ocorrencia12">Identificamos que o veículo chegou à garagem, porém não foi registrada nenhuma macro de parada ou chegada. Mesmo em locais como garagens, é imprescindível seguir o procedimento de envio das macros correspondentes. Reforçamos a importância de registrar todas as paradas utilizando as macros específicas para garantir a atualização precisa das informações. Solicitamos que o motorista seja orientado a adotar este procedimento de forma consistente e regular.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia12')">Copiar</button>
+
+                <hr>
+
+                <h3>Não responde VSN</h3>
+                <textarea
+                    id="ocorrencia13">Foi constatado que o motorista em questão não está cumprindo corretamente o envio da contra senha referente ao status "Viagem Segue Normal", respondendo de forma inadequada ou com atraso. Isso pode gerar interpretações equivocadas, como a de que está sob coerção, mesmo que não esteja. Reforçamos que é essencial que o motorista esteja sempre atento e cumpra o procedimento corretamente. Sempre que necessário, deve enviar a contra senha por mensagem livre para confirmar que a situação está sob controle. Além disso, caso seja questionado por telefone ou WhatsApp sobre o status "Viagem Segue Normal", o motorista deve responder prontamente, salvo em situações de risco. Lembramos que bloqueios acidentais podem ocorrer, mas são resolvidos rapidamente ao seguir essas orientações. A central está preparada para processar as informações e liberar os comandos com segurança e agilidade. Contamos com a atenção ao cumprimento dessas regras para garantir eficiência e segurança.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia13')">Copiar</button>
+
+                <hr>
+
+                <h3>INFORMATIVO SOBRE ESPELHAMENTO ONIX SAT</h3>
+                <textarea
+                    id="ocorrencia14">*INFORMATIVO SOBRE ESPELHAMENTO ONIX SAT* - VEÍCULO PLACA: ** - Para podermos aproveitar ao máximo os recursos da Onix Sat, precisamos que refaça o espelhamento, ativando a opção de inteligência embarcada.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia14')">Copiar</button>
+
+                <hr>
+
+                <h3>OCORRÊNCIA SOBRE ESPELHAMENTO ONIX SAT</h3>
+                <strong>COD 183</strong>
+                <textarea
+                    id="ocorrencia15">O veículo está prosseguindo com a viagem sem o espelhamento ativo com a inteligência embarcada. Consequentemente, não é possível configurar o veículo de acordo com as regras de segurança estabelecidas pelo PGR (Plano de Gerenciamento de Riscos). O grupo foi notificado sobre a situação.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia15')">Copiar</button>
+
+                <hr>
+
+                <h3>Modo Assistência Autotrac</h3>
+                <strong>COD 200</strong>
+                <textarea
+                    id="ocorrencia16">REGISTRAMOS QUE O SENHOR THIAGO SOLICITOU A CONFIGURAR O VEICULO EM MODO ASSISTÊNCIA PARA MANUTENÇÃO.</textarea>
+                <button class="btn btn-primary" onclick="copiarTextoPorId('ocorrencia16')">Copiar</button>
+            </section>
+
+
+            <!-- DICAS RÁPIDAS -->
+
+            <section class="flash accent p-5 mb-50" id="dicas-rapidas">
+                <h2 class="titulo">💡 Dicas Rápidas</h2>
+
+                <h2 class="h2">Locais e Destinos</h2>
+                <ul class="mb-30">
+                    <li><span>Casqueiro:</span> Bairro de Cubatão-SP onde fica a garagem da Dalastra.
                     </li>
-                    <li>Enviar o comando de início de check list <strong>com</strong> ou <strong>sem baú</strong>
-                        conforme a resposta (geralmente é contêiner, ou seja, sem baú).</li>
+                    <li><span>CEPALGO:</span> Cliente em Aparecida de Goiânia-GO.</li>
+                    <li><span>KAAGAMA:</span> Centro de Distribuição em Cajamar-SP.</li>
+                    <li><span>LECHMAN:</span> Localizado no Guarujá, conhecido por suas operações
+                        portuárias e
+                        logística.</li>
+                    <li><span>ALEMOA:</span> Um dos principais terminais portuários em Santos, SP, com
+                        grande
+                        movimentação de carga.</li>
+                    <li><span>LSM:</span> Localizado em Santos, é um ponto estratégico para operações
+                        logísticas e transporte de mercadorias.</li>
+                    <li><span>TRANSTEC:</span> Operadora com vários pátios em Santos.</li>
+                    <li><span>Transtec World:</span> Unidade localizada no Guarujá, com foco em
+                        logística
+                        portuária e transporte integrado.</li>
+                    <li><span>KM 24 Anhanguera:</span> Localizado na SP-330, em Vila Jaguara, São
+                        Paulo-SP, é a base da Dalastra, oferecendo suporte logístico e operações de transporte.</li>
                 </ul>
-            </li>
-            <li>Pedir mensagem de teste.</li>
-            <li>Oriente o motorista sobre o procedimento de responder a <strong>contra senha do VIAGEM SEGUE
-                    NORMAL</strong></li>
-            <li>Enviar, opcionalmente, os comandos:
-                <ul>
-                    <li>Proibir engate.</li>
-                    <li>Proibir porta carona.</li>
-                </ul>
-            </li>
-            <li>Verificar violações no histórico (últimos comandos e alertas de OBC).</li>
-            <li>Solicitar tabela de status e verificar se ela veio vazia.</li>
-            <li>
-                Após as verificações:
-                <ul>
-                    <li>Enviar fim de check list <em>s/baú</em> ou com, dependendo.</li>
-                    <li>Liberar veículo com sirene.</li>
-                </ul>
-            </li>
-            <li>Na aba de Trafegus, atender a solicitação de check list.</li>
-            <li>Verificar no terminal os sensores gerados e instalados.</li>
-        </ol>
 
-        <hr>
 
-        <div class="container" id="teclado-autotrac">
-            <header class="header">
-                <h2 class="fs-28">Desbloqueio Offline Autotrac</h2>
-            </header>
-            <ol class="list">
-                <li>
-                    <strong>Acesse o menu inicial</strong> e selecione a opção <code>VER STATUS</code>.
-                </li>
-                <li>
-                    <strong>Encontre o número do MCT/UCC do veículo:</strong>
-                    <ul>
-                        <li>Use a <kbd>seta para baixo</kbd> até chegar na opção <code>Nº SERIAL UNIDADE</code>.</li>
-                        <li>O número MCT/UCC do veículo aparecerá na tela.</li>
+                <hr>
+
+                <h2 class="h2">Consultando se já foi realizado o check list</h2>
+                <ol>
+                    <li>Acesse o <strong>menu "Relatório"</strong> no Trafegus.</li>
+                    <li>Selecione a opção <strong>"Check List"</strong>.</li>
+                    <li>Insira a <strong>placa do veículo</strong> no campo de busca.</li>
+                    <li>Role a barra lateral até o final para visualizar as informações.</li>
+                    <li>Verifique os campos <strong>data de início</strong>, <strong>data de fim</strong> e
+                        <strong>validade</strong> do check list.
+                    </li>
+                </ol>
+
+                <hr>
+
+                <h2 class="h2">Como Registrar os Problemas nos Atuadores</h2>
+                <ol>
+                    <li>Copie o <strong>número do terminal</strong>, que normalmente está nas propriedades do veículo.
+                    </li>
+                    <li>Clique em <strong>"Novo"</strong> para iniciar o registro.</li>
+                    <li>Insira o <strong>número do terminal</strong> no campo correspondente.</li>
+                    <li>Insira o <strong>periférico</strong> associado ao problema.</li>
+                </ol>
+
+                <hr>
+
+                <h2 class="h2">Filtro para Identificar Perda de Sinal</h2>
+                <p>Para monitorar a perda de sinal de forma eficiente, configure os seguintes filtros:</p>
+                <ul>
+                    <li>
+                        <strong>Filtro - Data com.bordo:</strong> Insira valores superiores à data e hora desejada.
+                        <br><em>Exemplo:</em> <code>> 10/12/2024 02:00</code>
+                    </li>
+                    <li>
+                        <strong>Filtro - Proximidade:</strong> Configure para <em>não conter</em> veículos próximos às
+                        garagens.
+                        <br><em>Exemplo:</em> <code>! *dalastra*</code>
+                    </li>
+                    <li>
+                        <strong>Filtro - Observação:</strong> Inclua categorias específicas como <code>FROTA</code>,
+                        <code>AGREGADO</code>, ou <code>PVZ</code> para refinar os resultados.
+                    </li>
+                </ul>
+
+                <hr>
+
+                <h2 class="h2">Procedimentos e dicas Importantes</h2>
+                <ul class="mb-30">
+                    <li>Na <span>Omnilink</span>: Enviar comando de <strong>deslacre de motor</strong>
+                        para
+                        veículos em reinicio de pernoite.</li>
+                    <li>Rastreadores secundários: Utilize <span>ucv (Consulte o login da liderança na
+                            Autotrac)</span> ou <span>3S</span>.</li>
+                    <li>Para veículos do projeto Caminhoneiro: mensagens de macros, se parecem com mensagens de texto
+                        livre,
+                        devem ser consideradas.</li>
+                    <li>Sempre verificar o motivo do bloqueio antes de enviar os comandos de liberação.</li>
+                    <li>Caso a informação precise ser repassada a um responsável, garantir o máximo de detalhes
+                        possíveis.</li>
+                    <li>Cobrar movimentação dos veículos na Baixada Santista.</li>
+                    <li>Tratar eventos de desvio onde a rota esta marco zero, como entrega.</li>
+                    <li>Passagem de Turno: Responder a passagem de turno no e-mail anterior. </li>
+                    <li>Ao passar ficha, verificar embarque de macros.</li>
+                </ul>
+
+                <hr>
+
+                <h1 class="h1">Tutorial: Como Retirar um Veículo Agregado</h1>
+                <h2 class="h4 text-secondary mb-3">Passo a Passo para Remover um Veículo do Sistema</h2>
+
+                <ol class="list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Acesse o Menu Principal</div>
+                            Entre no sistema e localize o menu principal.
+                        </div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Navegue até Cadastro de Veículos</div>
+                            No menu, selecione: <span class="badge bg-secondary">CADASTRO</span> > <span
+                                class="badge bg-secondary">VEICULO</span>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Acesse a Consulta Unificada</div>
+                            Dentro da seção de veículos, clique em <span class="badge bg-info text-dark">CONSULTA
+                                UNIFICADA</span>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Pesquise o Veículo</div>
+                            Insira a placa do veículo que deseja modificar no campo indicado
+                        </div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Acesse os Detalhes do Veículo</div>
+                            Dê um duplo clique sobre a placa do veículo na lista de resultados
+                        </div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Altere o Status do Veículo</div>
+                            Localize o campo "Status" e altere o valor para <span
+                                class="badge bg-warning text-dark">2</span>
+                            (isso indica que o veículo será retirado)
+                        </div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Acesse a Associação de Terminais</div>
+                            Volte ao menu principal e selecione: <span class="badge bg-secondary">MENU</span> > <span
+                                class="badge bg-secondary">ASSOCIAR TERMINAL</span>
+                        </div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Localize o Terminal do Veículo</div>
+                            Clique na <span class="badge bg-primary text-white">pastinha azul</span> correspondente ao
+                            veículo
+                            que está modificando
+                        </div>
+                    </li>
+
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Altere o Status do Terminal</div>
+                            Modifique o status do terminal para:<br>
+                            <span class="badge bg-danger">5</span> se desejar desativar o terminal<br>
+                            <span class="badge bg-success">1</span> se for reativar o terminal posteriormente
+                        </div>
+                    </li>
+                </ol>
+
+                <div class="alert alert-info mt-4">
+                    <h3 class="h6 text-info">Observações Importantes:</h3>
+                    <ul class="mb-0">
+                        <li>O status <span class="badge bg-warning text-dark">2</span> para veículos indica que ele está
+                            sendo
+                            retirado do sistema</li>
+                        <li>O status <span class="badge bg-danger">5</span> para terminais significa desativação</li>
+                        <li>Use o status <span class="badge bg-success">1</span> para terminais que devem permanecer
+                            ativos</li>
                     </ul>
+                    <p class="mt-2 mb-0">Lembre-se de confirmar todas as alterações antes de sair do sistema!</p>
+                </div>
+
+            </section>
+
+            <hr>
+
+            <!-- ANOTAÇOES DE GRID -->
+
+            <section class="p-5 flash muted" id="padrao-grid">
+                <h2 class="fs-32 text-center mb-30">Padrão de GRID Technocel</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Abreviação</th>
+                            <th>Descrição</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>IVO</strong></td>
+                            <td>Início de viagem na origem</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IVN</strong></td>
+                            <td>Início de viagem aguardando</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PVZ</strong></td>
+                            <td>Veículo parado vazio - informar movimentação</td>
+                        </tr>
+                        <tr>
+                            <td><strong>VZ</strong></td>
+                            <td>Veículo vazio</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CAR</strong></td>
+                            <td>Veículo carregado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CCAR</strong></td>
+                            <td>Veículo carregado em acompanhamento</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CVZ</strong></td>
+                            <td>Veículo vazio monitorado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ENT</strong></td>
+                            <td>Veículo em entrega</td>
+                        </tr>
+                        <tr>
+                            <td><strong>COL</strong></td>
+                            <td>Veículo em coleta</td>
+                        </tr>
+                        <tr>
+                            <td><strong>+ PG</strong></td>
+                            <td>Parada na garagem</td>
+                        </tr>
+                        <tr>
+                            <td><strong>- PE</strong></td>
+                            <td>Parada eventual</td>
+                        </tr>
+                        <td><strong>+ PTVB</strong></td>
+                        <td>Parada pernoite/veículo bloqueado</td>
+                        </tr>
+                        <tr>
+                            <td><strong>OF</strong></td>
+                            <td>Ocorrência feita</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <hr>
+
+            <!-- ALFABETO OTAN -->
+
+            <section class="p-5 flash muted" id="otan">
+                <h2 class="h1 mb-3">Alfabeto Fonético da OTAN</h2>
+
+                <p>
+                    Um recurso muito útil para uma comunicação clara e precisa é o uso do alfabeto fonético da OTAN.
+                    Esse alfabeto define palavras-chave para cada letra do alfabeto inglês, permitindo uma comunicação
+                    eficaz mesmo em situações críticas.
+                </p>
+                <p>
+                    Ao lidar com liberações de veículos sem sinal ou para transmitir a placa de algum veículo para a
+                    equipe,
+                    é altamente recomendado o uso desse alfabeto. Isso garante que as combinações alfanuméricas (letras
+                    e
+                    números)
+                    possam ser pronunciadas e entendidas com facilidade por quem transmite e recebe as mensagens por
+                    rádio ou
+                    telefone.
+                </p>
+                <p>
+                    Portanto, como operador de monitoramento, é importante estar familiarizado com o alfabeto fonético
+                    da OTAN e
+                    usá-lo
+                    sempre que necessário. Isso ajudará a garantir uma comunicação clara e precisa, evitando erros e
+                    problemas
+                    de entendimento.
+                </p>
+                <details>
+                    <summary>Alfabeto da OTAN</summary>
+                    <ul class="mt-2">
+                        <li><strong>A</strong> - Alfa</li>
+                        <li><strong>B</strong> - Bravo</li>
+                        <li><strong>C</strong> - Charlie</li>
+                        <li><strong>D</strong> - Delta</li>
+                        <li><strong>E</strong> - Eco</li>
+                        <li><strong>F</strong> - Foxtrot</li>
+                        <li><strong>G</strong> - Golf</li>
+                        <li><strong>H</strong> - Hotel</li>
+                        <li><strong>I</strong> - Índia</li>
+                        <li><strong>J</strong> - Juliet</li>
+                        <li><strong>K</strong> - Kilo</li>
+                        <li><strong>L</strong> - Lima</li>
+                        <li><strong>M</strong> - Mike</li>
+                        <li><strong>N</strong> - November</li>
+                        <li><strong>O</strong> - Oscar</li>
+                        <li><strong>P</strong> - Papa</li>
+                        <li><strong>Q</strong> - Quebec</li>
+                        <li><strong>R</strong> - Romeo</li>
+                        <li><strong>S</strong> - Sierra</li>
+                        <li><strong>T</strong> - Tango</li>
+                        <li><strong>U</strong> - Uniform</li>
+                        <li><strong>V</strong> - Victor</li>
+                        <li><strong>W</strong> - Whiskey</li>
+                        <li><strong>X</strong> - Xray</li>
+                        <li><strong>Y</strong> - Yankee</li>
+                        <li><strong>Z</strong> - Zulu</li>
+                    </ul>
+                </details>
+            </section>
+
+            <hr>
+
+            <!-- CODIGO Q -->
+
+            <section class="p-5 flash muted" id="codigoq">
+                <h2 class="h1 mb-3">Código Q</h3>
+                    <p>
+                        O Código Q foi criado pelo governo britânico por volta de 1909, quando a comunicação via rádio
+                        começou a ser
+                        utilizada comercialmente em navios por voz, substituindo o antigo sistema de código morse.
+                        Apenas
+                        três
+                        letras
+                        podiam transmitir informações ou perguntas pelo telégrafo, que eram compreendidas rapidamente.
+                    </p>
+                    <p>
+                        Embora o código morse tenha caído em desuso devido à tecnologia obsoleta dos telégrafos, o
+                        Código Q
+                        se
+                        tornou
+                        independente e é amplamente utilizado internacionalmente por organizações como forças militares,
+                        polícia,
+                        SAMU,
+                        vigilantes, aviação e empresas privadas. Esse código utiliza uma coleção padronizada de
+                        perguntas
+                        pré-definidas,
+                        realizadas por meio de três letras de fácil pronúncia, todas começando com a letra Q, o que
+                        torna a
+                        comunicação
+                        simples, rápida e de fácil compreensão.
+                    </p>
+                    <details>
+                        <summary>Lista de Códigos Q</summary>
+                        <ul>
+                            <li><strong>QAP</strong> - Na escuta</li>
+                            <li><strong>QSL</strong> - Entendido</li>
+                            <li><strong>TKS</strong> - Obrigado</li>
+                            <li><strong>QAR</strong> - Desligar</li>
+                            <li><strong>QRL</strong> - Estou ocupado</li>
+                            <li><strong>QTH</strong> - Endereço</li>
+                            <li><strong>QRX</strong> - Aguarde</li>
+                            <li><strong>UM</strong> - Primeiro</li>
+                            <li><strong>DOIS</strong> - Segundo</li>
+                            <li><strong>TRÊS</strong> - Terceiro</li>
+                            <li><strong>QUATRO</strong> - Quarto</li>
+                            <li><strong>CINCO</strong> - Quinto</li>
+                            <li><strong>SEIS</strong> - Sexto</li>
+                            <li><strong>SETE</strong> - Sétimo</li>
+                            <li><strong>OITO</strong> - Oitavo</li>
+                            <li><strong>NOVE</strong> - Nono</li>
+                            <li><strong>ZERO</strong> - Nulo / Negativo</li>
+                        </ul>
+                    </details>
+            </section>
+
+            <hr>
+
+            <section class="flash muted p-5">
+                <h2 id="sm-satel" class="h1 mb-4">Como Criar SM SATEL</h2>
+                <h2 class="h3">Exemplos Específicos para Importação e Exportação</h2>
+                <p>Para melhor compreensão das (OC), seguem exemplos específicos para importação e exportação:</p>
+                <p>Definir o Tipo de Transporte - <strong>Sempre selecione Tipo de Transporte = 1.</strong></p>
+                <p>Verificar se é <strong>Exportação ou Importação</strong>. A origem e o destino muda, conforme a
+                    imagem:</p>
+                <div class="card mb-30">
+                    <img src="src/img/sm-satel1.png" width="100%" alt="SM SATEL">
+                </div>
+                <div class="card">
+                    <img src="src/img/sm-satel2.png" width="100%" alt="SM SATEL">
+                </div>
+                <hr class="divider">
+                <h2 class="h2">Conferir Dados Obrigatórios</h2>
+                <p><strong>🚧 Verifique sempre:</strong></p>
+                <li>✅ Local de origem</li>
+                <li>✅ Destino da viagem</li>
+                <li>✅ Motorista do veículo</li>
+                <li>✅ Rota (trajeto a ser seguido)</li>
+
+                <hr class="divider">
+
+                <h2 class="h2">Confirmar Criação da SM no grupo do WhatsApp.</h2>
+                <li>Após criar a solicitação, informe se a SM foi gerada com sucesso.</li>
+                <li>Caso não seja possível criar, informe o motivo (ex.: dados incorretos, falta de informações, etc.).
                 </li>
-                <li>
-                    <strong>Digite o número MCT/UCC:</strong>
-                    <ul>
-                        <li>Insira o número diretamente no teclado. <em>Nada aparecerá na tela enquanto você
-                                digita.</em>
+
+
+
+            </section>
+            </section>
+
+            <hr>
+            <section class="p-5 flash muted">
+                <h1 id="padrao-rota" class="fs-32">Padronização e Organização de Rotas</h1>
+                <p>Temos observado a criação de diversas rotas sem um padrão definido, além da duplicação de rotas já
+                    existentes. Para garantir a padronização e a organização, solicitamos que sejam seguidas as
+                    seguintes
+                    recomendações:</p>
+                <h2>Nomenclatura das Rotas</h2>
+                <p>A nomenclatura das rotas deve conter:</p>
+                <ul>
+                    <li>Nome do responsável pela rota</li>
+                    <li>Cidade de origem (cliente)</li>
+                    <li>Cidade de destino (cliente)</li>
+                </ul>
+                <p>Caso haja alguma entrega ou passagem por um local específico, essa informação deve ser inserida entre
+                    colchetes <code>[ ]</code>.</p>
+                <div class="example">
+                    <strong>Exemplo:</strong><br>
+                    <code>SATEL – SANTOS – SP (TECON) X COLATINA – ES (FRISA) [VIA BR116]</code>
+                </div>
+                <h2>Criação de Novas Rotas</h2>
+                <ul>
+                    <li>Evite utilizar apenas o nome da cidade. Utilize sempre o nome do cliente correspondente.</li>
+                    <li>Para saídas de Santos/Guarujá, informe corretamente o local de saída, especificando o terminal
+                        ou porto
+                        adequado, evitando designações genéricas.</li>
+                </ul>
+            </section>
+
+
+
+
+            <hr>
+
+            <section id="desbloqueio-offline-autotrac" class="flash muted p-5">
+                <header class="header">
+                    <h2 class="fs-28">Desbloqueio Offline Autotrac</h2>
+                </header>
+                <ol class="list">
+                    <li>
+                        <strong>Acesse o menu inicial</strong> e selecione a opção <code>VER STATUS</code>.
+                    </li>
+                    <li>
+                        <strong>Encontre o número do MCT/UCC do veículo:</strong>
+                        <ul>
+                            <li>Use a <kbd>seta para baixo</kbd> até chegar na opção <code>Nº SERIAL UNIDADE</code>.
+                            </li>
+                            <li>O número MCT/UCC do veículo aparecerá na tela.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Digite o número MCT/UCC:</strong>
+                        <ul>
+                            <li>Insira o número diretamente no teclado. <em>Nada aparecerá na tela enquanto você
+                                    digita.</em>
+                            </li>
+                            <li>Após digitar, pressione <kbd>Enter</kbd>.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Acesse as configurações do veículo:</strong>
+                        <ul>
+                            <li>Use as <kbd>setas</kbd> para navegar até as opções disponíveis:</li>
+                            <li><strong>SEQUENCIAL:</strong> Para desbloquear o veículo por senha.</li>
+                            <li><strong>REINICIAR EQUIPAMENTO:</strong> Para resetar o equipamento diretamente pelo
+                                teclado.
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <figure class="text-center">
+                    <img src="./src/img/teclado-autotrac.jpg" alt="Teclado do equipamento Autotrac"
+                        class="image responsive" />
+                    <figcaption>Teclado do equipamento Autotrac</figcaption>
+                </figure>
+            </section>
+
+            <hr>
+
+            <section class="p-5 flash muted" id="excesso-funcoes">
+                <h2 class="h1">Excesso de Funções Lógicas</h2>
+                <p>Estas ações devem ser realizadas apenas para veículos monitorados pela nossa <strong>GR</strong> na
+                    Autotrac:
+                </p>
+                <ul>
+                    <li>Limpar todas as funções.</li>
+                    <li>Enviar <strong>Geral Prime/Híbrido + Segurança</strong> (configuração básica).</li>
+                    <li>Comando <strong>UCC2 - Proibe Desengate</strong>: Configurar para <em>10 segundos</em> com
+                        sirene e
+                        bloqueio.</li>
+                    <li>Comando <strong>UCC2 - Proibe Carona</strong>: Configurar para <em>20 segundos</em> com sirene e
+                        bloqueio.</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <!-- LISTA DE MACROS SATEL E DALASTRA -->
+
+            <section class="section p-5 mb-50 flash muted">
+                <h2 id="macros" class="h1 mb-4">Lista de Macros Satel / Dalastra</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Tecnologia do Rastreador</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dalastra - Macros</td>
+                            <td>AUTOTRAC</td>
+                            <td><a href="./manuais/Dalastra - Macros Autotrac.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Satel - Macros</td>
+                            <td>AUTOTRAC</td>
+                            <td><a href="./manuais/Satel - Macros Autotrac.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Manual de Macros e orientações SASCAR</td>
+                            <td>SASCAR</td>
+                            <td><a href="./manuais/Manual Sascar.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Manual de Macros e orientações Omnilink</td>
+                            <td>OMNILINK</td>
+                            <td><a href="./manuais/Manual Omnilink.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Manual de Macros e orientações OnixSat</td>
+                            <td>ONIX SAT</td>
+                            <td><a href="./manuais/Manual Onix.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Padrão Technocel Gerenciamento de Risco</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Padrão de Grid Trafegus</td>
+                            <td><a href="./manuais/PADRÃO DE GRID TRAFEGUS.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>FLUXOGRAMA DE AÇÕES PARA EVENTOS</td>
+                            <td><a href="./manuais/FLUXOGRAMA EVENTOS TECHNOCEL GR.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>SLA - Manual do Operador</td>
+                            <td><a href="./manuais/SLA Manual do Operador - Technocel.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Manual Operacional Trafegus</td>
+                            <td><a href="./manuais/19 - Manual operacional Technocel.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Check List Processos</td>
+                            <td><a href="./manuais/CHECK LIST - Processos.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+
+            <hr>
+
+            <!-- TABELA DE MANUAIS SASCAR -->
+            <section class="p-5 flash muted" id="manual-sascar">
+                <h2 class="h1 mb-4">Tabela de Manuais da SASCAR</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Modelo</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Manual completo do SASGC</td>
+                            <td>Manual SASGC</td>
+                            <td><a href="./manuais/MANUAL DO SASGC.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Boas Praticas Trava 5 Roda</td>
+                            <td>Trava 5 Roda</td>
+                            <td><a href="./manuais/Boas Praticas Trava 5 Roda.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Manual tablet SASMDT MSC830</td>
+                            <td>TABLET MSC830</td>
+                            <td><a href="./manuais/Manual tablet SASMDT MSC830.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Layout do Tablet do MSC830</td>
+                            <td>TABLET MSC830</td>
+                            <td><a href="./manuais/Layout do Tablet do MSC-830.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Como conectar TABLET MSC830</td>
+                            <td>TABLET MSC830</td>
+                            <td><a href="./manuais/Como conectar TABLET MSC830.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Desbloqueio Offline TABLET MSC830</td>
+                            <td>TABLET MSC830</td>
+                            <td><a href="./manuais/Desbloqueio Tablet MSC830.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Guia de Referência TECLADO MSC830</td>
+                            <td>TECLADO MSC830</td>
+                            <td><a href="./manuais/Guia de Referncia Rapida TECLADO MSC830.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>OFFLINE PARA RETIRAR ALARME TECLADO MSC830</td>
+                            <td>TECLADO MSC830</td>
+                            <td><a href="./manuais/OFFLINE PARA RETIRAR ALARME TECLADO MSC830.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Atualizar Horário Tablet SASMDT</td>
+                            <td>Tablet SASMDT</td>
+                            <td><a href="./manuais/Atualizar Horario Tablet SASMDT.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                        <tr>
+                            <td>Guia teclado TD50</td>
+                            <td>Teclado TD50</td>
+                            <td><a href="./manuais/Guia_do_Teclado (1).pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Manual teclado TD50</td>
+                            <td>Teclado TD50</td>
+                            <td><a href="./manuais/Guia teclado TD50.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>MANUAL SASMDT TABLET SEM TECLADO</td>
+                            <td>Tablet SASMDT</td>
+                            <td><a href="./manuais/MANUAL SASMDT TABLET SEM TECLADO.pdf" target="_blank"
+                                    rel="noopener noreferrer">Acessar</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <hr>
+
+            <section class="flash severe p-5" id="parada-indevida-omnilink">
+
+                <h2 class="fs-24">Parada indevida (OMNILINK EM SITUAÇÕES DE TRANSITO LENTO)<h2>
+                        <p>O Omnilink pode registrar paradas irregulares durante situações de trânsito lento. Para
+                            evitar isso, é necessário ajustar suas configurações removendo a ação de parada por
+                            tempo irregular.</p>
+                        <hr>
+
+                        <ol>
+                            <li>Selecione o veículo, clique com o botão direito, até <em>CARACTERÍSTICAS</em>.</li>
+                            <li><strong>Entre em Configurações:</strong> Dentro do menu, localize e selecione
+                                <em>CONFIGURAÇÕES</em>.
+                            </li>
+                            <li><strong>Acesse as Opções Gerais e Modo Interativo:</strong> Dentro do menu de
+                                configurações, clique em <em>OPÇÕES GERAIS E MODO INTERATIVO</em>.</li>
+                            <li><strong>Modifique o Tempo de Parada Irregular:</strong>
+                                <ul>
+                                    <li>Localize a opção <em>TEMPO DE PARADA IRREGULAR</em>.</li>
+                                    <li>Altere o valor para <strong>NÃO UTILIZA</strong>.</li>
+                                </ul>
+                            </li>
+                            <li><strong>Transmita as Configurações:</strong> Clique em <em>TRANSMITIR</em> para
+                                salvar e aplicar a alteração.</li>
+                            <li><strong>Restaurando a Configuração Padrão:</strong> Após sair da situação de
+                                trânsito lento, retorne ao menu e ajuste novamente para a configuração padrão.</li>
+                        </ol>
+
+            </section>
+
+            <hr>
+
+
+            <!-- CONFIGURAÇOES GERAIS DE VEICULOS -->
+
+            <section class="flash muted p-5">
+                <h2 class="h1 mb-4" id="check-list">CHECK LIST, EMBARQUE DE MACROS E CONFIGURAÇÕES
+                </h2>
+                <!-- AUTOTRAC -->
+                <div class="p-5">
+                    <h2 class="fs-28 text-uppercase">Check List Autotrac</h2>
+                    <p>Siga os passos abaixo para realizar o check list de forma adequada:</p>
+
+                    <ol>
+                        <li>Confirmar se há um pedido de check list.</li>
+                        <li>Na <strong>Autotrac</strong>:
+                            <ul>
+                                <li>Ativar TESTE de botão de pânico.</li>
+                                <li>Confirmar com o motorista se o veículo é <strong>contêiner</strong> ou
+                                    <strong>baú</strong>.
+                                </li>
+                                <li>Enviar o comando de início de check list <strong>com</strong> ou <strong>sem
+                                        baú</strong>
+                                    conforme a resposta (geralmente é contêiner, ou seja, sem baú).</li>
+                            </ul>
                         </li>
-                        <li>Após digitar, pressione <kbd>Enter</kbd>.</li>
-                    </ul>
-                </li>
-                <li>
-                    <strong>Acesse as configurações do veículo:</strong>
-                    <ul>
-                        <li>Use as <kbd>setas</kbd> para navegar até as opções disponíveis:</li>
-                        <li><strong>SEQUENCIAL:</strong> Para desbloquear o veículo por senha.</li>
-                        <li><strong>REINICIAR EQUIPAMENTO:</strong> Para resetar o equipamento diretamente pelo teclado.
+                        <li>Pedir mensagem de teste.</li>
+                        <li>Oriente o motorista sobre o procedimento de responder a <strong>contra senha do VIAGEM SEGUE
+                                NORMAL</strong></li>
+                        <li>Enviar, opcionalmente, os comandos:
+                            <ul>
+                                <li>Proibir engate.</li>
+                                <li>Proibir porta carona.</li>
+                            </ul>
                         </li>
-                    </ul>
-                </li>
-            </ol>
-
-            <figure class="text-center">
-                <img src="./src/img/teclado-autotrac.jpg" alt="Teclado do equipamento Autotrac"
-                    class="image responsive" />
-                <figcaption>Teclado do equipamento Autotrac</figcaption>
-            </figure>
-        </div>
-
-        <hr>
-        <br>
-
-        <h2 class="fs-24 text-uppercase">Excesso de Funções Lógicas</h2>
-        <p>Estas ações devem ser realizadas apenas para veículos monitorados pela nossa <strong>GR</strong> na Autotrac:
-        </p>
-        <ul>
-            <li>Limpar todas as funções.</li>
-            <li>Enviar <strong>Geral Prime/Híbrido + Segurança</strong> (configuração básica).</li>
-            <li>Comando <strong>UCC2 - Proibe Desengate</strong>: Configurar para <em>10 segundos</em> com sirene e
-                bloqueio.</li>
-            <li>Comando <strong>UCC2 - Proibe Carona</strong>: Configurar para <em>20 segundos</em> com sirene e
-                bloqueio.</li>
-        </ul>
-        <br>
-
-    </div>
-
-    <hr>
-
-    <!-- OMNILINK -->
-    <div class="flash variant p-5" id="omnilink">
-        <h2 class="fs-28 text-uppercase">CHECK LIST OMNILINK</h2>
-        <ol class="mb-10">
-            <li class="mb-5"><strong>Testar Funções Básicas do Veículo:</strong>
-                <ul>
-                    <li>Testar o <strong>teclado</strong>.</li>
-                    <li>Pedir para o motorista <strong>realizar uma macro</strong>.</li>
-                    <li>Colocar o <strong>veículo em trânsito</strong>.</li>
-                    <li>Acionar o <strong>botão de pânico</strong>.</li>
-                    <li>Abrir a <strong>porta do motorista</strong>.</li>
-                    <li><strong>Desengatar o veículo</strong>.</li>
-                </ul>
-            </li>
-            <li class="mb-5"><strong>Consultar Violações e Mensagens:</strong>
-                <ul>
-                    <li>Acesse <strong>Históricos > Alarme</strong> para verificar se as violações foram geradas.</li>
-                    <li>Acesse <strong>Mensagens > Mensagens Recebidas</strong> para consultar as mensagens enviadas.
-                    </li>
-                </ul>
-            </li>
-            <li class="mb-5"><strong>Ações de Correção (se as violações forem geradas):</strong>
-                <ul>
-                    <li>Solicite ao motorista que <strong>engate e feche a porta do motorista</strong>.</li>
-                    <li>Solicite ao motorista que <strong>abra a porta carona</strong>.</li>
-                    <li><strong>Confirmar se está com o bloqueio e a sirene</strong>.</li>
-                    <li>Caso o veículo tenha <strong>baú</strong>, coloque-o em trânsito e peça ao motorista para
-                        <strong>abrir o baú</strong> sem enviar o comando para testar a trava.
-                    </li>
-                    <li>Envie o <strong>comando de desbloqueio</strong>, coloque o veículo em <strong>local
-                            autorizado</strong> (menu chegada) e envie o comando de <strong>abrir baú</strong>.</li>
-                    <li>Confirme se o <strong>baú chegou</strong> corretamente.</li>
-                </ul>
-            </li>
-            <li class="mb-5"><strong>Verificar Retorno da Antena:</strong>
-                <ul>
-                    <li>Verifique os <strong>alarmes</strong>, <strong>tele-eventos</strong> e
-                        <strong>tele-comandos</strong>.
-                    </li>
-                    <li>Se estiver tudo certo, aparecerá um <strong>OK</strong> ou <strong>erro</strong> caso haja
-                        inconformidade.</li>
-                </ul>
-            </li>
-            <li><strong>Finalização:</strong>
-                <ul>
-                    <li>Ao terminar, <strong>envie a desativação</strong>.</li>
-                    <li><strong>Oriente o motorista sobre a contra senha</strong>.</li>
-                </ul>
-            </li>
-        </ol>
-    </div>
-
-    <div class="flash variant p-5">
-        <section>
-            <h2 class="fs-28 text-uppercase">EMBARQUE DE MACROS OMNILINK</h2>
-            <ol>
-                <li class="mb-5"><strong>Envio de Comandos:</strong>
-                    <ul>
-                        <li><strong>Liberar o uso de funções programáveis RI.</strong></li>
-                        <li><strong>Inibir funções programáveis.</strong></li>
-                    </ul>
-                </li>
-                <li class="mb-5"><strong>Características do Veículo:</strong>
-                    <ul>
-                        <li>Opção <strong>Comunicação</strong>.</li>
-                        <li><strong>Comportamento do veículo nas exceções</strong>.</li>
-                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
-                        <li>Clique em <strong>Transmitir</strong>.</li>
-                    </ul>
-                </li>
-                <li class="mb-5"><strong>Transmissão de Teleeventos:</strong>
-                    <ul>
-                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
-                        <li>Clique em <strong>Transmitir</strong>.</li>
-                    </ul>
-                </li>
-                <li class="mb-5"><strong>Configurações:</strong>
-                    <ul>
-                        <li>Opção de <strong>Segurança</strong>.</li>
-                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
-                        <li><strong>Verifique o que está habilitado</strong>. Caso não esteja,
-                            <strong>habilite</strong>.
+                        <li>Verificar violações no histórico (últimos comandos e alertas de OBC).</li>
+                        <li>Solicitar tabela de status e verificar se ela veio vazia.</li>
+                        <li>
+                            Após as verificações:
+                            <ul>
+                                <li>Enviar fim de check list <em>s/baú</em> ou com, dependendo.</li>
+                                <li>Liberar veículo com sirene.</li>
+                            </ul>
                         </li>
-                        <li>Clique em <strong>Transmitir</strong>.</li>
-                    </ul>
-                </li>
-                <li class="mb-5"><strong>Opções Gerais de Modo Interativo:</strong>
-                    <ul>
-                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
-                        <li>Clique em <strong>Transmitir</strong>.</li>
-                    </ul>
-                </li>
-                <li class="mb-5"><strong>Atuadores:</strong>
-                    <ul>
-                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
-                        <li>Clique em <strong>Transmitir</strong>.</li>
-                    </ul>
-                </li>
-                <li class="mb-5"><strong>Senha do Motorista:</strong>
-                    <ul>
-                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
-                        <li><strong>Transmitir a senha do motorista</strong> (pode ser alterada, se necessário).</li>
-                    </ul>
-                </li>
-                <li class="mb-5"><strong>Configuração de Histórico:</strong>
-                    <ul>
-                        <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
-                        <li><strong>Envio imediato</strong>.</li>
-                        <li>Clique em <strong>Transmitir</strong>.</li>
-                    </ul>
-                </li>
-                <li class="mb-5"><strong>Parâmetros do Veículo:</strong>
-                    <ul>
-                        <li>Selecione a seção <strong>Modo de Economia</strong>.</li>
-                        <li>Clique em <strong>Transmitir</strong>.</li>
-                    </ul>
-                </li>
-                <li class="mb-5"><strong>Mensagens:</strong>
-                    <ul>
-                        <li><strong>Transmitir mensagens pré-definidas</strong>.</li>
-                        <li>Perfil <strong>TCELL 4484</strong>.</li>
-                        <li>Clique em <strong>Transmitir</strong>.</li>
-                    </ul>
-                </li>
-            </ol>
-        </section>
-    </div>
-
-    <div class="flash variant p-5">
-        <section>
-            <h2 class="fs-24 text-uppercase">TESTE NA ANTENA SATELITAL</h2>
-            <ol>
-                <li>Acesse o <strong>menu superior</strong> <em>veículo</em> e clique em <strong>Teste de
-                        Comunicação</strong>.</li>
-                <li>Localize a <strong>placa do veículo</strong> e marque o <strong>X</strong> na opção <strong>Teste
-                        Satélite</strong>.</li>
-                <li>Clique em <strong>Transmitir</strong>.</li>
-            </ol>
-        </section>
-    </div>
-
-    <div class="flash variant p-5">
-        <section>
-            <h2 class="fs-24">Parada indevida (OMNILINK EM SITUAÇÕES DE TRANSITO LENTO)<h2>
-            <p>O Omnilink pode registrar paradas irregulares durante situações de trânsito lento. Para evitar isso, é necessário ajustar suas configurações removendo a ação de parada por tempo irregular.</p>
-            <hr>           
+                        <li>Na aba de Trafegus, atender a solicitação de check list.</li>
+                        <li>Verificar no terminal os sensores gerados e instalados.</li>
+                    </ol>
+                </div>
+            </section>
             
-            <ol>
-                <li>Selecione o veículo, clique com o botão direito, até <em>CARACTERÍSTICAS</em>.</li>
-                <li><strong>Entre em Configurações:</strong> Dentro do menu, localize e selecione <em>CONFIGURAÇÕES</em>.</li>
-                <li><strong>Acesse as Opções Gerais e Modo Interativo:</strong> Dentro do menu de configurações, clique em <em>OPÇÕES GERAIS E MODO INTERATIVO</em>.</li>
-                <li><strong>Modifique o Tempo de Parada Irregular:</strong>
-                    <ul>
-                        <li>Localize a opção <em>TEMPO DE PARADA IRREGULAR</em>.</li>
-                        <li>Altere o valor para <strong>NÃO UTILIZA</strong>.</li>
-                    </ul>
-                </li>
-                <li><strong>Transmita as Configurações:</strong> Clique em <em>TRANSMITIR</em> para salvar e aplicar a alteração.</li>
-                <li><strong>Restaurando a Configuração Padrão:</strong> Após sair da situação de trânsito lento, retorne ao menu e ajuste novamente para a configuração padrão.</li>
-            </ol>         
-    
-        </div>
-        </section>
-    </div>
+            <hr>
 
-    <hr>
-
-    <!-- ONIX SAT  -->
-    <div class="flash active p-5" id="onix">
-        <section>
-            <h2 class="fs-28 text-uppercase">CHECK LIST ONIX</h2>
-            <ol>
-                <li class="mb-5"><strong>Checar Inteligência Embarcada (IE):</strong>
-                    <ul>
-                        <li>Verifique se está com a inteligência embarcada (Opção: <strong>Gerência Inteligência
-                                Embarcada</strong>).</li>
-                        <li><strong>Caso não tenha</strong>: Refazer o espelhamento com a IE liberada.</li>
-                    </ul>
-                </li>
-                <li class="mb-5"><strong>Verificar Senha do Motorista:</strong>
-                    <ul>
-                        <li>Clique em <strong>Administração de Motoristas</strong>.</li>
-                        <li>Caso não tenha senha, será necessário embarcar a senha do motorista.</li>
-                        <li>Clique na bolinha com o nome do motorista.</li>
-                        <li>Selecione o motorista e a empresa.</li>
-                        <li>Para embarcar, clique no ícone <strong>+</strong>.</li>
-                        <li>Clique em <strong>Próximo</strong>.</li>
-                        <li>Clique no ícone <strong>+</strong> novamente.</li>
-                        <li>Clique em <strong>Próximos</strong> mais 2x.</li>
-                    </ul>
-                </li>
-                <li class="mb-5"><strong>Início do Check List:</strong>
-                    <ul>
-                        <li>Solicite ao motorista que informe o início do check list.</li>
-                        <li>Transmita a senha ao motorista.</li>
-                        <li>Realize as verificações de <strong>violações nos sensores</strong> e
-                            <strong>atuadores</strong>.
-                        </li>
-                        <li>Verifique o <strong>botão de pânico</strong>.</li>
-                        <li>Confirme o <strong>bloqueio/sirene</strong>.</li>
-                        <li>Solicite a <strong>mensagem de teste</strong>.</li>
-                        <li>Peça para o motorista fechar tudo e engatar.</li>
-                        <li>Envie o <strong>desbloqueio</strong> e consulte se está tudo fechado, apenas com a ignição
-                            ligada.</li>
-                    </ul>
-                </li>
-            </ol>
-        </section>
-    </div>
-
-    <div class="flash active p-5">
-        <section>
-            <h2 class="fs-28 text-uppercase">EMBARQUE DE MACROS ONIX SAT</h2>
-            <ol>
-                <li class="mb-5"><strong>Adicionar Veículo ao Grupo:</strong>
-                    <ul>
-                        <li>Caso o veículo não esteja disponível no grid, clique em <strong>Administração</strong> e
-                            selecione <strong>Adicionar veículo ao grupo</strong>.</li>
-                    </ul>
-                </li>
-                <li class="mb-5"><strong>Limpar Inteligência Embarcada:</strong>
-                    <ul>
-                        <li>Clique com o botão direito e vá para <strong>Inteligência Embarcada</strong>.</li>
-                        <li>Selecione <strong>Limpar Inteligência Embarcada</strong>.</li>
-                        <li><strong>Atenção:</strong> Cuidado ao clicar nas opções, se clicar errado, o padrão Onix será
-                            embarcado novamente.
+            <section class="p-5 flash variant" id="omnilink">
+                <!-- OMNILINK -->
+                <div class="p-5" id="omnilink">
+                    <h2 class="fs-28 text-uppercase">CHECK LIST OMNILINK</h2>
+                    <ol class="mb-10">
+                        <li class="mb-5"><strong>Testar Funções Básicas do Veículo:</strong>
                             <ul>
-                                <li><strong>Primeira opção:</strong> SIM.</li>
-                                <li><strong>Segunda opção:</strong> NÃO.</li>
+                                <li>Testar o <strong>teclado</strong>.</li>
+                                <li>Pedir para o motorista <strong>realizar uma macro</strong>.</li>
+                                <li>Colocar o <strong>veículo em trânsito</strong>.</li>
+                                <li>Acionar o <strong>botão de pânico</strong>.</li>
+                                <li>Abrir a <strong>porta do motorista</strong>.</li>
+                                <li><strong>Desengatar o veículo</strong>.</li>
                             </ul>
                         </li>
-                        <li>Aguarde o semáforo ficar <strong>verde</strong> e clique em <strong>Atualizar
-                                Dados</strong>.</li>
-                    </ul>
-                </li>
-                <li class="mb-5"><strong>Configuração de Macros:</strong>
-                    <ul>
-                        <li>Clique na aba <strong>Macros</strong>.</li>
-                        <li>Clique no ícone <strong>+</strong>.</li>
-                        <li><strong>Grupo 1:</strong> Sempre inserir <strong>Technocel Padrão</strong>.
+                        <li class="mb-5"><strong>Consultar Violações e Mensagens:</strong>
                             <ul>
-                                <li>Selecione <strong>Macros Sequenciadas</strong>.</li>
-                                <li>Clique no ícone de <strong>...</strong>.</li>
-                                <li>Selecione o nome da empresa (<strong>Ex.: DALASTRA/SATEL (SEM BAU)</strong>).</li>
-                                <li><strong>Opção SIM</strong>.</li>
+                                <li>Acesse <strong>Históricos > Alarme</strong> para verificar se as violações foram
+                                    geradas.</li>
+                                <li>Acesse <strong>Mensagens > Mensagens Recebidas</strong> para consultar as mensagens
+                                    enviadas.
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="mb-5"><strong>Ações de Correção (se as violações forem geradas):</strong>
+                            <ul>
+                                <li>Solicite ao motorista que <strong>engate e feche a porta do motorista</strong>.</li>
+                                <li>Solicite ao motorista que <strong>abra a porta carona</strong>.</li>
+                                <li><strong>Confirmar se está com o bloqueio e a sirene</strong>.</li>
+                                <li>Caso o veículo tenha <strong>baú</strong>, coloque-o em trânsito e peça ao motorista
+                                    para
+                                    <strong>abrir o baú</strong> sem enviar o comando para testar a trava.
+                                </li>
+                                <li>Envie o <strong>comando de desbloqueio</strong>, coloque o veículo em <strong>local
+                                        autorizado</strong> (menu chegada) e envie o comando de <strong>abrir
+                                        baú</strong>.
+                                </li>
+                                <li>Confirme se o <strong>baú chegou</strong> corretamente.</li>
+                            </ul>
+                        </li>
+                        <li class="mb-5"><strong>Verificar Retorno da Antena:</strong>
+                            <ul>
+                                <li>Verifique os <strong>alarmes</strong>, <strong>tele-eventos</strong> e
+                                    <strong>tele-comandos</strong>.
+                                </li>
+                                <li>Se estiver tudo certo, aparecerá um <strong>OK</strong> ou <strong>erro</strong>
+                                    caso
+                                    haja
+                                    inconformidade.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Finalização:</strong>
+                            <ul>
+                                <li>Ao terminar, <strong>envie a desativação</strong>.</li>
+                                <li><strong>Oriente o motorista sobre a contra senha</strong>.</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="flash variant p-5">
+                    <section>
+                        <h2 class="fs-28 text-uppercase">EMBARQUE DE MACROS OMNILINK</h2>
+                        <ol>
+                            <li class="mb-5"><strong>Envio de Comandos:</strong>
+                                <ul>
+                                    <li><strong>Liberar o uso de funções programáveis RI.</strong></li>
+                                    <li><strong>Inibir funções programáveis.</strong></li>
+                                </ul>
+                            </li>
+                            <li class="mb-5"><strong>Características do Veículo:</strong>
+                                <ul>
+                                    <li>Opção <strong>Comunicação</strong>.</li>
+                                    <li><strong>Comportamento do veículo nas exceções</strong>.</li>
+                                    <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                                    <li>Clique em <strong>Transmitir</strong>.</li>
+                                </ul>
+                            </li>
+                            <li class="mb-5"><strong>Transmissão de Teleeventos:</strong>
+                                <ul>
+                                    <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                                    <li>Clique em <strong>Transmitir</strong>.</li>
+                                </ul>
+                            </li>
+                            <li class="mb-5"><strong>Configurações:</strong>
+                                <ul>
+                                    <li>Opção de <strong>Segurança</strong>.</li>
+                                    <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                                    <li><strong>Verifique o que está habilitado</strong>. Caso não esteja,
+                                        <strong>habilite</strong>.
+                                    </li>
+                                    <li>Clique em <strong>Transmitir</strong>.</li>
+                                </ul>
+                            </li>
+                            <li class="mb-5"><strong>Opções Gerais de Modo Interativo:</strong>
+                                <ul>
+                                    <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                                    <li>Clique em <strong>Transmitir</strong>.</li>
+                                </ul>
+                            </li>
+                            <li class="mb-5"><strong>Atuadores:</strong>
+                                <ul>
+                                    <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                                    <li>Clique em <strong>Transmitir</strong>.</li>
+                                </ul>
+                            </li>
+                            <li class="mb-5"><strong>Senha do Motorista:</strong>
+                                <ul>
+                                    <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                                    <li><strong>Transmitir a senha do motorista</strong> (pode ser alterada, se
+                                        necessário).
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="mb-5"><strong>Configuração de Histórico:</strong>
+                                <ul>
+                                    <li>No perfil, insira o nome da empresa (Exemplo: DALASTRA).</li>
+                                    <li><strong>Envio imediato</strong>.</li>
+                                    <li>Clique em <strong>Transmitir</strong>.</li>
+                                </ul>
+                            </li>
+                            <li class="mb-5"><strong>Parâmetros do Veículo:</strong>
+                                <ul>
+                                    <li>Selecione a seção <strong>Modo de Economia</strong>.</li>
+                                    <li>Clique em <strong>Transmitir</strong>.</li>
+                                </ul>
+                            </li>
+                            <li class="mb-5"><strong>Mensagens:</strong>
+                                <ul>
+                                    <li><strong>Transmitir mensagens pré-definidas</strong>.</li>
+                                    <li>Perfil <strong>TCELL 4484</strong>.</li>
+                                    <li>Clique em <strong>Transmitir</strong>.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </section>
+                </div>
+
+                <div class="flash variant p-5">
+                    <section>
+                        <h2 class="fs-24 text-uppercase">TESTE NA ANTENA SATELITAL</h2>
+                        <ol>
+                            <li>Acesse o <strong>menu superior</strong> <em>veículo</em> e clique em <strong>Teste de
+                                    Comunicação</strong>.</li>
+                            <li>Localize a <strong>placa do veículo</strong> e marque o <strong>X</strong> na opção
+                                <strong>Teste
+                                    Satélite</strong>.
+                            </li>
+                            <li>Clique em <strong>Transmitir</strong>.</li>
+                        </ol>
+                    </section>
+                </div>
+            </section>
+
+            <hr>
+
+            <!-- ONIX SAT  -->
+            <div class="flash active p-5" id="onix">
+                <section>
+                    <h2 class="fs-28 text-uppercase">CHECK LIST ONIX</h2>
+                    <ol>
+                        <li class="mb-5"><strong>Checar Inteligência Embarcada (IE):</strong>
+                            <ul>
+                                <li>Verifique se está com a inteligência embarcada (Opção: <strong>Gerência Inteligência
+                                        Embarcada</strong>).</li>
+                                <li><strong>Caso não tenha</strong>: Refazer o espelhamento com a IE liberada.</li>
+                            </ul>
+                        </li>
+                        <li class="mb-5"><strong>Verificar Senha do Motorista:</strong>
+                            <ul>
+                                <li>Clique em <strong>Administração de Motoristas</strong>.</li>
+                                <li>Caso não tenha senha, será necessário embarcar a senha do motorista.</li>
+                                <li>Clique na bolinha com o nome do motorista.</li>
+                                <li>Selecione o motorista e a empresa.</li>
+                                <li>Para embarcar, clique no ícone <strong>+</strong>.</li>
                                 <li>Clique em <strong>Próximo</strong>.</li>
-                                <li>Clique em <strong>Li e Concordo</strong>.</li>
-                                <li>Clique no ícone <strong>+</strong>.</li>
-                                <li>Clique no ícone de <strong>...</strong>.</li>
-                                <li>Selecione novamente o nome da empresa com <strong>Raio de Manobra</strong>
-                                    (<strong>Ex.: DALASTRA/SATEL SAÍDA DE RAIO DE MANOBRA (S/BAU)</strong>).</li>
-                                <li>Clique em <strong>OK</strong> e <strong>Salvar</strong>.</li>
+                                <li>Clique no ícone <strong>+</strong> novamente.</li>
+                                <li>Clique em <strong>Próximos</strong> mais 2x.</li>
                             </ul>
                         </li>
-                        <li>Dê um duplo clique no nome da configuração.</li>
-                        <li>Clique em <strong>Próximo</strong> e depois em <strong>Finalizar</strong>.</li>
-                        <li>Avance para as próximas etapas e aguarde o embarque da configuração.</li>
-                        <li><strong>Importante:</strong> Certifique-se de que o sinal está <strong>atualizado</strong> e
-                            em <strong>GSM</strong>.</li>
-                    </ul>
-                </li>
-                <li><strong>Envio dos Comandos:</strong>
-                    <ul>
-                        <li>Após configurar os macros, envie os seguintes comandos:
+                        <li class="mb-5"><strong>Início do Check List:</strong>
                             <ul>
-                                <li><strong>Habilitar - Portas Mot/Car.</strong></li>
-                                <li><strong>Habilitar - Painel.</strong></li>
-                                <li><strong>Habilitar - Desengate (testar primeiro, não testar junto com o
-                                        baú).</strong></li>
-                                <li><strong>Habilitar - Baú (caso tenha).</strong></li>
+                                <li>Solicite ao motorista que informe o início do check list.</li>
+                                <li>Transmita a senha ao motorista.</li>
+                                <li>Realize as verificações de <strong>violações nos sensores</strong> e
+                                    <strong>atuadores</strong>.
+                                </li>
+                                <li>Verifique o <strong>botão de pânico</strong>.</li>
+                                <li>Confirme o <strong>bloqueio/sirene</strong>.</li>
+                                <li>Solicite a <strong>mensagem de teste</strong>.</li>
+                                <li>Peça para o motorista fechar tudo e engatar.</li>
+                                <li>Envie o <strong>desbloqueio</strong> e consulte se está tudo fechado, apenas com a ignição
+                                    ligada.</li>
                             </ul>
                         </li>
-                    </ul>
-                </li>
-            </ol>
-        </section>
+                    </ol>
+                </section>
+            </div>
+        
+            <div class="flash active p-5">
+                <section>
+                    <h2 class="fs-28 text-uppercase">EMBARQUE DE MACROS ONIX SAT</h2>
+                    <ol>
+                        <li class="mb-5"><strong>Adicionar Veículo ao Grupo:</strong>
+                            <ul>
+                                <li>Caso o veículo não esteja disponível no grid, clique em <strong>Administração</strong> e
+                                    selecione <strong>Adicionar veículo ao grupo</strong>.</li>
+                            </ul>
+                        </li>
+                        <li class="mb-5"><strong>Limpar Inteligência Embarcada:</strong>
+                            <ul>
+                                <li>Clique com o botão direito e vá para <strong>Inteligência Embarcada</strong>.</li>
+                                <li>Selecione <strong>Limpar Inteligência Embarcada</strong>.</li>
+                                <li><strong>Atenção:</strong> Cuidado ao clicar nas opções, se clicar errado, o padrão Onix será
+                                    embarcado novamente.
+                                    <ul>
+                                        <li><strong>Primeira opção:</strong> SIM.</li>
+                                        <li><strong>Segunda opção:</strong> NÃO.</li>
+                                    </ul>
+                                </li>
+                                <li>Aguarde o semáforo ficar <strong>verde</strong> e clique em <strong>Atualizar
+                                        Dados</strong>.</li>
+                            </ul>
+                        </li>
+                        <li class="mb-5"><strong>Configuração de Macros:</strong>
+                            <ul>
+                                <li>Clique na aba <strong>Macros</strong>.</li>
+                                <li>Clique no ícone <strong>+</strong>.</li>
+                                <li><strong>Grupo 1:</strong> Sempre inserir <strong>Technocel Padrão</strong>.
+                                    <ul>
+                                        <li>Selecione <strong>Macros Sequenciadas</strong>.</li>
+                                        <li>Clique no ícone de <strong>...</strong>.</li>
+                                        <li>Selecione o nome da empresa (<strong>Ex.: DALASTRA/SATEL (SEM BAU)</strong>).</li>
+                                        <li><strong>Opção SIM</strong>.</li>
+                                        <li>Clique em <strong>Próximo</strong>.</li>
+                                        <li>Clique em <strong>Li e Concordo</strong>.</li>
+                                        <li>Clique no ícone <strong>+</strong>.</li>
+                                        <li>Clique no ícone de <strong>...</strong>.</li>
+                                        <li>Selecione novamente o nome da empresa com <strong>Raio de Manobra</strong>
+                                            (<strong>Ex.: DALASTRA/SATEL SAÍDA DE RAIO DE MANOBRA (S/BAU)</strong>).</li>
+                                        <li>Clique em <strong>OK</strong> e <strong>Salvar</strong>.</li>
+                                    </ul>
+                                </li>
+                                <li>Dê um duplo clique no nome da configuração.</li>
+                                <li>Clique em <strong>Próximo</strong> e depois em <strong>Finalizar</strong>.</li>
+                                <li>Avance para as próximas etapas e aguarde o embarque da configuração.</li>
+                                <li><strong>Importante:</strong> Certifique-se de que o sinal está <strong>atualizado</strong> e
+                                    em <strong>GSM</strong>.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Envio dos Comandos:</strong>
+                            <ul>
+                                <li>Após configurar os macros, envie os seguintes comandos:
+                                    <ul>
+                                        <li><strong>Habilitar - Portas Mot/Car.</strong></li>
+                                        <li><strong>Habilitar - Painel.</strong></li>
+                                        <li><strong>Habilitar - Desengate (testar primeiro, não testar junto com o
+                                                baú).</strong></li>
+                                        <li><strong>Habilitar - Baú (caso tenha).</strong></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ol>
+                </section>
+            </div>
+        
+            </section>
+        
+            <section class="p-5 flash muted">
+                <!-- ORIENTAÇÕES CHECK LIST  -->
+                <h3 id="orientacao-teste" class="h1 mb-10">ORIENTAÇÕES PARA O MOTORISTA INICIAR O CHECK LIST</h3>
+                <strong>Enviar via WhatsApp</strong>
+                <textarea id="orientado" rows="14" cols="18" class="mb-5">
+        
+                - Coloca macro de *Inicio de Viagem* por favor
+        
+                - Manda mensagem livre escrito *TESTE*
+                
+                - Aperta o botão de pânico 5 segundos
+                
+                - Abre as portas
+                
+                - Retira a tomada da carreta
+                
+                *Quando terminar me avise por favor*
+        
+            </textarea>
+                <button class="btn btn-primary mb-50" onclick="copiarTextoPorId('orientado')">Copiar
+                    orientações</button>
+        
+                <!-- ORIENTAÇÃO VIAGEN SEGUE NORMAL -->
+        
+                <h3 class="fs-24">Orientações para o motorista responder a Resposta de Segurança</h3>
+                <strong>Enviar via WhatsApp</strong>
+        
+        
+                <!-- Seleção do Sistema -->
+                <label for="system">Selecione a Tecnologia:</label>
+                <select id="system" onchange="updateResponse()" class="mb-15">
+                    <option value="default">Padrão</option>
+                    <option value="autotrac">AUTOTRAC</option>
+                    <option value="sascar">SASCAR</option>
+                    <option value="omnilink">OMNILINK</option>
+                    <option value="onixsat">ONIXSAT</option>
+                </select>
+        
+                <!-- Textarea para a Resposta -->
+                <textarea id="response" readonly rows="12" cols="18" class="mb-10">
+        PERGUNTA DE SEGURANÇA:
+        "A viagem segue normal?"
+        
+        RESPOSTA DE SEGURANÇA:
+        
+        Se estiver tudo bem: 4 primeiros dígitos do CPF.
+        
+        
+        Se estiver em perigo: Responda com qualquer outra informação (ex: 'sim', 'não', 'tudo bem'). Nossos operadores estão preparados para identificar isso como um sinal de perigo e acionar imediatamente o plano de contingência.
+            </textarea>
+                <button class="btn btn-primary mb-50" onclick="copiarTextoPorId('response')">Copiar orientações</button>
+            </section>
+        
+            <hr>
+        
+        
+        
+        
+            <hr>
+        
+
+
+
     </div>
-
-    <hr>
-
-    <!-- TABELA DE MANUAIS SASCAR -->
-    <div class="container p-5 flash muted" id="manual-sascar">
-        <h4 class="fs-28 text-uppercase mb-30">Tabela de Manuais da SASCAR</h4>
-        <hr>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Modelo</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Manual completo do SASGC</td>
-                    <td>Manual SASGC</td>
-                    <td><a href="./manuais/MANUAL DO SASGC.pdf" target="_blank" rel="noopener noreferrer">Acessar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Boas Praticas Trava 5 Roda</td>
-                    <td>Trava 5 Roda</td>
-                    <td><a href="./manuais/Boas Praticas Trava 5 Roda.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-                <tr>
-                    <td>Manual tablet SASMDT MSC830</td>
-                    <td>TABLET MSC830</td>
-                    <td><a href="./manuais/Manual tablet SASMDT MSC830.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-                <tr>
-                    <td>Layout do Tablet do MSC830</td>
-                    <td>TABLET MSC830</td>
-                    <td><a href="./manuais/Layout do Tablet do MSC-830.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-                <tr>
-                    <td>Como conectar TABLET MSC830</td>
-                    <td>TABLET MSC830</td>
-                    <td><a href="./manuais/Como conectar TABLET MSC830.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-                <tr>
-                    <td>Desbloqueio Offline TABLET MSC830</td>
-                    <td>TABLET MSC830</td>
-                    <td><a href="./manuais/Desbloqueio Tablet MSC830.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-                <tr>
-                    <td>Guia de Referência TECLADO MSC830</td>
-                    <td>TECLADO MSC830</td>
-                    <td><a href="./manuais/Guia de Referncia Rapida TECLADO MSC830.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-                <tr>
-                    <td>OFFLINE PARA RETIRAR ALARME TECLADO MSC830</td>
-                    <td>TECLADO MSC830</td>
-                    <td><a href="./manuais/OFFLINE PARA RETIRAR ALARME TECLADO MSC830.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-                <tr>
-                    <td>Atualizar Horário Tablet SASMDT</td>
-                    <td>Tablet SASMDT</td>
-                    <td><a href="./manuais/Atualizar Horario Tablet SASMDT.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-                <tr>
-                    <td>Guia teclado TD50</td>
-                    <td>Teclado TD50</td>
-                    <td><a href="./manuais/Guia_do_Teclado (1).pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Manual teclado TD50</td>
-                    <td>Teclado TD50</td>
-                    <td><a href="./manuais/Guia teclado TD50.pdf" target="_blank" rel="noopener noreferrer">Acessar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>MANUAL SASMDT TABLET SEM TECLADO</td>
-                    <td>Tablet SASMDT</td>
-                    <td><a href="./manuais/MANUAL SASMDT TABLET SEM TECLADO.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <hr>
-
-    <section class="section p-5 mb-50 flash muted">
-        <h4 id="macros" class="fs-28 text-uppercase mb-30">Lista de Macros Satel / Dalastra</h4>
-        <hr>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Cliente</th>
-                    <th>Tecnologia do Rastreador</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Dalastra - Macros</td>
-                    <td>AUTOTRAC</td>
-                    <td><a href="./manuais/Dalastra - Macros Autotrac.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Satel - Macros</td>
-                    <td>AUTOTRAC</td>
-                    <td><a href="./manuais/Satel - Macros Autotrac.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-                <tr>
-                    <td>Manual de Macros e orientações SASCAR</td>
-                    <td>SASCAR</td>
-                    <td><a href="./manuais/Manual Sascar.pdf" target="_blank" rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-                <tr>
-                    <td>Manual de Macros e orientações Omnilink</td>
-                    <td>OMNILINK</td>
-                    <td><a href="./manuais/Manual Omnilink.pdf" target="_blank" rel="noopener noreferrer">Acessar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Manual de Macros e orientações OnixSat</td>
-                    <td>ONIX SAT</td>
-                    <td><a href="./manuais/Manual Onix.pdf" target="_blank" rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <hr>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Padrão Technocel Gerenciamento de Risco</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Padrão de Grid Trafegus</td>
-                    <td><a href="./manuais/PADRÃO DE GRID TRAFEGUS.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td>FLUXOGRAMA DE AÇÕES PARA EVENTOS</td>
-                    <td><a href="./manuais/FLUXOGRAMA EVENTOS TECHNOCEL GR.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-                <tr>
-                    <td>SLA - Manual do Operador</td>
-                    <td><a href="./manuais/SLA Manual do Operador - Technocel.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-
-                <tr>
-                    <td>Manual Operacional Trafegus</td>
-                    <td><a href="./manuais/19 - Manual operacional Technocel.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-                <tr>
-                    <td>Check List Processos</td>
-                    <td><a href="./manuais/CHECK LIST - Processos.pdf" target="_blank"
-                            rel="noopener noreferrer">Acessar</a></td>
-                </tr>
-            </tbody>
-        </table>
-
-    </section>
-
-    <hr>    
-
-    <!-- PADRAO DE ROTAS CRIANDO SM -->
-    <section>
-        <div class="section p-5 mb-30 flash muted">
-            <h1 id="orientacao-rota" class="fs-32">Padronização e Organização de Rotas</h1>
-            <p>Temos observado a criação de diversas rotas sem um padrão definido, além da duplicação de rotas já
-                existentes. Para garantir a padronização e a organização, solicitamos que sejam seguidas as seguintes
-                recomendações:</p>
-            <h2>Nomenclatura das Rotas</h2>
-            <p>A nomenclatura das rotas deve conter:</p>
-            <ul>
-                <li>Nome do responsável pela rota</li>
-                <li>Cidade de origem (cliente)</li>
-                <li>Cidade de destino (cliente)</li>
-            </ul>
-            <p>Caso haja alguma entrega ou passagem por um local específico, essa informação deve ser inserida entre
-                colchetes <code>[ ]</code>.</p>
-            <div class="example">
-                <strong>Exemplo:</strong><br>
-                <code>SATEL – SANTOS – SP (TECON) X COLATINA – ES (FRISA) [VIA BR116]</code>
-            </div>
-            <h2>Criação de Novas Rotas</h2>
-            <ul>
-                <li>Evite utilizar apenas o nome da cidade. Utilize sempre o nome do cliente correspondente.</li>
-                <li>Para saídas de Santos/Guarujá, informe corretamente o local de saída, especificando o terminal ou porto
-                    adequado, evitando designações genéricas.</li>
-            </ul>
-        </div>
-
-        <hr>
-
-        <div class="section flash muted p-5">
-            <h1 id="sm-satel" class="fs-28">Como Criar SM SATEL</h1>
-            <h2 class="h1">Exemplos Específicos para Importação e Exportação</h2>
-            <p>Para melhor compreensão das (OC), seguem exemplos específicos para importação e exportação:</p>
-            <p>Definir o Tipo de Transporte - <strong>Sempre selecione Tipo de Transporte = 1.</strong></p>
-            <p>Verificar se é <strong>Exportação ou Importação</strong>. A origem e o destino muda, conforme a imagem:</p>            
-            <div class="card mb-30">
-                <img src="src/img/sm-satel1.png" width="100%" alt="SM SATEL">
-            </div>
-            <div class="card">
-                <img src="src/img/sm-satel2.png" width="100%" alt="SM SATEL">
-            </div>
-            <hr class="divider">
-            <h2 class="fs-24">Conferir Dados Obrigatórios</h2>
-            <p><strong>🚧 Verifique sempre:</strong></p>
-            <li>✅ Local de origem</li>
-            <li>✅ Destino da viagem</li>
-            <li>✅ Motorista do veículo</li>
-            <li>✅ Rota (trajeto a ser seguido)</li>
-
-            <hr class="divider">
-
-            <h2 class="fs-24">Confirmar Criação da SM no grupo do WhatsApp.</h2>
-            <li>Após criar a solicitação, informe se a SM foi gerada com sucesso.</li>
-            <li>Caso não seja possível criar, informe o motivo (ex.: dados incorretos, falta de informações, etc.).</li>
-
-
-          
-        </div>
-    </section>
-
-    <hr>
-
-    <footer class="footer">
-        <div class="container">
-            <p>Contato:</p>
-            <ul>
-                <li><a href="mailto:hugohendrixc@gmail.com">hugohendrixc@gmail.com</a></li>
-                <li><a href="https://www.linkedin.com/in/hugohendrix/">LinkedIn</a></li>
-                <li><a href="https://github.com/HugoHendrix/">GitHub</a></li>
-            </ul>
-            <p>Links úteis:</p>
-            <ul>
-                <li><a href="https://www.sascar.com.br" target="_blank">Sascar</a></li>
-                <li><a href="https://www.omnilink.com.br" target="_blank">Omnilink</a></li>
-                <li><a href="https://www.onixsat.com.br" target="_blank">Onix Sat</a></li>
-                <li><a href="https://www.autotrac.com.br" target="_blank">Autotrac</a></li>
-            </ul>
-            <p>&copy; 2025 Hugo Hendrix | Technocel - Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-
-    <!-- Botão de Voltar ao Topo -->
-    <button id="back-to-top" title="Voltar ao topo">↑</button>
+    </main>
 
 
     <script src="src/js/jquery.min.js"></script>
