@@ -11,8 +11,8 @@ html {
 }
 
 .sidebar {
-    width: 25%;
-    padding: 10px;
+    width: 24%;
+    padding: 20px;
     position: fixed;
     left: 0;
     height: 100vh;
@@ -22,8 +22,7 @@ html {
 }
 
 .content {
-    margin-left: 16%;
-    padding: 30px;
+    margin-left: 12%;
     flex-grow: 1;
 }
 
@@ -60,21 +59,21 @@ html {
     position: fixed;
     right: 18px;
     top: 10px;
+    bottom: 10px; /* Novo - limita altura */
+    max-height: 95vh; /* Altura máxima da tela */
+    overflow-y: auto; /* Adiciona scroll quando necessário */
     display: flex;
     flex-direction: column;
     gap: 10px;
     z-index: 1000;
-    
+    padding-right: 8px; /* Compensa a barra de scroll */
 }
 
 .post-it {
-    position: static;
     width: 200px;
+    flex-shrink: 0; /* Impede redução de altura */
 }
 
-.post-it > ul li {
-    font-size: .8em;
-}
 
 .custom-textarea { 
     margin-bottom: 20px;
