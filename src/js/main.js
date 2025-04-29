@@ -78,10 +78,10 @@ function converterParaGoogle() {
     if (!entrada) return;
 
     const saida = entrada
-        .replace(/,/g, '.')
-        .replace(/([0-9])[.,](\s|$)/g, '$1$2')
-        .replace(/(\d)\s*(?=-)/g, '$1 ')
-        .replace(/\s+/g, ' ')
+        .replace(/,/g, '.') // Padroniza decimais com pontos
+        .replace(/([0-9])[.,](\s|$)/g, '$1$2') // Remove caracteres indesejados no final
+        .replace(/(-?\d+\.\d+)\s+(-?\d+\.\d+)/g, '$1, $2') // Formatação correta
+        .replace(/\s+/g, ' ') // Normaliza espaços
         .trim();
 
     document.getElementById('output').value = saida;

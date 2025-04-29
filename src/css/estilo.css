@@ -11,7 +11,7 @@ html {
 }
 
 .sidebar {
-    width: 24%;
+    width: 22%;
     padding: 20px;
     position: fixed;
     left: 0;
@@ -59,19 +59,19 @@ html {
     position: fixed;
     right: 18px;
     top: 10px;
-    bottom: 10px; /* Novo - limita altura */
-    max-height: 95vh; /* Altura máxima da tela */
-    overflow-y: auto; /* Adiciona scroll quando necessário */
+    bottom: 10px; 
+    max-height: 95vh; 
+    overflow-y: auto; 
     display: flex;
     flex-direction: column;
     gap: 10px;
     z-index: 1000;
-    padding-right: 8px; /* Compensa a barra de scroll */
+    padding-right: 8px; 
 }
 
 .post-it {
     width: 200px;
-    flex-shrink: 0; /* Impede redução de altura */
+    flex-shrink: 0; 
 }
 
 
