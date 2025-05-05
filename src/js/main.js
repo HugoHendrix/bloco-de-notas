@@ -78,27 +78,33 @@ function converterParaGoogle() {
     if (!entrada) return;
 
     const saida = entrada
-        .replace(/,/g, '.') // Padroniza decimais com pontos
-        .replace(/([0-9])[.,](\s|$)/g, '$1$2') // Remove caracteres indesejados no final
-        .replace(/(-?\d+\.\d+)\s+(-?\d+\.\d+)/g, '$1, $2') // Formatação correta
-        .replace(/\s+/g, ' ') // Normaliza espaços
+        .replace(/,/g, '.') // Passo 1: Padroniza decimais com pontos
+        .replace(/(-?\d+)\.?[\s](-?\d+)/g, '$1.$2') // Passo 2: Corrige espaços ENTRE DECIMAIS
+        .replace(/\.(?=-)/g, ' ') // Passo 3: Separa coordenadas por espaço
+        .replace(/(-?\d+\.\d+)\s+(-?\d+\.\d+)/, '$1 $2') // Passo 4: Garante o formato
+        .replace(/\s+/g, ' ') // Passo 5: Remove espaços extras
         .trim();
 
     document.getElementById('output').value = saida;
     copiarTextoPorId('output');
 }
 
+// Função para converter para o formato do Trafegus
 function converterParaTrafegus() {
-    const entrada = document.getElementById('input').value.trim();
-    if (!entrada) return;
+    const entrada = document.getElementById('input').value;
 
-    const saida = entrada
-        .replace(/(\d)\s+(?=-)/g, '$1,')
-        .replace(/\./g, ',');
+    // Passo 1: Substituir os espaços entre coordenadas por vírgula
+    let saida = entrada.replace(/(\d)\s+(?=-)/g, '$1,');
 
-    document.getElementById('output').value = saida;
-    copiarTextoPorId('output');
+    // Passo 2: Substituir pontos por vírgulas
+    saida = saida.replace(/\./g, ',');
+
+    const outputElemento = document.getElementById('output');
+    outputElemento.value = saida.trim(); // Remove espaços desnecessários no início ou fim
+
+    copiarTextoPorId('output'); // Copiar automaticamente
 }
+
 
 // ========== INICIALIZAÇÃO ========== //
 document.addEventListener("DOMContentLoaded", function() {
