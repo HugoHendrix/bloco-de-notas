@@ -55,6 +55,9 @@
                                 <li><a href="#orientacao-teste">Orientações Check List</a></li>
                             </ul>
                         </li>
+                        <li>
+                            <a href="#horizonte">Horizonte Transportes Procedimentos</a>
+                        </li>
 
                     </ul>
 
@@ -82,13 +85,14 @@
             <!-- Passagem de Turno -->
             <section class="mb-50" id="passagem">
                 <h2 class="titulo">📣 Passagem de Turno</h2>
-                <textarea id="anotacoes" class="custom-textarea" placeholder=" Digite a passagem de turno..."></textarea>
+                <textarea id="anotacoes" class="custom-textarea"
+                    placeholder=" Digite a passagem de turno..."></textarea>
                 <br>
                 <button class="btn btn-success" onclick="salvar('anotacoes')">Salvar texto</button>
                 <button class="btn btn-primary" onclick="copiarTextoPorId('anotacoes')">Copiar texto</button>
             </section>
 
-            <!-- Anotações Gerais -->         
+            <!-- Anotações Gerais -->
             <section>
                 <h2 class="titulo">✍ Anotações</h2>
                 <textarea id="anotacoes-gerais" class="custom-textarea"></textarea>
@@ -165,13 +169,15 @@
             <!-- CONVERSOR DE COORDENADAS -->
             <section class="mb-50" id="conversor">
                 <h2 class="titulo">📍 Conversor de Coordenadas</h2>
-                <textarea id="input" placeholder="Ex: -23.550520,-46.633308 ou -23 33 01.87 -46 37 58.14" rows="2" cols="50"></textarea>
+                <textarea id="input" placeholder="Ex: -23.550520,-46.633308 ou -23 33 01.87 -46 37 58.14" rows="2"
+                    cols="50"></textarea>
                 <br>
                 <button class="btn btn-primary" onclick="converterParaGoogle()">Converter para Google Maps</button>
                 <button class="btn btn-secondary" onclick="converterParaTrafegus()">Converter para Trafegus</button>
                 <br><br>
                 <textarea id="output" placeholder="Resultado aparecerá aqui" rows="2" cols="10" readonly></textarea>
-                <button class="btn btn-primary mt-5 mb-10" onclick="copiarTextoPorId('output')">Copiar Resultado</button>
+                <button class="btn btn-primary mt-5 mb-10" onclick="copiarTextoPorId('output')">Copiar
+                    Resultado</button>
             </section>
 
             <hr>
@@ -1332,7 +1338,8 @@
                             <ul>
                                 <li>Caso o veículo não esteja disponível no grid, clique em
                                     <strong>Administração</strong> e
-                                    selecione <strong>Adicionar veículo ao grupo</strong>.</li>
+                                    selecione <strong>Adicionar veículo ao grupo</strong>.
+                                </li>
                             </ul>
                         </li>
                         <li class="mb-5"><strong>Limpar Inteligência Embarcada:</strong>
@@ -1377,7 +1384,8 @@
                                 <li>Avance para as próximas etapas e aguarde o embarque da configuração.</li>
                                 <li><strong>Importante:</strong> Certifique-se de que o sinal está
                                     <strong>atualizado</strong> e
-                                    em <strong>GSM</strong>.</li>
+                                    em <strong>GSM</strong>.
+                                </li>
                             </ul>
                         </li>
                         <li><strong>Envio dos Comandos:</strong>
@@ -1454,45 +1462,181 @@
 
             <hr>
 
-
-
-
-            <hr>
-
-
-
-            <blockquote>0f
-                <div class="">
-                    <p>Contato:</p>
+            <div>
+                <header>
+                    <h1>Tutorial: Criação de Solicitação de Monitoramento (SM) no CELLOG</h1>
+                </header>
+        
+                <p>Este guia detalha o passo a passo para criar uma Solicitação de Monitoramento (SM) de forma eficiente no sistema CELLOG.</p>
+        
+                <hr>
+        
+                <section id="acesso-sm">
+                    <h2>Passo 1: Acessando a Tela de Solicitação de Monitoramento</h2>
+                    <ol>
+                        <li><strong>Abra o Sistema CELLOG.</strong></li>
+                        <li>Navegue pelo menu seguindo esta ordem:
+                            <ul>
+                                <li><code>III [MENU]</code></li>
+                                <li><code>CADASTRO</code></li>
+                                <li><code>VIAGENS</code></li>
+                                <li><code>SOLICITAÇÃO DE MONITORAMENTO</code></li>
+                            </ul>
+                        </li>
+                        <li>Para criar uma nova SM, <strong>clique no ícone da bandeira</strong> que aparece ao lado do ícone do olho.</li>
+                    </ol>
+                </section>
+        
+                <hr>
+        
+                <section id="preenchimento-dados">
+                    <h2>Passo 2: Preenchendo os Dados da SM</h2>
+                    <p>Insira as informações solicitadas em cada campo:</p>
+                    <ol>
+                        <li><strong>TIPO DE TRANSPORTE:</strong>
+                            <p>Preencha com: <code>[ 1 ]</code></p>
+                        </li>
+                        <li><strong>TRANSPORTADOR:</strong>
+                            <p>Informe o código do transportador.</p>
+                            <p><em>Exemplo:</em> <code>[ 4084470 ]</code></p>
+                        </li>
+                        <li><strong>VEÍCULO:</strong>
+                            <p>Insira a placa do veículo.</p>
+                            <p><em>Exemplo:</em> <code>[ CVR3F60 ]</code></p>
+                        </li>
+                        <li><strong>MOTORISTA:</strong>
+                            <p>Digite o nome completo do motorista.</p>
+                            <p><em>Exemplo:</em> <code>[ SILAS BRITO RIBEIRO ]</code></p>
+                        </li>
+                        <li><strong>ROTA:</strong>
+                            <p>Descreva o trajeto completo da viagem.</p>
+                            <p><em>Exemplo:</em> <code>[ HORIZONTE - ALEXANIA - GO (HEINEKEN) X PALMAS - TO (ATACADAO CESAMAR) ]</code></p>
+                            <p><strong>Atenção aos Detalhes Específicos da Rota (veja Passo 4).</strong></p>
+                        </li>
+                        <li><strong>PREVISÃO DE INÍCIO:</strong>
+                            <p>Informe o horário estimado para o início da viagem.</p>
+                            <p><em>Exemplo:</em> <code>[ 10:00 ]</code></p>
+                        </li>
+                        <li><strong>PREVISÃO DE FIM:</strong>
+                            <p>Informe o horário estimado para a conclusão da viagem.</p>
+                            <p><em>Exemplo:</em> <code>[ 10:00 ]</code></p>
+                        </li>
+                        <li><strong>VALOR DA MERCADORIA:</strong>
+                            <p>Insira o valor total da carga.</p>
+                            <p><em>Exemplo:</em> <code>[ 150.000,00 ]</code></p>
+                        </li>
+                        <li><strong>PLANO DE G.R (Gerenciamento de Risco):</strong>
+                            <p>Selecione o PGR (Plano de Gerenciamento de Risco) apropriado para a situação (Vazio, Carregado, Tanque). Consulte a tabela abaixo para os códigos corretos:</p>
+                            <div class="table-container-div">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Local/Situação</th>
+                                            <th>PGR VAZIO</th>
+                                            <th>PGR CARREGADO</th>
+                                            <th>PGR ESPECÍFICO</th>
+                                            <th>Responsáveis (Autorização)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>MATRIZ (Jose Bonifacio-SP)</strong></td>
+                                            <td><code>2073</code></td>
+                                            <td><code>2069</code></td>
+                                            <td></td>
+                                            <td>Walquir e Leticia</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>FILIAL LIMEIRA</strong></td>
+                                            <td><code>2104</code></td>
+                                            <td><code>2105</code></td>
+                                            <td></td>
+                                            <td>Silvio e Bruna</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ORIGEM NESTLÉ</strong></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><code>1992</code> (Usar quando a origem for Nestlé)</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>ACOMPANHAMENTO CCAR</strong></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><code>1995</code></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </li>
+                    </ol>
+                </section>
+        
+                <hr>
+        
+                <section id="verificacao-obrigatoria">
+                    <h2>Passo 3: Verificações Obrigatórias Antes de Finalizar</h2>
+                    <div class="important-note-div">
+                        <p><span class="warning-symbol-span">🚧</span> <strong>Confira sempre estes dados críticos:</strong></p>
+                        <ul>
+                            <li><span class="check-item-span">✅</span> <strong>Local de Origem:</strong> Verifique se o ponto inicial da viagem está correto.</li>
+                            <li><span class="check-item-span">✅</span> <strong>Destino da Viagem:</strong> Confirme o local final da entrega.</li>
+                            <li><span class="check-item-span">✅</span> <strong>Motorista do Veículo:</strong> Assegure-se de que o motorista escalado é o correto.</li>
+                            <li><span class="check-item-span">✅</span> <strong>Rota:</strong> Garanta que o trajeto detalhado está de acordo com o planejado e inclui os pontos necessários (veja Passo 4).</li>
+                        </ul>
+                    </div>
+                </section>
+        
+                <hr>
+        
+                <section id="detalhes-rotas">
+                    <h2>Passo 4: Detalhes Cruciais Sobre Rotas Específicas</h2>
+                    <p>Atenção ao definir a rota, pois alguns trajetos exigem informações adicionais:</p>
                     <ul>
-                        <li><a href="mailto:hugohendrixc@gmail.com">hugohendrixc@gmail.com</a></li>
-                        <li><a href="https://www.linkedin.com/in/hugohendrix/">LinkedIn</a></li>
-                        <li><a href="https://github.com/HugoHendrix/">GitHub</a></li>
+                        <li><strong>ROTAS PARA TETRA PARK:</strong>
+                            <p>Sempre vincule os <strong>três postos de abastecimento</strong> próximos:</p>
+                            <ol>
+                                <li>Posto Formigão (Capivari)</li>
+                                <li>Posto Belvista (Capivari)</li>
+                                <li>Posto Benfica (Elias Fausto)</li>
+                            </ol>
+                        </li>
+                        <li><strong>ROTAS NESTLÉ ITUITABA (LOGLILOG):</strong>
+                            <p>Vincular a <code>LOGLILOG LOGISTICA</code> na rota.</p>
+                        </li>
+                        <li><strong>ROTAS PELA BR-153 (Passando por Jose Bonifacio):</strong>
+                            <p>Sempre que a rota incluir a BR-153 e passar por Jose Bonifacio, <strong>vincular a MATRIZ</strong> na rota.</p>
+                        </li>
+                        <li><strong>ROTAS PRÓXIMAS À FILIAL LIMEIRA:</strong>
+                            <p>Se a rota passar nas proximidades da filial em Limeira, <strong>vincular a FILIAL LIMEIRA</strong> na rota.</p>
+                        </li>
                     </ul>
-                    <p>Links úteis:</p>
+                </section>
+        
+                <hr>
+        
+                <section id="problemas-perifericos">
+                    <h2>Passo 5: Lidando com Problemas em Periféricos</h2>
+                    <p>Caso ocorra algum problema com periféricos (rastreador, etc.), é crucial registrar:</p>
                     <ul>
-                        <li><a href="https://www.sascar.com.br" target="_blank">Sascar</a></li>
-                        <li><a href="https://www.omnilink.com.br" target="_blank">Omnilink</a></li>
-                        <li><a href="https://www.onixsat.com.br" target="_blank">Onix Sat</a></li>
-                        <li><a href="https://www.autotrac.com.br" target="_blank">Autotrac</a></li>
+                        <li>No campo de observações ou apropriado, inserir: "<strong>Gestor notificado</strong>".</li>
                     </ul>
-                    <footer>&copy; 2025 Hugo Hendrix | Technocel - Todos os direitos reservados.</footer>
-                </div>
-            </blockquote>
-    </div>
-    </main>
-
-   
+                </section>
+        </main>
 
 
-    <script src="src/js/jquery.min.js"></script>
-    <script src="src/js/bootstrap.bundle.min.js"></script>
-    <script src="src/js/owl.carousel.min.js"></script>
-    <script src="src/js/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script src="src/js/main.js"></script>
+
+
+        <script src="src/js/jquery.min.js"></script>
+        <script src="src/js/bootstrap.bundle.min.js"></script>
+        <script src="src/js/owl.carousel.min.js"></script>
+        <script src="src/js/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="src/js/main.js"></script>
 </body>
 
 </html>
