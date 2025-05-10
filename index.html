@@ -36,8 +36,6 @@
                                 <li><a href="#padrao-grid">Padrão de Grid</a></li>
                                 <li><a href="#otan">Alfabeto Fonético da OTAN</a></li>
                                 <li><a href="#codigoq">Código Q</a></li>
-                                <li><a href="#sm-satel">Como Criar SM SATEL</a></li>
-                                <li><a href="#padrao-rota">Padronização de Rotas</a></li>
                                 <li><a href="#desbloqueio-offline-autotrac">Desbloqueio Offline Autotrac</a></li>
                                 <li><a href="#excesso-funcoes">Excesso de Funções Lógicas</a></li>
                                 <li><a href="#macros">Lista de Macros SATEL / Dalastra</a></li>
@@ -55,10 +53,13 @@
                                 <li><a href="#orientacao-teste">Orientações Check List</a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#horizonte">Horizonte Transportes Procedimentos</a>
-                        </li>
+                        <li><a href="#horizonte">Procedimentos para criar SM</a>
+                        <ul>
+                            <li><a href="#sm-satel">Como Criar SM SATEL</a></li>
 
+                            <li><a href="#padrao-rota">Padronização de Rotas</a></li>
+                        </ul>
+                        </li>
                     </ul>
 
                 </nav>
@@ -732,72 +733,7 @@
 
             <hr>
 
-            <section class="flash muted p-5">
-                <h2 id="sm-satel" class="h1 mb-4">Como Criar SM SATEL</h2>
-                <h2 class="h3">Exemplos Específicos para Importação e Exportação</h2>
-                <p>Para melhor compreensão das (OC), seguem exemplos específicos para importação e exportação:</p>
-                <p>Definir o Tipo de Transporte - <strong>Sempre selecione Tipo de Transporte = 1.</strong></p>
-                <p>Verificar se é <strong>Exportação ou Importação</strong>. A origem e o destino muda, conforme a
-                    imagem:</p>
-                <div class="card mb-30">
-                    <img src="src/img/sm-satel1.png" width="100%" alt="SM SATEL">
-                </div>
-                <div class="card">
-                    <img src="src/img/sm-satel2.png" width="100%" alt="SM SATEL">
-                </div>
-                <hr class="divider">
-                <h2 class="h2">Conferir Dados Obrigatórios</h2>
-                <p><strong>🚧 Verifique sempre:</strong></p>
-                <li>✅ Local de origem</li>
-                <li>✅ Destino da viagem</li>
-                <li>✅ Motorista do veículo</li>
-                <li>✅ Rota (trajeto a ser seguido)</li>
-
-                <hr class="divider">
-
-                <h2 class="h2">Confirmar Criação da SM no grupo do WhatsApp.</h2>
-                <li>Após criar a solicitação, informe se a SM foi gerada com sucesso.</li>
-                <li>Caso não seja possível criar, informe o motivo (ex.: dados incorretos, falta de informações, etc.).
-                </li>
-
-
-
-            </section>
-            </section>
-
-            <hr>
-            <section class="p-5 flash muted">
-                <h1 id="padrao-rota" class="fs-32">Padronização e Organização de Rotas</h1>
-                <p>Temos observado a criação de diversas rotas sem um padrão definido, além da duplicação de rotas já
-                    existentes. Para garantir a padronização e a organização, solicitamos que sejam seguidas as
-                    seguintes
-                    recomendações:</p>
-                <h2>Nomenclatura das Rotas</h2>
-                <p>A nomenclatura das rotas deve conter:</p>
-                <ul>
-                    <li>Nome do responsável pela rota</li>
-                    <li>Cidade de origem (cliente)</li>
-                    <li>Cidade de destino (cliente)</li>
-                </ul>
-                <p>Caso haja alguma entrega ou passagem por um local específico, essa informação deve ser inserida entre
-                    colchetes <code>[ ]</code>.</p>
-                <div class="example">
-                    <strong>Exemplo:</strong><br>
-                    <code>SATEL – SANTOS – SP (TECON) X COLATINA – ES (FRISA) [VIA BR116]</code>
-                </div>
-                <h2>Criação de Novas Rotas</h2>
-                <ul>
-                    <li>Evite utilizar apenas o nome da cidade. Utilize sempre o nome do cliente correspondente.</li>
-                    <li>Para saídas de Santos/Guarujá, informe corretamente o local de saída, especificando o terminal
-                        ou porto
-                        adequado, evitando designações genéricas.</li>
-                </ul>
-            </section>
-
-
-
-
-            <hr>
+     
 
             <section id="desbloqueio-offline-autotrac" class="flash muted p-5">
                 <header class="header">
@@ -1462,12 +1398,43 @@
 
             <hr>
 
-            <div>
+            <hr>
+            <section class="p-5 flash muted">
+                <h1 id="padrao-rota" class="fs-32">Padronização e Organização de Rotas</h1>
+                <p>Temos observado a criação de diversas rotas sem um padrão definido, além da duplicação de rotas já
+                    existentes. Para garantir a padronização e a organização, solicitamos que sejam seguidas as
+                    seguintes
+                    recomendações:</p>
+                <h2>Nomenclatura das Rotas</h2>
+                <p>A nomenclatura das rotas deve conter:</p>
+                <ul>
+                    <li>Nome do responsável pela rota</li>
+                    <li>Cidade de origem (cliente)</li>
+                    <li>Cidade de destino (cliente)</li>
+                </ul>
+                <p>Caso haja alguma entrega ou passagem por um local específico, essa informação deve ser inserida entre
+                    colchetes <code>[ ]</code>.</p>
+                <div class="example">
+                    <strong>Exemplo:</strong><br>
+                    <code>SATEL – SANTOS – SP (TECON) X COLATINA – ES (FRISA) [VIA BR116]</code>
+                </div>
+                <h2>Criação de Novas Rotas</h2>
+                <ul>
+                    <li>Evite utilizar apenas o nome da cidade. Utilize sempre o nome do cliente correspondente.</li>
+                    <li>Para saídas de Santos/Guarujá, informe corretamente o local de saída, especificando o terminal
+                        ou porto
+                        adequado, evitando designações genéricas.</li>
+                </ul>
+            </section>
+
+            <hr>
+
+            <div id="horizonte" class="p-5 flash muted">
                 <header>
                     <h1>Tutorial: Criação de Solicitação de Monitoramento (SM) no CELLOG</h1>
                 </header>
         
-                <p>Este guia detalha o passo a passo para criar uma Solicitação de Monitoramento (SM) de forma eficiente no sistema CELLOG.</p>
+                <p>Este guia detalha o passo a passo para criar uma <a href="http://www.cellog.com.br/trafeguswebnovo/login" target="_blank" rel="noopener noreferrer">Solicitação de Monitoramento (SM) de forma eficiente no sistema CELLOG</a>. Utilizando como Exemplo o <strong class="fs-18">cliente Horizonte</strong>.</p>
         
                 <hr>
         
@@ -1624,6 +1591,49 @@
                         <li>No campo de observações ou apropriado, inserir: "<strong>Gestor notificado</strong>".</li>
                     </ul>
                 </section>
+
+
+                <hr>
+
+                <section class="flash muted p-5">
+                    <h2 id="sm-satel" class="h1 mb-4">Como Criar SM SATEL</h2>
+                    <h2 class="h3">Exemplos Específicos para Importação e Exportação</h2>
+                    <p>Para melhor compreensão das (OC), seguem exemplos específicos para importação e exportação:</p>
+                    <p>Definir o Tipo de Transporte - <strong>Sempre selecione Tipo de Transporte = 1.</strong></p>
+                    <p>Verificar se é <strong>Exportação ou Importação</strong>. A origem e o destino muda, conforme a
+                        imagem:</p>
+                    <div class="card mb-30">
+                        <img src="src/img/sm-satel1.png" width="100%" alt="SM SATEL">
+                    </div>
+                    <div class="card">
+                        <img src="src/img/sm-satel2.png" width="100%" alt="SM SATEL">
+                    </div>
+                    <hr class="divider">
+                    <h2 class="h2">Conferir Dados Obrigatórios</h2>
+                    <p><strong>🚧 Verifique sempre:</strong></p>
+                    <li>✅ Local de origem</li>
+                    <li>✅ Destino da viagem</li>
+                    <li>✅ Motorista do veículo</li>
+                    <li>✅ Rota (trajeto a ser seguido)</li>
+    
+                    <hr class="divider">
+    
+                    <h2 class="h2">Confirmar Criação da SM no grupo do WhatsApp.</h2>
+                    <li>Após criar a solicitação, informe se a SM foi gerada com sucesso.</li>
+                    <li>Caso não seja possível criar, informe o motivo (ex.: dados incorretos, falta de informações, etc.).
+                    </li>
+    
+    
+    
+                </section>
+                </section>
+    
+         
+    
+    
+    
+    
+                <hr>
         </main>
 
 
