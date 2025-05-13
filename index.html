@@ -53,12 +53,14 @@
                                 <li><a href="#orientacao-teste">Orientações Check List</a></li>
                             </ul>
                         </li>
-                        <li><a href="#horizonte">Procedimentos para criar SM</a>
+                        <li><a href="#processos-horizonte">Anotações - Processos Horizonte JR
+                        </a></li>
                         <ul>
-                            <li><a href="#sm-satel">Como Criar SM SATEL</a></li>
+                                <li><a href="#horizonte">Como Criar SM Horizonte</a>
+                                <li><a href="#sm-satel">Como Criar SM SATEL</a></li>
 
-                            <li><a href="#padrao-rota">Padronização de Rotas</a></li>
-                        </ul>
+                                <li><a href="#padrao-rota">Padronização de Rotas</a></li>
+                            </ul>
                         </li>
                     </ul>
 
@@ -733,7 +735,7 @@
 
             <hr>
 
-     
+
 
             <section id="desbloqueio-offline-autotrac" class="flash muted p-5">
                 <header class="header">
@@ -1429,15 +1431,164 @@
 
             <hr>
 
-            <div id="horizonte" class="p-5 flash muted">
+         <section class="p-5 flash active" id="processos-horizonte">
+            <h1 class="h1"><strong>Anotações - Processos Horizonte JR</strong>  </h1>
+            <h3 id="1-monitoramento-obrigatório"><strong>1. Monitoramento Obrigatório</strong></h3>
+            <ul>
+            <li>Todos os veículos (carregados ou vazios) devem ter <strong>SM (Solicitação de Monitoramento)</strong> ativa.  </li>
+            <li>Bloquear movimentações sem SM até regularização.</li>
+            </ul>
+            <p><strong>Exceção – Saída para Manutenção (SEM SM):</strong>  </p>
+            <ul>
+            <li>Liberação <strong>apenas com autorização</strong> do responsável (via grupo corporativo).  </li>
+            <li>Comandos necessários:  <ul>
+            <li>Limpar Funções Lógicas  </li>
+            <li>Assistência Técnica  </li>
+            <li>Liberar Veículo  </li>
+            <li>Desligar Sirene (se porta aberta)</li>
+            </ul>
+            </li>
+            <li><strong>Modo manutenção:</strong>  <ul>
+            <li>Não gera eventos (exceto excesso de velocidade ou desvio de rota com SM ativa → tratar como <strong>&quot;MANUTENÇÃO&quot;</strong>).</li>
+            </ul>
+            </li>
+            <li><strong>Retorno da manutenção:</strong>  <ul>
+            <li>Reenviar comando <strong>&quot;Geral – Horizonte (configuração básica)&quot;</strong> para restaurar parâmetros padrão.</li>
+            </ul>
+            </li>
+            </ul>
+            <hr>
+            <h3 id="2-penalidade--excesso-de-velocidade"><strong>2. Penalidade – Excesso de Velocidade</strong></h3>
+            <ul>
+            <li>Limites:  <ul>
+            <li><strong>80 km/h</strong> (Unilever)  </li>
+            <li><strong>90 km/h</strong> (demais cargas/vazios)</li>
+            </ul>
+            </li>
+            <li><strong>Bloqueio automático:</strong> 30 minutos.  </li>
+            <li><strong>Liberação antecipada:</strong> Apenas por <strong>Rogério, Márcio, Gilmar, Silvio, Renato ou Junior</strong>.  </li>
+            <li><strong>Registro obrigatório:</strong>  <ul>
+            <li>Abrir não conformidade (informar cliente).  </li>
+            <li>Notificar no grupo com <strong>print do mapa</strong> do local.</li>
+            </ul>
+            </li>
+            </ul>
+            <hr>
+            <h3 id="3-particularidades-da-operação"><strong>3. Particularidades da Operação</strong></h3>
+            <ul>
+            <li><strong>Espelhamento de embarques:</strong> Responsabilidade da <strong>Technocel</strong>.  </li>
+            <li><strong>Roteamento:</strong> Usar conta principal da Horizonte JR (credenciais salvas).  </li>
+            <li><strong>Reconfiguração temporária:</strong>  <ul>
+            <li>Registrar no grid <strong>&quot;RECONFIG PARÂMETROS&quot;</strong>.  </li>
+            <li>Retornar para <strong>[890 – 60 – 1780]</strong> após a viagem.</li>
+            </ul>
+            </li>
+            </ul>
+            <hr>
+            <h3 id="4-tratativas-de-eventos"><strong>4. Tratativas de Eventos</strong></h3>
+            <p><strong>Violação de Horário no Destino:</strong>  </p>
+            <ul>
+            <li>Pode ser ignorada (previsão estimada). Tratamento automático via PGR.</li>
+            </ul>
+            <p><strong>Movimento Indevido Fora do Destino:</strong>  </p>
+            <ul>
+            <li>Causa: Falha na <strong>Trafegus</strong> (não reconhece macro após efetivação).  </li>
+            <li><strong>Solução:</strong>  <ul>
+            <li>Clicar com botão direito no evento → <strong>&quot;Incluir Macro Manual&quot;</strong> (ex: &quot;INÍCIO DE VIAGEM&quot;).  </li>
+            <li>Verificar <strong>&quot;Código Tipo&quot;</strong> se estiver em branco.</li>
+            <img src="./src/img/codigo-tipo.png" alt="Código Tipo" class="img-fluid mb-5">
+            </ul>
+            </li>
+            </ul>
+            <hr>
+            <h3 id="5-paradas-não-autorizadas-primeiros-50-km"><strong>5. Paradas Não Autorizadas (Primeiros 50 km)</strong></h3>
+            <ul>
+            <li><strong>Proibido parar</strong> (exceto justificativas).  </li>
+            <li><strong>Procedimentos:</strong>  <ul>
+            <li><strong>Trânsito:</strong> Registrar como <strong>&quot;Reinício de Viagem&quot;</strong>.  </li>
+            <li><strong>Postos/Alimentação:</strong>  <ul>
+            <li>Contatar motorista para seguir viagem.  </li>
+            <li>Abrir não conformidade (relatar parada e orientação).</li>
+            </ul>
+            </li>
+            <li><strong>Filial Limeira-SP:</strong> Parada autorizada (só registrar não conformidade).</li>
+            </ul>
+            </li>
+            </ul>
+            <hr>
+            <h3 id="6-excesso-de-tempo-em-posto"><strong>6. Excesso de Tempo em Posto</strong></h3>
+            <ul>
+            <li>Motorista <strong>deve informar &quot;FIM DE VIAGEM&quot;</strong> ao chegar.  <ul>
+            <li>Se usar <strong>&quot;PARA ESPERA&quot;</strong>, veículo <strong>não bloqueia</strong> (risco de movimentação sem SM).</li>
+            </ul>
+            </li>
+            <li><strong>Importante:</strong> Encerrar SMs em aberto para evitar bloqueios por desvio de rota.</li>
+            </ul>
+            <hr>
+            <h3 id="7-outros-bloqueios"><strong>7. Outros Bloqueios</strong></h3>
+            <ul>
+            <li><strong>INÍCIO DE VIAGEM:</strong> Não é padrão. Verificar se houve:  <ul>
+            <li>FIM DE VIAGEM  </li>
+            <li>Violação  </li>
+            <li>Fim de jornada</li>
+            </ul>
+            </li>
+            <li><strong>Porta Aberta:</strong> Bloqueio após 20 segundos (configuração PROÍBE CARONA).  </li>
+            <li><strong>Fim de Jornada:</strong>  <ul>
+            <li>Veículos sem finalização são bloqueados <strong>às 22h</strong>.  </li>
+            <li>Reativar apenas com <strong>&quot;INÍCIO DE JORNADA&quot;</strong> + 11h de descanso (ou autorização).</li>
+            </ul>
+            </li>
+            <li><strong>Novelis (Pindamonhangaba):</strong>  <ul>
+            <li>Penalidade de 30 minutos por excesso de velocidade <strong>deve ser cumprida</strong>.  </li>
+            <li>Se outra GR liberar antes, avisar no grupo.</li>
+            </ul>
+            </li>
+            </ul>
+            <hr>
+            <h3 id="8-comunicação"><strong>8. Comunicação</strong></h3>
+            <ul>
+            <li><strong>Bloqueio por velocidade:</strong>  <ul>
+            <li>Notificar no grupo com <strong>print do local</strong>.  </li>
+            <li>Mensagem padrão para motorista:  <blockquote>
+            <p><em>&quot;Recebemos evento de velocidade excedida. Conforme regra, o veículo deve aguardar 30 minutos no local. Após esse período, será liberado.&quot;</em></p>
+            </blockquote>
+            </li>
+            </ul>
+            </li>
+            <li><strong>CCAR ou eventos críticos (pânico, porta aberta):</strong>  <ul>
+            <li>Notificar a <strong>GR responsável</strong> e contatar motorista.  </li>
+            <li><strong>Nunca enviar comandos sem autorização</strong> (risco de invalidar seguro).</li>
+            </ul>
+            </li>
+            </ul>
+            <hr>
+            <p><strong>Observações:</strong>  </p>
+            <ul>
+            <li>Todas as <strong>não conformidades</strong> devem ser <strong>registradas e comunicadas no grupo</strong>.  </li>
+            <li>Aguardar manual de <strong>roteamento/espelhamento AMBEV</strong>. Enquanto isso, consultar <strong>Ivan</strong> ou <strong>Elaine</strong>.</li>
+            </ul>
+            
+
+         </section>
+
+
+
+
+            <hr>
+
+            <div id="horizonte" class="p-5 flash active">
                 <header>
-                    <h1>Tutorial: Criação de Solicitação de Monitoramento (SM) no CELLOG</h1>
+                    <h1 class="h1">Horizonte - Criação de SM via CELLOG</h1>
                 </header>
-        
-                <p>Este guia detalha o passo a passo para criar uma <a href="http://www.cellog.com.br/trafeguswebnovo/login" target="_blank" rel="noopener noreferrer">Solicitação de Monitoramento (SM) de forma eficiente no sistema CELLOG</a>. Utilizando como Exemplo o <strong class="fs-18">cliente Horizonte</strong>.</p>
-        
+
+                <p>Este guia detalha o passo a passo para criar uma <a
+                        href="http://www.cellog.com.br/trafeguswebnovo/login" target="_blank"
+                        rel="noopener noreferrer">Solicitação de Monitoramento (SM) de forma eficiente no sistema
+                        CELLOG</a>. Utilizando como Exemplo o <strong class="fs-18">cliente Horizonte</strong>.</p>
+
                 <hr>
-        
+
                 <section id="acesso-sm">
                     <h2>Passo 1: Acessando a Tela de Solicitação de Monitoramento</h2>
                     <ol>
@@ -1450,12 +1601,13 @@
                                 <li><code>SOLICITAÇÃO DE MONITORAMENTO</code></li>
                             </ul>
                         </li>
-                        <li>Para criar uma nova SM, <strong>clique no ícone da bandeira</strong> que aparece ao lado do ícone do olho.</li>
+                        <li>Para criar uma nova SM, <strong>clique no ícone da bandeira</strong> que aparece ao lado do
+                            ícone do olho.</li>
                     </ol>
                 </section>
-        
+
                 <hr>
-        
+
                 <section id="preenchimento-dados">
                     <h2>Passo 2: Preenchendo os Dados da SM</h2>
                     <p>Insira as informações solicitadas em cada campo:</p>
@@ -1477,7 +1629,9 @@
                         </li>
                         <li><strong>ROTA:</strong>
                             <p>Descreva o trajeto completo da viagem.</p>
-                            <p><em>Exemplo:</em> <code>[ HORIZONTE - ALEXANIA - GO (HEINEKEN) X PALMAS - TO (ATACADAO CESAMAR) ]</code></p>
+                            <p><em>Exemplo:</em>
+                                <code>[ HORIZONTE - ALEXANIA - GO (HEINEKEN) X PALMAS - TO (ATACADAO CESAMAR) ]</code>
+                            </p>
                             <p><strong>Atenção aos Detalhes Específicos da Rota (veja Passo 4).</strong></p>
                         </li>
                         <li><strong>PREVISÃO DE INÍCIO:</strong>
@@ -1493,7 +1647,8 @@
                             <p><em>Exemplo:</em> <code>[ 150.000,00 ]</code></p>
                         </li>
                         <li><strong>PLANO DE G.R (Gerenciamento de Risco):</strong>
-                            <p>Selecione o PGR (Plano de Gerenciamento de Risco) apropriado para a situação (Vazio, Carregado, Tanque). Consulte a tabela abaixo para os códigos corretos:</p>
+                            <p>Selecione o PGR (Plano de Gerenciamento de Risco) apropriado para a situação (Vazio,
+                                Carregado, Tanque). Consulte a tabela abaixo para os códigos corretos:</p>
                             <div class="table-container-div">
                                 <table>
                                     <thead>
@@ -1540,24 +1695,30 @@
                         </li>
                     </ol>
                 </section>
-        
+
                 <hr>
-        
+
                 <section id="verificacao-obrigatoria">
                     <h2>Passo 3: Verificações Obrigatórias Antes de Finalizar</h2>
                     <div class="important-note-div">
-                        <p><span class="warning-symbol-span">🚧</span> <strong>Confira sempre estes dados críticos:</strong></p>
+                        <p><span class="warning-symbol-span">🚧</span> <strong>Confira sempre estes dados
+                                críticos:</strong></p>
                         <ul>
-                            <li><span class="check-item-span">✅</span> <strong>Local de Origem:</strong> Verifique se o ponto inicial da viagem está correto.</li>
-                            <li><span class="check-item-span">✅</span> <strong>Destino da Viagem:</strong> Confirme o local final da entrega.</li>
-                            <li><span class="check-item-span">✅</span> <strong>Motorista do Veículo:</strong> Assegure-se de que o motorista escalado é o correto.</li>
-                            <li><span class="check-item-span">✅</span> <strong>Rota:</strong> Garanta que o trajeto detalhado está de acordo com o planejado e inclui os pontos necessários (veja Passo 4).</li>
+                            <li><span class="check-item-span">✅</span> <strong>Local de Origem:</strong> Verifique se o
+                                ponto inicial da viagem está correto.</li>
+                            <li><span class="check-item-span">✅</span> <strong>Destino da Viagem:</strong> Confirme o
+                                local final da entrega.</li>
+                            <li><span class="check-item-span">✅</span> <strong>Motorista do Veículo:</strong>
+                                Assegure-se de que o motorista escalado é o correto.</li>
+                            <li><span class="check-item-span">✅</span> <strong>Rota:</strong> Garanta que o trajeto
+                                detalhado está de acordo com o planejado e inclui os pontos necessários (veja Passo 4).
+                            </li>
                         </ul>
                     </div>
                 </section>
-        
+
                 <hr>
-        
+
                 <section id="detalhes-rotas">
                     <h2>Passo 4: Detalhes Cruciais Sobre Rotas Específicas</h2>
                     <p>Atenção ao definir a rota, pois alguns trajetos exigem informações adicionais:</p>
@@ -1574,16 +1735,18 @@
                             <p>Vincular a <code>LOGLILOG LOGISTICA</code> na rota.</p>
                         </li>
                         <li><strong>ROTAS PELA BR-153 (Passando por Jose Bonifacio):</strong>
-                            <p>Sempre que a rota incluir a BR-153 e passar por Jose Bonifacio, <strong>vincular a MATRIZ</strong> na rota.</p>
+                            <p>Sempre que a rota incluir a BR-153 e passar por Jose Bonifacio, <strong>vincular a
+                                    MATRIZ</strong> na rota.</p>
                         </li>
                         <li><strong>ROTAS PRÓXIMAS À FILIAL LIMEIRA:</strong>
-                            <p>Se a rota passar nas proximidades da filial em Limeira, <strong>vincular a FILIAL LIMEIRA</strong> na rota.</p>
+                            <p>Se a rota passar nas proximidades da filial em Limeira, <strong>vincular a FILIAL
+                                    LIMEIRA</strong> na rota.</p>
                         </li>
                     </ul>
                 </section>
-        
+
                 <hr>
-        
+
                 <section id="problemas-perifericos">
                     <h2>Passo 5: Lidando com Problemas em Periféricos</h2>
                     <p>Caso ocorra algum problema com periféricos (rastreador, etc.), é crucial registrar:</p>
@@ -1595,45 +1758,48 @@
 
                 <hr>
 
-                <section class="flash muted p-5">
-                    <h2 id="sm-satel" class="h1 mb-4">Como Criar SM SATEL</h2>
-                    <h2 class="h3">Exemplos Específicos para Importação e Exportação</h2>
-                    <p>Para melhor compreensão das (OC), seguem exemplos específicos para importação e exportação:</p>
-                    <p>Definir o Tipo de Transporte - <strong>Sempre selecione Tipo de Transporte = 1.</strong></p>
-                    <p>Verificar se é <strong>Exportação ou Importação</strong>. A origem e o destino muda, conforme a
-                        imagem:</p>
-                    <div class="card mb-30">
-                        <img src="src/img/sm-satel1.png" width="100%" alt="SM SATEL">
-                    </div>
-                    <div class="card">
-                        <img src="src/img/sm-satel2.png" width="100%" alt="SM SATEL">
-                    </div>
-                    <hr class="divider">
-                    <h2 class="h2">Conferir Dados Obrigatórios</h2>
-                    <p><strong>🚧 Verifique sempre:</strong></p>
-                    <li>✅ Local de origem</li>
-                    <li>✅ Destino da viagem</li>
-                    <li>✅ Motorista do veículo</li>
-                    <li>✅ Rota (trajeto a ser seguido)</li>
-    
-                    <hr class="divider">
-    
-                    <h2 class="h2">Confirmar Criação da SM no grupo do WhatsApp.</h2>
-                    <li>Após criar a solicitação, informe se a SM foi gerada com sucesso.</li>
-                    <li>Caso não seja possível criar, informe o motivo (ex.: dados incorretos, falta de informações, etc.).
-                    </li>
-    
-    
-    
-                </section>
-                </section>
-    
-         
-    
-    
-    
-    
-                <hr>
+
+            </div>
+
+            <br>
+
+            <section class="flash severe p-5">
+                <h2 id="sm-satel" class="h1 mb-4">Como Criar SM SATEL</h2>
+                <h2 class="h3">Exemplos Específicos para Importação e Exportação</h2>
+                <p>Para melhor compreensão das (OC), seguem exemplos específicos para importação e exportação:</p>
+                <p>Definir o Tipo de Transporte - <strong>Sempre selecione Tipo de Transporte = 1.</strong></p>
+                <p>Verificar se é <strong>Exportação ou Importação</strong>. A origem e o destino muda, conforme a
+                    imagem:</p>
+                <div class="card mb-30">
+                    <img src="src/img/sm-satel1.png" width="100%" alt="SM SATEL">
+                </div>
+                <div class="card">
+                    <img src="src/img/sm-satel2.png" width="100%" alt="SM SATEL">
+                </div>
+                <hr class="divider">
+                <h2 class="h2">Conferir Dados Obrigatórios</h2>
+                <p><strong>🚧 Verifique sempre:</strong></p>
+                <li>✅ Local de origem</li>
+                <li>✅ Destino da viagem</li>
+                <li>✅ Motorista do veículo</li>
+                <li>✅ Rota (trajeto a ser seguido)</li>
+
+                <hr class="divider">
+
+                <h2 class="h2">Confirmar Criação da SM no grupo do WhatsApp.</h2>
+                <li>Após criar a solicitação, informe se a SM foi gerada com sucesso.</li>
+                <li>Caso não seja possível criar, informe o motivo (ex.: dados incorretos, falta de informações, etc.).
+                </li>
+
+
+
+            </section>
+
+
+
+
+
+            <hr>
         </main>
 
 
