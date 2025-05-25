@@ -54,14 +54,15 @@
                             </ul>
                         </li>
                         <li><a href="#processos-horizonte">Anotações - Processos Horizonte JR
-                        </a></li>
+                            </a></li>
                         <ul>
-                                <li><a href="#horizonte">Como Criar SM Horizonte</a>
-                                <li><a href="#sm-satel">Como Criar SM SATEL</a></li>
+                            <li><a href="#horizonte">Como Criar SM Horizonte</a>
+                            <li><a href="#sm-satel">Como Criar SM SATEL</a></li>
 
-                                <li><a href="#padrao-rota">Padronização de Rotas</a></li>
-                                <li><a href="./manuais/AUTOTRAC - Manual Roteamentos.pdf" target="_blank" rel="noopener noreferrer">Autotrac Manutal de Roteamento</a></li>
-                            </ul>
+                            <li><a href="#padrao-rota">Padronização de Rotas</a></li>
+                            <li><a href="./manuais/AUTOTRAC - Manual Roteamentos.pdf" target="_blank"
+                                    rel="noopener noreferrer">Autotrac Manutal de Roteamento</a></li>
+                        </ul>
                         </li>
                     </ul>
 
@@ -1432,146 +1433,175 @@
 
             <hr>
 
-         <section class="p-5 flash active" id="processos-horizonte">
-            <h1 class="h1"><strong>Anotações - Processos Horizonte JR</strong>  </h1>
-            <h3 id="1-monitoramento-obrigatório"><strong>1. Monitoramento Obrigatório</strong></h3>
-            <ul>
-            <li>Todos os veículos (carregados ou vazios) devem ter <strong>SM (Solicitação de Monitoramento)</strong> ativa.  </li>
-            <li>Bloquear movimentações sem SM até regularização.</li>
-            </ul>
-            <p><strong>Exceção – Saída para Manutenção (SEM SM):</strong>  </p>
-            <ul>
-            <li>Liberação <strong>apenas com autorização</strong> do responsável (via grupo corporativo).  </li>
-            <li>Comandos necessários:  <ul>
-            <li>Limpar Funções Lógicas  </li>
-            <li>Assistência Técnica  </li>
-            <li>Liberar Veículo  </li>
-            <li>Desligar Sirene (se porta aberta)</li>
-            </ul>
-            </li>
-            <li><strong>Modo manutenção:</strong>  <ul>
-            <li>Não gera eventos (exceto excesso de velocidade ou desvio de rota com SM ativa → tratar como <strong>&quot;MANUTENÇÃO&quot;</strong>).</li>
-            </ul>
-            </li>
-            <li><strong>Retorno da manutenção:</strong>  <ul>
-            <li>Reenviar comando <strong>&quot;Geral – Horizonte (configuração básica)&quot;</strong> para restaurar parâmetros padrão.</li>
-            </ul>
-            </li>
-            </ul>
-            <hr>
-            <h3 id="2-penalidade--excesso-de-velocidade"><strong>2. Penalidade – Excesso de Velocidade</strong></h3>
-            <ul>
-            <li>Limites:  <ul>
-            <li><strong>80 km/h</strong> (Unilever)  </li>
-            <li><strong>90 km/h</strong> (demais cargas/vazios)</li>
-            </ul>
-            </li>
-            <li><strong>Bloqueio automático:</strong> 30 minutos.  </li>
-            <li><strong>Liberação antecipada:</strong> Apenas por <strong>Rogério, Márcio, Gilmar, Silvio, Renato ou Junior</strong>.  </li>
-            <li><strong>Registro obrigatório:</strong>  <ul>
-            <li>Abrir não conformidade (informar cliente).  </li>
-            <li>Notificar no grupo com <strong>print do mapa</strong> do local.</li>
-            </ul>
-            </li>
-            </ul>
-            <hr>
-            <h3 id="3-particularidades-da-operação"><strong>3. Particularidades da Operação</strong></h3>
-            <ul>
-            <li><strong>Espelhamento de embarques:</strong> Responsabilidade da <strong>Technocel</strong>.  </li>
-            <li><strong>Roteamento:</strong> Usar conta principal da Horizonte JR (credenciais salvas).  </li>
-            <li><strong>Reconfiguração temporária:</strong>  <ul>
-            <li>Registrar no grid <strong>&quot;RECONFIG PARÂMETROS&quot;</strong>.  </li>
-            <li>Retornar para <strong>[890 – 60 – 1780]</strong> após a viagem.</li>
-            </ul>
-            </li>
-            </ul>
-            <hr>
-            <h3 id="4-tratativas-de-eventos"><strong>4. Tratativas de Eventos</strong></h3>
-            <p><strong>Violação de Horário no Destino:</strong>  </p>
-            <ul>
-            <li>Pode ser ignorada (previsão estimada). Tratamento automático via PGR.</li>
-            </ul>
-            <p><strong>Movimento Indevido Fora do Destino:</strong>  </p>
-            <ul>
-            <li>Causa: Falha na <strong>Trafegus</strong> (não reconhece macro após efetivação).  </li>
-            <li><strong>Solução:</strong>  <ul>
-            <li>Clicar com botão direito no evento → <strong>&quot;Incluir Macro Manual&quot;</strong> (ex: &quot;INÍCIO DE VIAGEM&quot;).  </li>
-            <li>Verificar <strong>&quot;Código Tipo&quot;</strong> se estiver em branco.</li>
-            <img src="./src/img/codigo-tipo.png" alt="Código Tipo" class="img-fluid mb-5">
-            </ul>
-            </li>
-            </ul>
-            <hr>
-            <h3 id="5-paradas-não-autorizadas-primeiros-50-km"><strong>5. Paradas Não Autorizadas (Primeiros 50 km)</strong></h3>
-            <ul>
-            <li><strong>Proibido parar</strong> (exceto justificativas).  </li>
-            <li><strong>Procedimentos:</strong>  <ul>
-            <li><strong>Trânsito:</strong> Registrar como <strong>&quot;Reinício de Viagem&quot;</strong>.  </li>
-            <li><strong>Postos/Alimentação:</strong>  <ul>
-            <li>Contatar motorista para seguir viagem.  </li>
-            <li>Abrir não conformidade (relatar parada e orientação).</li>
-            </ul>
-            </li>
-            <li><strong>Filial Limeira-SP:</strong> Parada autorizada (só registrar não conformidade).</li>
-            </ul>
-            </li>
-            </ul>
-            <hr>
-            <h3 id="6-excesso-de-tempo-em-posto"><strong>6. Excesso de Tempo em Posto</strong></h3>
-            <ul>
-            <li>Motorista <strong>deve informar &quot;FIM DE VIAGEM&quot;</strong> ao chegar.  <ul>
-            <li>Se usar <strong>&quot;PARA ESPERA&quot;</strong>, veículo <strong>não bloqueia</strong> (risco de movimentação sem SM).</li>
-            </ul>
-            </li>
-            <li><strong>Importante:</strong> Encerrar SMs em aberto para evitar bloqueios por desvio de rota.</li>
-            </ul>
-            <hr>
-            <h3 id="7-outros-bloqueios"><strong>7. Outros Bloqueios</strong></h3>
-            <ul>
-            <li><strong>INÍCIO DE VIAGEM:</strong> Não é padrão. Verificar se houve:  <ul>
-            <li>FIM DE VIAGEM  </li>
-            <li>Violação  </li>
-            <li>Fim de jornada</li>
-            </ul>
-            </li>
-            <li><strong>Porta Aberta:</strong> Bloqueio após 20 segundos (configuração PROÍBE CARONA).  </li>
-            <li><strong>Fim de Jornada:</strong>  <ul>
-            <li>Veículos sem finalização são bloqueados <strong>às 22h</strong>.  </li>
-            <li>Reativar apenas com <strong>&quot;INÍCIO DE JORNADA&quot;</strong> + 11h de descanso (ou autorização).</li>
-            </ul>
-            </li>
-            <li><strong>Novelis (Pindamonhangaba):</strong>  <ul>
-            <li>Penalidade de 30 minutos por excesso de velocidade <strong>deve ser cumprida</strong>.  </li>
-            <li>Se outra GR liberar antes, avisar no grupo.</li>
-            </ul>
-            </li>
-            </ul>
-            <hr>
-            <h3 id="8-comunicação"><strong>8. Comunicação</strong></h3>
-            <ul>
-            <li><strong>Bloqueio por velocidade:</strong>  <ul>
-            <li>Notificar no grupo com <strong>print do local</strong>.  </li>
-            <li>Mensagem padrão para motorista:  <blockquote>
-            <p><em>&quot;Recebemos evento de velocidade excedida. Conforme regra, o veículo deve aguardar 30 minutos no local. Após esse período, será liberado.&quot;</em></p>
-            </blockquote>
-            </li>
-            </ul>
-            </li>
-            <li><strong>CCAR ou eventos críticos (pânico, porta aberta):</strong>  <ul>
-            <li>Notificar a <strong>GR responsável</strong> e contatar motorista.  </li>
-            <li><strong>Nunca enviar comandos sem autorização</strong> (risco de invalidar seguro).</li>
-            </ul>
-            </li>
-            </ul>
-            <hr>
-            <p><strong>Observações:</strong>  </p>
-            <ul>
-            <li>Todas as <strong>não conformidades</strong> devem ser <strong>registradas e comunicadas no grupo</strong>.  </li>
-            <li>Aguardar manual de <strong>roteamento/espelhamento AMBEV</strong>. Enquanto isso, consultar <strong>Ivan</strong> ou <strong>Elaine</strong>.</li>
-            </ul>
-            
+            <section class="p-5 flash active" id="processos-horizonte">
+                <h1 class="h1"><strong>Anotações - Processos Horizonte JR</strong> </h1>
+                <h3 id="1-monitoramento-obrigatório"><strong>1. Monitoramento Obrigatório</strong></h3>
+                <ul>
+                    <li>Todos os veículos (carregados ou vazios) devem ter <strong>SM (Solicitação de
+                            Monitoramento)</strong> ativa. </li>
+                    <li>Bloquear movimentações sem SM até regularização.</li>
+                </ul>
+                <p><strong>Exceção – Saída para Manutenção (SEM SM):</strong> </p>
+                <ul>
+                    <li>Liberação <strong>apenas com autorização</strong> do responsável (via grupo corporativo). </li>
+                    <li>Comandos necessários: <ul>
+                            <li>Limpar Funções Lógicas </li>
+                            <li>Assistência Técnica </li>
+                            <li>Liberar Veículo </li>
+                            <li>Desligar Sirene (se porta aberta)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Modo manutenção:</strong>
+                        <ul>
+                            <li>Não gera eventos (exceto excesso de velocidade ou desvio de rota com SM ativa → tratar
+                                como <strong>&quot;MANUTENÇÃO&quot;</strong>).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Retorno da manutenção:</strong>
+                        <ul>
+                            <li>Reenviar comando <strong>&quot;Geral – Horizonte (configuração básica)&quot;</strong>
+                                para restaurar parâmetros padrão.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <hr>
+                <h3 id="2-penalidade--excesso-de-velocidade"><strong>2. Penalidade – Excesso de Velocidade</strong></h3>
+                <ul>
+                    <li>Limites: <ul>
+                            <li><strong>80 km/h</strong> (Unilever) </li>
+                            <li><strong>90 km/h</strong> (demais cargas/vazios)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Bloqueio automático:</strong> 30 minutos. </li>
+                    <li><strong>Liberação antecipada:</strong> Apenas por <strong>Rogério, Márcio, Gilmar, Silvio,
+                            Renato ou Junior</strong>. </li>
+                    <li><strong>Registro obrigatório:</strong>
+                        <ul>
+                            <li>Abrir não conformidade (informar cliente). </li>
+                            <li>Notificar no grupo com <strong>print do mapa</strong> do local.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <hr>
+                <h3 id="3-particularidades-da-operação"><strong>3. Particularidades da Operação</strong></h3>
+                <ul>
+                    <li><strong>Espelhamento de embarques:</strong> Responsabilidade da <strong>Technocel</strong>.
+                    </li>
+                    <li><strong>Roteamento:</strong> Usar conta principal da Horizonte JR (credenciais salvas). </li>
+                    <li><strong>Reconfiguração temporária:</strong>
+                        <ul>
+                            <li>Registrar no grid <strong>&quot;RECONFIG PARÂMETROS&quot;</strong>. </li>
+                            <li>Retornar para <strong>[890 – 60 – 1780]</strong> após a viagem.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <hr>
+                <h3 id="4-tratativas-de-eventos"><strong>4. Tratativas de Eventos</strong></h3>
+                <p><strong>Violação de Horário no Destino:</strong> </p>
+                <ul>
+                    <li>Pode ser ignorada (previsão estimada). Tratamento automático via PGR.</li>
+                </ul>
+                <p><strong>Movimento Indevido Fora do Destino:</strong> </p>
+                <ul>
+                    <li>Causa: Falha na <strong>Trafegus</strong> (não reconhece macro após efetivação). </li>
+                    <li><strong>Solução:</strong>
+                        <ul>
+                            <li>Clicar com botão direito no evento → <strong>&quot;Incluir Macro Manual&quot;</strong>
+                                (ex: &quot;INÍCIO DE VIAGEM&quot;). </li>
+                            <li>Verificar <strong>&quot;Código Tipo&quot;</strong> se estiver em branco.</li>
+                            <img src="./src/img/codigo-tipo.png" alt="Código Tipo" class="img-fluid mb-5">
+                        </ul>
+                    </li>
+                </ul>
+                <hr>
+                <h3 id="5-paradas-não-autorizadas-primeiros-50-km"><strong>5. Paradas Não Autorizadas (Primeiros 50
+                        km)</strong></h3>
+                <ul>
+                    <li><strong>Proibido parar</strong> (exceto justificativas). </li>
+                    <li><strong>Procedimentos:</strong>
+                        <ul>
+                            <li><strong>Trânsito:</strong> Registrar como <strong>&quot;Reinício de
+                                    Viagem&quot;</strong>. </li>
+                            <li><strong>Postos/Alimentação:</strong>
+                                <ul>
+                                    <li>Contatar motorista para seguir viagem. </li>
+                                    <li>Abrir não conformidade (relatar parada e orientação).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Filial Limeira-SP:</strong> Parada autorizada (só registrar não conformidade).
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <hr>
+                <h3 id="6-excesso-de-tempo-em-posto"><strong>6. Excesso de Tempo em Posto</strong></h3>
+                <ul>
+                    <li>Motorista <strong>deve informar &quot;FIM DE VIAGEM&quot;</strong> ao chegar. <ul>
+                            <li>Se usar <strong>&quot;PARA ESPERA&quot;</strong>, veículo <strong>não bloqueia</strong>
+                                (risco de movimentação sem SM).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Importante:</strong> Encerrar SMs em aberto para evitar bloqueios por desvio de rota.
+                    </li>
+                </ul>
+                <hr>
+                <h3 id="7-outros-bloqueios"><strong>7. Outros Bloqueios</strong></h3>
+                <ul>
+                    <li><strong>INÍCIO DE VIAGEM:</strong> Não é padrão. Verificar se houve: <ul>
+                            <li>FIM DE VIAGEM </li>
+                            <li>Violação </li>
+                            <li>Fim de jornada</li>
+                        </ul>
+                    </li>
+                    <li><strong>Porta Aberta:</strong> Bloqueio após 20 segundos (configuração PROÍBE CARONA). </li>
+                    <li><strong>Fim de Jornada:</strong>
+                        <ul>
+                            <li>Veículos sem finalização são bloqueados <strong>às 22h</strong>. </li>
+                            <li>Reativar apenas com <strong>&quot;INÍCIO DE JORNADA&quot;</strong> + 11h de descanso (ou
+                                autorização).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Novelis (Pindamonhangaba):</strong>
+                        <ul>
+                            <li>Penalidade de 30 minutos por excesso de velocidade <strong>deve ser cumprida</strong>.
+                            </li>
+                            <li>Se outra GR liberar antes, avisar no grupo.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <hr>
+                <h3 id="8-comunicação"><strong>8. Comunicação</strong></h3>
+                <ul>
+                    <li><strong>Bloqueio por velocidade:</strong>
+                        <ul>
+                            <li>Notificar no grupo com <strong>print do local</strong>. </li>
+                            <li>Mensagem padrão para motorista: <blockquote>
+                                    <p><em>&quot;Recebemos evento de velocidade excedida. Conforme regra, o veículo deve
+                                            aguardar 30 minutos no local. Após esse período, será liberado.&quot;</em>
+                                    </p>
+                                </blockquote>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><strong>CCAR ou eventos críticos (pânico, porta aberta):</strong>
+                        <ul>
+                            <li>Notificar a <strong>GR responsável</strong> e contatar motorista. </li>
+                            <li><strong>Nunca enviar comandos sem autorização</strong> (risco de invalidar seguro).</li>
+                        </ul>
+                    </li>
+                </ul>
+                <hr>
+                <p><strong>Observações:</strong> </p>
+                <ul>
+                    <li>Todas as <strong>não conformidades</strong> devem ser <strong>registradas e comunicadas no
+                            grupo</strong>. </li>
+                    <li>Aguardar manual de <strong>roteamento/espelhamento AMBEV</strong>. Enquanto isso, consultar
+                        <strong>Ivan</strong> ou <strong>Elaine</strong>.
+                    </li>
+                </ul>
 
-         </section>
+
+            </section>
 
 
 
@@ -1759,8 +1789,90 @@
 
                 <hr>
 
-
             </div>
+
+            <br>
+
+            <section class="p-5 flash active">
+
+                <h1 id="manual-de-consulta--checklist-e-configurações-autotrac">Manual de Consulta – Checklist e
+                    Configurações Autotrac</h1>
+                <img class="mb-15" src="./src/img/obc.png" width="100%">
+                    
+                <h1 id="1-antes-de-iniciar-o-checklist">1. Antes de iniciar o Checklist</h1>
+                <p>Antes de executar o checklist Autotrac no veículo, verifique <strong>obrigatoriamente</strong> as
+                    configurações iniciais no sistema OBC.</p>
+                <h3 id="11-verificação-do-perfil-de-obc">1.1 Verificação do Perfil de OBC</h3>
+                <ul>
+                    <li>Acesse o OBC (computador de bordo).</li>
+                    <li>Confirme se o perfil está corretamente configurado.</li>
+                    <li>O perfil correto deve ser o da <strong>Horizonte</strong>.</li>
+                </ul>
+                <p>✅ Se estiver como <strong>&quot;Horizonte&quot;</strong>, está certo.<br>❌ Se não estiver,
+                    <strong>ajuste antes de prosseguir</strong>.</p>
+                <hr>
+                <h1 id="2-fonte-de-dados-can-bus">2. Fonte de Dados (Can Bus)</h1>
+                <h2 id="21-o-que-é">2.1 O que é</h2>
+                <p>A <strong>Fonte de Dados</strong> é responsável pelas informações que vêm do barramento
+                    <strong>Can</strong>.</p>
+                <h3 id="22-problemas-comuns">2.2 Problemas comuns</h3>
+                <p>Quando a tela apresenta erro de leitura na Fonte de Dados, o problema está no barramento
+                    <strong>Can</strong>.<br>Nesses casos:</p>
+                <ul>
+                    <li>É necessário levar o veículo à assistência técnica da <strong>Autotrac</strong>.</li>
+                    <li>Esse problema pode interferir na <strong>velocidade aferida pelo sistema</strong>.</li>
+                    <li>A falha pode causar <strong>reprovação</strong> no checklist.</li>
+                </ul>
+                <h3 id="23-reprovação">2.3 Reprovação</h3>
+                <p>A reprovação pode ocorrer, mas é importante verificar <strong>qual periférico causou o erro</strong>.
+                </p>
+                <blockquote>
+                    <p><em>Observação: revisar posteriormente qual periférico é responsável por este tipo de
+                            reprovação.</em></p>
+                </blockquote>
+                <hr>
+                <h1 id="3-configuração-básica">3. Configuração Básica</h1>
+                <h3 id="31-exibição-na-tela">3.1 Exibição na tela</h3>
+                <p>A tela da <strong>Configuração Básica</strong> mostra o último comando de configuração básica enviado
+                    ao veículo.</p>
+                <h3 id="32-exemplo">3.2 Exemplo</h3>
+                <p>Se o comando foi de assistência técnica, <strong>será isso que aparecerá.</strong></p>
+                <hr>
+                <h1 id="4-ordem-recomendada-de-verificação-e-configuração">4. Ordem recomendada de verificação e
+                    configuração</h1>
+                <h3 id="41-etapas-para-o-checklist">4.1 Etapas para o checklist</h3>
+                <ol>
+                    <li>Verifique a <strong>tela inicial de configuração do equipamento (OBC)</strong>.<ul>
+                            <li>Confirme as condições do sistema e o tipo de configuração atual.</li>
+                        </ul>
+                    </li>
+                    <li>Verifique e ajuste o perfil do OBC para <strong>“Horizonte”</strong>.</li>
+                    <li>Analise a <strong>Fonte de Dados</strong>:<ul>
+                            <li>Verifique se há erro de leitura (problemas no barramento Can).</li>
+                        </ul>
+                    </li>
+                    <li>Envie os comandos de configuração:<ul>
+                            <li>Limpe as funções lógicas.</li>
+                            <li>Envie o comando de <strong>Configuração Básica geral</strong> de acordo com o
+                                OBC.<br>Exemplo: <code>Geral Config Básica Horizonte</code>.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ative todos os sensores do sistema</strong>, garantindo o funcionamento completo.</li>
+                </ol>
+                <hr>
+                <h2 id="5-observações-finais">5. Observações finais</h2>
+                <ul>
+                    <li>A ordem correta e a validação dessas etapas ajudam a garantir que o checklist seja
+                        <strong>aprovado com sucesso</strong>.</li>
+                    <li>Qualquer falha na Fonte de Dados, perfil incorreto ou ausência de sensores pode resultar em
+                        <strong>reprovação</strong>.</li>
+                    <li>Caso necessário, encaminhe o equipamento à <strong>Autotrac</strong> para correção de falhas
+                        físicas (especialmente barramento Can).</li>
+                </ul>
+
+
+
+            </section>
 
             <br>
 

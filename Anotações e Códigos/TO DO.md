@@ -3,6 +3,8 @@
 - [ ] COLOCAR TAREFAS A FAZER
 - [ ] INSERIR MANUAIS DE OUTRAS TECNOLOGIAS
 - [ ] ORGANIZAR O MENU E O SITE POR SEÇÕES (DICAS, POR TECNOLOGIAS E ETC)
+- [ ] Adicionar uma forma de criar, editar e excluir os post its
+- [ ] Adicionar um relógio, acionar tarefar e a ferramenta avisar / notificar
 - [x] VERSÃO COM SIDEBAR LATERAL
 - [x] INSERIR DADOS DE CONTATO DO APOIO DALASTRA
 - [X] ANALISARR E INSERIR OS MANUAIS
